@@ -1,0 +1,258 @@
++<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astraea | Homepage</title>
+  
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/navbar.css">
+  <link rel="stylesheet" href="CSS/solar-system.css">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  
+  <script src="javascript/navbar.js" defer></script>
+  <script src="javascript/Solar-system.js" defer></script>
+  <script src="javascript/footer.js" defer></script>
+  <script src="javascript/form.js" defer></script>
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header id="navbar" class="topnav">
+  <div class="logo-container">
+  <a href="index.html" class="logo">Astraea</a>
+  <img src="images/logo.png" class="logo-icon">
+  </div>
+
+  <div class="menu-toggle" id="mobile-menu"> <!--for phones-->
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+
+  <ul class="nav-links">
+    
+  <li class="dropdown">
+    <a href="#" class="dropbtn">Planets & Systems ▾</a>
+    <div class="dropdown-content">
+      <div class="nested-dropdown">
+        <a href="#" class="nested-dropbtn">Solar System Planets ▸</a>
+        <div class="nested-dropdown-content">
+          <a href="html/Planets_Mercury.html">Mercury</a>
+          <a href="html/Planets_Venus.html">Venus</a>
+          <a href="html/Planets_Earth.html">Earth</a>
+          <a href="html/Planets_Mars.html">Mars</a>
+          <a href="html/Planets_Jupiter.html">Jupiter</a>
+          <a href="html/Planets_Saturn.html">Saturn</a>
+          <a href="html/Planets_Uranus.html">Uranus</a>
+          <a href="html/Planets_Neptune.html">Neptune</a>
+        </div>
+      </div>
+      <a href="html/exoplanets.html">Exoplanets</a>
+      <a href="html/Alien Systems.html">Foreign Systems</a>
+    </div>
+  </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Missions & Spacecraft ▾</a>
+      <div class="dropdown-content">
+        <a href="html/Europa Clipper.html">Europa Clipper</a>
+        <a href="html/mars-missions.html">Mars Missions</a>
+        <a href="html/Apollo.html">Apollo Missions</a>
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Science & Tech ▾</a>
+      <div class="dropdown-content">
+        <a href="html/spaceTechnology.html">Space Technology</a>
+        <a href="html/SpacePhenomena.html">Space Phenomena</a>
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Mysteries & History ▾</a>
+      <div class="dropdown-content">
+        <a href="html/SpaceMysteries.html">Space Mysteries</a>
+        <a href="html/spaceHistory.html">Space History</a>
+        <a href="html/spaceFuture.html">Future of Space</a>
+      </div>
+    </li>
+
+  </ul>
+</header>
+
+<section class="hero-section"> // solar system
+  <div id="canvas-container"></div>
+
+  <div id="info-card" class="info-card">
+    <h3 id="card-title">Planet</h3>
+    <p id="card-desc">Description</p>
+  </div>
+</section>
+
+  <section class="content-section">
+    <div>
+      <div class="feature-row">
+        <div class="feature-image-galaxy">
+          <div class="feature-text">
+            <div class="feature-text-h2-container">
+              <h2 class="feature-text-h2">EXPLORE THE</h2>
+              <h2 class="feature-text-h2">UNIVERSE</h2>
+            </div>
+            <p class="feature-text-p">
+              Explore the thousands of exoplanets discovered across the Milky Way. 
+              Discover the incredible diversity of alien star systems, from scorching gas giants to frozen Super-Earths.
+            </p>
+            <a href="html/Alien Systems.html" class="btn">Explore More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-image-spacex">
+          <div class="feature-text-spacex">
+            <div class="feature-text-h2-container">
+              <h2 class="feature-text-h2">SPACE</h2>
+              <h2 class="feature-text-h2">TECHNOLOGY</h2>
+            </div>
+            <p class="feature-text-p-spacex">
+              Learn about the reusable boosters and spacecraft paving the way for interplanetary travel.
+            </p>
+            <a href="html/spaceTechnology.html" class="btn">Explore More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-image-mysteries">
+          <div class="feature-text">
+            <div class="feature-text-h2-container">
+              <h2 class="feature-text-h2">The History Of Space</h2>
+            </div>
+            <p class="feature-text-p">
+              From Sputnik to the Space Station: Discover the incredible story of how humanity reached the stars. 
+              Explore timelines, legendary missions, 
+              and the pioneers who pushed the boundaries of what is possible in space.
+            </p>
+            <a href=".//html/spaceHistory.html" class="btn">Discover</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="w-full flex flex-col md:flex-row min-h-[80vh] overflow-hidden">
+    
+    <div class="card-bg-apollo group relative w-full md:w-1/3 min-h-[50vh] md:min-h-0 flex flex-col justify-end p-8 md:p-16 md:pl-24 lg:pl-32 transition-all duration-700 ease-out">
+      
+      <div class="relative z-10 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500" style="margin-left: 10px;">
+        
+        <h3 class="text-4xl md:text-5xl font-bold md:mb-12 text-white drop-shadow-lg" style="margin-bottom: 16px;">Apollo Missions</h3>
+        
+        <p class="text-gray-200 mb-8 opacity-0 group-hover:opacity-100 transition-opacity duration-700 max-w-lg drop-shadow-md text-base md:text-lg" style="margin-bottom: 4px;">
+          Powered by the colossal Saturn V rocket, 
+          NASA’s Apollo missions changed history forever. 
+          Discover the engineering marvels and human bravery that took humanity to the lunar surface.
+        </p>
+        
+        <a href="html/Apollo.html" class="inline-block text-[#00d2ff] font-bold text-lg hover:text-white transition-colors duration-300" style="margin-bottom: 6px;">
+          See the Saturn V <span class="inline-block group-hover:translate-x-2 transition-transform duration-300">→</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="card-bg-europa group relative w-full md:w-1/3 min-h-[50vh] md:min-h-0 flex flex-col justify-end p-8 md:p-16 transition-all duration-700 ease-out">
+      
+      <div class="relative z-10 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500" style="margin-left: 10px;">
+        
+        <h3 class="text-4xl md:text-5xl font-bold md:mb-12 text-white drop-shadow-lg" style="margin-bottom: 16px;">Europa Clipper</h3>
+        
+        <p class="text-gray-200 mb-8 opacity-0 group-hover:opacity-100 transition-opacity duration-700 max-w-lg drop-shadow-md text-base md:text-lg" style="margin-bottom: 4px;">
+          Beneath an icy crust, Jupiter's moon Europa hides a massive liquid ocean. 
+          Discover how NASA's Europa Clipper mission is soaring to the outer solar system to search for the building blocks of life.
+        </p>
+        
+        <a href="html/Europa Clipper.html" class="inline-block text-[#00d2ff] font-bold text-lg hover:text-white transition-colors duration-300" style="margin-bottom: 6px;">
+          Explore the Mission <span class="inline-block group-hover:translate-x-2 transition-transform duration-300">→</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="card-bg-mars group relative w-full md:w-1/3 min-h-[50vh] md:min-h-0 flex flex-col justify-end p-8 md:p-16 md:pr-24 lg:pr-32 transition-all duration-700 ease-out">
+      
+      <div class="relative z-10 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500" style="margin-left: 10px;">
+        
+        <h3 class="text-4xl md:text-5xl font-bold md:mb-12 text-white drop-shadow-lg" style="margin-bottom: 16px;">Mars Missions</h3>
+        
+        <p class="text-gray-200 mb-8 opacity-0 group-hover:opacity-100 transition-opacity duration-700 max-w-lg drop-shadow-md text-base md:text-lg" style="margin-bottom: 4px;">
+          From ancient riverbeds to alien skies, 
+          explore the robotic pioneers like Perseverance and Curiosity that are currently uncovering 
+          the secrets of Mars and paving the way for human exploration.
+        </p>
+        
+        <a href="html/mars-missions.html" class="inline-block text-[#00d2ff] font-bold text-lg hover:text-white transition-colors duration-300" style="margin-bottom: 6px;">
+          Explore Mars Missions <span class="inline-block group-hover:translate-x-2 transition-transform duration-300">→</span>
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="form-section">
+  <div class="form-container">
+    <h2 class="form-title">Join the Astraea Crew</h2>
+    <p class="form-subtitle">Register for mission updates and interplanetary flight logs.</p>
+
+    <form id="astraea-form" class="glass-form" novalidate>
+      
+      <div class="input-group">
+        <label for="fullName">Pilot Name</label>
+        <input type="text" id="fullName" placeholder="e.g. Neil Armstrong" autocomplete="off">
+        <span class="error-message" id="nameError"></span>
+      </div>
+
+      <div class="input-group">
+        <label for="email">Comms Link (Email)</label>
+        <input type="email" id="email" placeholder="astronaut@nasa.gov" autocomplete="off">
+        <span class="error-message" id="emailError"></span>
+      </div>
+
+      <div class="input-group">
+        <label for="destination">Target Destination</label>
+        <select id="destination">
+          <option value="" disabled selected>Select a planetary body...</option>
+          <option value="mars">Mars (Manned Mission)</option>
+          <option value="europa">Europa (Subsurface Ocean)</option>
+          <option value="titan">Titan (Atmospheric Flight)</option>
+        </select>
+        <span class="error-message" id="destError"></span>
+      </div>
+
+      <button type="submit" class="submit-btn">Initialize Sequence</button>
+      
+      <div id="successMessage" class="success-hidden">Registration Confirmed. Welcome aboard!</div>
+    </form>
+  </div>
+</section>
+
+  <section class="pill-container">
+    <footer class="space-fact-pill">
+      <h6 id="rng-header" class="pill-title">test</h6>
+      <p id="rng-message" class="pill-text">test</p>
+    </footer>
+    
+  </section>
+
+</body>
+</html>

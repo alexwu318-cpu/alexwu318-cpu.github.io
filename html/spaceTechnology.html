@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Astraea | Space Technology</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        space: ["Space Grotesk", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/spaceTechnology.css">
+
+    <script src="../javascript/navbar.js" defer></script>
+</head>
+
+<body class="overflow-x-hidden font-space bg-[#050816] text-[#E8EEF8] leading-[1.6] bg-[linear-gradient(rgba(124,150,255,.04)_2px,transparent_2px),linear-gradient(90deg,rgba(124,150,255,.04)_2px,transparent_2px),linear-gradient(rgba(124,150,255,.025)_2px,transparent_2px),linear-gradient(90deg,rgba(124,150,255,.025)_2px,transparent_2px)] bg-[size:120px_120px,120px_120px,24px_24px,24px_24px]"></body>
+    <!-- Nav -->
+    <header id="navbar" class="topnav">
+    <div class="logo-container">
+    <a href="../index.html" class="logo">Astraea</a>
+    <img src="../images/logo.png" class="logo-icon">
+    </div>
+
+    <div class="menu-toggle" id="mobile-menu"> <!--for phones-->
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
+    <ul class="nav-links">
+        
+    <li class="dropdown">
+        <a href="#" class="dropbtn">Planets & Systems ▾</a>
+        <div class="dropdown-content">
+        <div class="nested-dropdown">
+            <a href="#" class="nested-dropbtn">Solar System Planets ▸</a>
+            <div class="nested-dropdown-content">
+            <a href="../html/Planets_Mercury.html">Mercury</a>
+            <a href="../html/Planets_Venus.html">Venus</a>
+            <a href="../html/Planets_Earth.html">Earth</a>
+            <a href="../html/Planets_Mars.html">Mars</a>
+            <a href="../html/Planets_Jupiter.html">Jupiter</a>
+            <a href="../html/Planets_Saturn.html">Saturn</a>
+            <a href="../html/Planets_Uranus.html">Uranus</a>
+            <a href="../html/Planets_Neptune.html">Neptune</a>
+            </div>
+        </div>
+        <a href="../html/exoplanets.html">Exoplanets</a>
+        <a href="../html/Alien Systems.html">Foreign Systems</a>
+        </div>
+    </li>
+
+        <li class="dropdown">
+        <a href="#" class="dropbtn">Missions & Spacecraft ▾</a>
+        <div class="dropdown-content">
+            <a href="../html/Europa Clipper.html">Europa Clipper</a>
+            <a href="../html/mars-missions.html">Mars Missions</a>
+            <a href="../html/Apollo.html">Apollo Missions</a>
+        </div>
+        </li>
+
+        <li class="dropdown">
+        <a href="#" class="dropbtn">Science & Tech ▾</a>
+        <div class="dropdown-content">
+            <a href="../html/spaceTechnology.html">Space Technology</a>
+            <a href="../html/SpacePhenomena.html">Space Phenomena</a>
+        </div>
+        </li>
+
+        <li class="dropdown">
+        <a href="#" class="dropbtn">Mysteries & History ▾</a>
+        <div class="dropdown-content">
+            <a href="../html/SpaceMysteries.html">Space Mysteries</a>
+            <a href="../html/spaceHistory.html">Space History</a>
+            <a href="../html/spaceFuture.html">Future of Space</a>
+        </div>
+        </li>
+
+    </ul>
+    </header>
+
+    <main class="pt-[76px]">
+
+    <!-- Hero -->
+        <section class="relative mx-auto grid min-h-[calc(100vh-80px)] max-w-[1500px] grid-cols-1 items-center gap-10 px-5 pt-10 pb-20 sm:px-8 lg:grid-cols-[42%_58%] lg:gap-20 lg:px-[60px] lg:pb-[120px]">
+            <div>
+                <h1 class="mb-[25px] text-[2.7rem] leading-[1.05] font-bold sm:text-[4rem] lg:text-[5.5rem]">
+                    Pushing the<br>
+                    Boundaries of<br>
+                    Space Technology
+                </h1>
+
+                <p class="mb-[35px] max-w-[500px] text-base sm:text-[1.15rem] lg:text-[1.35rem]">
+                    Innovative spacecraft, advanced propulsion,
+                    and intelligent systems powering the future
+                    of exploration.
+                </p>
+
+                <div class="flex flex-col gap-4 sm:flex-row">
+                    <button
+                        onclick="window.open('https://www.nasa.gov/technology/', 'nasa tech')"
+                        class="border-2 border-[#40516D] bg-[#0B1424] px-[30px] py-[14px] text-[.95rem] font-semibold uppercase tracking-[1px] text-[#E8EEF8] transition hover:bg-[#5F7CFF] hover:text-white">
+                        Explore Technologies
+                    </button>
+
+                    <button
+                        onclick="window.open('https://www.nasa.gov/technology-news/', 'nasa news')"
+                        class="border-2 border-[#40516D] bg-[#0B1424] px-[30px] py-[14px] text-[.95rem] font-semibold uppercase tracking-[1px] text-[#E8EEF8] transition hover:bg-[#5F7CFF] hover:text-white">
+                        Latest Tech News
+                    </button>
+                </div>
+            </div>
+
+            <div class="relative h-[620px] sm:h-[780px] lg:h-[960px]">
+                <div class="rocket-wrapper absolute bottom-[-40px] left-1/2 -translate-x-1/2 lg:left-[35%]">
+                    <img
+                        src="../images/rocket.png"
+                        alt="rocket-images"
+                        class="block w-[160px] max-w-full sm:w-[180px] lg:w-[200px]">
+
+                    <div class="engine-flame"></div>
+                    <div class="engine-glow"></div>
+
+                    <div class="smoke">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute bottom-[30px] left-1/2 hidden -translate-x-1/2 flex-col items-center gap-3 md:flex">
+                <span class="text-[.75rem] tracking-[3px] text-[#7C96FF]">
+                    SCROLL TO EXPLORE
+                </span>
+
+                <div class="h-[45px] w-[2px] bg-[#0D1930]"></div>
+            </div>
+        </section>
+
+    <!-- Technology Pillars -->
+        <section class="mx-auto w-full max-w-[1700px] px-5 py-20 sm:px-8 lg:px-[60px] lg:py-[100px]">
+            <h2 class="mb-14 text-center text-3xl font-bold sm:text-4xl lg:mb-20 lg:text-5xl">
+                Our Technology Pillars
+            </h2>
+
+            <div class="grid grid-cols-1 gap-y-12 sm:grid-cols-2 lg:grid-cols-5 lg:gap-y-0">
+                <article class="group relative flex min-h-[340px] flex-col items-center px-7 text-center transition hover:-translate-y-2 after:absolute after:right-0 after:top-0 after:hidden after:h-[260px] after:w-px after:bg-[#293850] lg:after:block">
+                    <img src="../images/rocketicon.svg" alt="Propulsion Icon" class="mb-7 h-[70px] w-[70px] object-contain brightness-0 invert">
+
+                    <h3 class="mb-5 flex min-h-[60px] items-center justify-center text-[1.3rem] font-semibold text-[#7C96FF]">
+                        Advanced Propulsion
+                    </h3>
+
+                    <p class="mb-6 translate-y-0 opacity-100 transition lg:translate-y-[10px] lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
+                        Revolutionizing space travel with efficient propulsion systems.
+                    </p>
+
+                    <a
+                        href="https://www.nasa.gov/directorates/stmd/game-changing-development-program/advanced-in-space-propulsion-aisp/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="mt-auto inline-flex translate-y-0 items-center gap-2 text-[.9rem] font-bold tracking-[1px] text-[#7C96FF] opacity-100 transition lg:translate-y-[10px] lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
+                        LEARN MORE →
+                    </a>
+                </article>
+
+                <article class="group relative flex min-h-[340px] flex-col items-center px-7 text-center transition hover:-translate-y-2 after:absolute after:right-0 after:top-0 after:hidden after:h-[260px] after:w-px after:bg-[#293850] lg:after:block">
+                    <img src="../images/brain-circuit.svg" alt="AI Icon" class="mb-7 h-[70px] w-[70px] object-contain brightness-0 invert">
+
+                    <h3 class="mb-5 flex min-h-[60px] items-center justify-center text-[1.3rem] font-semibold text-[#7C96FF]">
+                        Avionics & AI
+                    </h3>
+
+                    <p class="mb-6 translate-y-0 opacity-100 transition lg:translate-y-[10px] lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
+                        Intelligent systems and autonomy for precision and reliability.
+                    </p>
+
+                    <a
+                        href="https://esto.nasa.gov/aist/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="mt-auto inline-flex translate-y-0 items-center gap-2 text-[.9rem] font-bold tracking-[1px] text-[#7C96FF] opacity-100 transition lg:translate-y-[10px] lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
+                        LEARN MORE →
+                    </a>
+                </article>
+
+                <article class="group relative flex min-h-[340px] flex-col items-center px-7 text-center transition hover:-translate-y-2 after:absolute after:right-0 after:top-0 after:hidden after:h-[260px] after:w-px after:bg-[#293850] lg:after:block">
+                    <img src="../images/satellite.svg" alt="Structures Icon" class="mb-7 h-[70px] w-[70px] object-contain brightness-0 invert">
+
+                    <h3 class="mb-5 flex min-h-[60px] items-center justify-center text-[1.3rem] font-semibold text-[#7C96FF]">
+                        Structures
+                    </h3>
+
+                    <p class="mb-6 translate-y-0 opacity-100 transition lg:translate-y-[10px] lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
+                        Lightweight, high-strength materials built for the extremes of space.
+                    </p>
+
+                    <a
+                        href="https://www.nasa.gov/reference/advanced-space-transportation-systems/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="mt-auto inline-flex translate-y-0 items-center gap-2 text-[.9rem] font-bold tracking-[1px] text-[#7C96FF] opacity-100 transition lg:translate-y-[10px] lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
+                        LEARN MORE →
+                    </a>
+                </article>
+
+                <article class="group relative flex min-h-[340px] flex-col items-center px-7 text-center transition hover:-translate-y-2 after:absolute after:right-0 after:top-0 after:hidden after:h-[260px] after:w-px after:bg-[#293850] lg:after:block">
+                    <img src="../images/power.svg" alt="Power Icon" class="mb-7 h-[70px] w-[70px] object-contain brightness-0 invert">
+
+                    <h3 class="mb-5 flex min-h-[60px] items-center justify-center text-[1.3rem] font-semibold text-[#7C96FF]">
+                        Power Systems
+                    </h3>
+
+                    <p class="mb-6 translate-y-0 opacity-100 transition lg:translate-y-[10px] lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
+                        Reliable energy solutions for spacecraft and instruments.
+                    </p>
+
+                    <a
+                        href="https://techport.nasa.gov/projects/10759"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="mt-auto inline-flex translate-y-0 items-center gap-2 text-[.9rem] font-bold tracking-[1px] text-[#7C96FF] opacity-100 transition lg:translate-y-[10px] lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
+                        LEARN MORE →
+                    </a>
+                </article>
+
+                <article class="group flex min-h-[340px] flex-col items-center px-7 text-center transition hover:-translate-y-2">
+                    <img src="../images/communication.svg" alt="Communication Icon" class="mb-7 h-[70px] w-[70px] object-contain brightness-0 invert">
+
+                    <h3 class="mb-5 flex min-h-[60px] items-center justify-center text-[1.3rem] font-semibold text-[#7C96FF]">
+                        Communication
+                    </h3>
+
+                    <p class="mb-6 translate-y-0 opacity-100 transition lg:translate-y-[10px] lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
+                        High-bandwidth communication systems that keep missions connected through seamless data transmission.
+                    </p>
+
+                    <a
+                        href="https://www.nasa.gov/communicating-with-missions/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="mt-auto inline-flex translate-y-0 items-center gap-2 text-[.9rem] font-bold tracking-[1px] text-[#7C96FF] opacity-100 transition lg:translate-y-[10px] lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
+                        LEARN MORE →
+                    </a>
+                </article>
+            </div>
+        </section>
+
+    <!-- Explore Spacecraft -->
+        <section class="mx-auto my-20 max-w-[1500px] px-5 sm:px-8 lg:my-[140px] lg:px-[60px]">
+            <h2 class="mb-12 text-center text-3xl font-bold sm:text-5xl lg:mb-[70px] lg:text-[3.8rem]">
+                Explore Spacecraft
+            </h2>
+
+            <div class="grid grid-cols-1 items-stretch gap-10 lg:grid-cols-[360px_1fr] lg:gap-[70px]">
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:flex lg:flex-col lg:justify-center lg:gap-5">
+                    <button
+                        class="viewer-btn active flex h-[82px] w-full items-center border-2 border-[#293850] bg-[#0B1424] px-7 text-[1.1rem] font-semibold transition hover:translate-x-2 hover:bg-[#5F7CFF] hover:text-white"
+                        data-spacecraft="orion">
+                        Orion Capsule
+                    </button>
+
+                    <button
+                        class="viewer-btn flex h-[82px] w-full items-center border-2 border-[#293850] bg-[#0B1424] px-7 text-[1.1rem] font-semibold transition hover:translate-x-2 hover:bg-[#5F7CFF] hover:text-white"
+                        data-spacecraft="webb">
+                        James Webb Telescope
+                    </button>
+
+                    <button
+                        class="viewer-btn flex h-[82px] w-full items-center border-2 border-[#293850] bg-[#0B1424] px-7 text-[1.1rem] font-semibold transition hover:translate-x-2 hover:bg-[#5F7CFF] hover:text-white"
+                        data-spacecraft="sls">
+                        Space Launch System
+                    </button>
+
+                    <button
+                        class="viewer-btn flex h-[82px] w-full items-center border-2 border-[#293850] bg-[#0B1424] px-7 text-[1.1rem] font-semibold transition hover:translate-x-2 hover:bg-[#5F7CFF] hover:text-white"
+                        data-spacecraft="rover">
+                        Perseverance Rover
+                    </button>
+                </div>
+
+                <div class="flex flex-col gap-6">
+                    <div class="relative">
+                        <button
+                            id="prevBtn"
+                            class="absolute left-3 top-1/2 z-20 h-12 w-12 -translate-y-1/2 rounded-full sm:h-[58px] sm:w-[58px] lg:left-[-60px] bg-black/55 text-[2rem] text-white transition hover:bg-[#0D1930]">
+                            &#10094;
+                        </button>
+
+                        <img
+                            id="viewer-image"
+                            src="../images/orion1.jpg"
+                            alt="Spacecraft"
+                            class="h-[320px] w-full rounded-[14px] object-cover transition-opacity duration-300 sm:h-[420px] lg:h-[520px]">
+
+                        <button
+                            id="nextBtn"
+                            class="absolute right-3 top-1/2 z-20 h-12 w-12 -translate-y-1/2 rounded-full sm:h-[58px] sm:w-[58px] lg:right-[-60px] bg-black/55 text-[2rem] text-white transition hover:bg-[#0D1930]">
+                            &#10095;
+                        </button>
+                    </div>
+
+                    <div class="rounded-[5px] border border-[#293850] bg-[#0B1424] px-5 py-6 sm:px-[34px] sm:py-7">
+                        <h3 class="mb-[14px] text-[2rem] font-semibold text-[#7C96FF]">
+                            Fun Facts
+                        </h3>
+
+                        <p id="fact-text" class="text-[1.1rem] leading-[1.8] text-[#9AA9BF]">
+                            Orion is NASA's next-generation spacecraft designed for deep-space exploration.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Featured Technologies -->
+        <section class="mx-auto my-24 max-w-[1500px] px-5 sm:px-8 lg:my-[180px] lg:px-[60px]">
+            <div class="mb-[70px] text-center">
+                <h2 class="mb-5 text-3xl font-bold sm:text-5xl lg:text-[3.5rem]">
+                    Featured Technologies
+                </h2>
+
+                <p class="mx-auto max-w-[700px] leading-[1.8] text-[#9AA9BF]">
+                    Discover some of the breakthrough technologies that have transformed
+                    modern space exploration. Hover over each innovation to learn how it
+                    changed the future of space missions.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-10">
+                <article class="group relative h-[520px] cursor-pointer sm:h-[450px] overflow-hidden rounded-[24px] shadow-[0_12px_35px_rgba(0,0,0,.35)] transition hover:-translate-y-3 hover:shadow-[0_25px_55px_rgba(0,0,0,.5)]">
+                    <img
+                        src="../images/webbmirror.jpg"
+                        alt="James Webb Mirror"
+                        class="h-full w-full object-cover transition duration-700 group-hover:scale-110">
+
+                    <div class="absolute inset-x-0 bottom-0 translate-y-0 bg-gradient-to-b md:translate-y-[70%] md:group-hover:translate-y-0 from-[rgba(11,31,58,.05)] to-[rgba(11,31,58,.97)] p-[35px] text-white transition duration-500">
+                        <span class="font-bold tracking-[2px] text-[#8FA8FF]">2021</span>
+
+                        <h3 class="my-[10px] mt-[-10px] text-[2rem] font-semibold">
+                            James Webb Mirror
+                        </h3>
+
+                        <p class="mb-[18px] leading-[1.7] opacity-100 transition delay-150 md:opacity-0 md:group-hover:opacity-100">
+                            The James Webb Space Telescope features an 18-segment,
+                            gold-coated mirror measuring 6.5 metres in diameter,
+                            making it the largest telescope ever launched into space.
+                        </p>
+
+                        <ul class="list-disc pl-[18px] leading-[1.9] opacity-100 transition delay-200 md:opacity-0 md:group-hover:opacity-100">
+                            <li>Largest telescope ever launched</li>
+                            <li>Infrared observations</li>
+                            <li>Looks over 13 billion years into the past</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="group relative h-[520px] cursor-pointer sm:h-[450px] overflow-hidden rounded-[24px] shadow-[0_12px_35px_rgba(0,0,0,.35)] transition hover:-translate-y-3 hover:shadow-[0_25px_55px_rgba(0,0,0,.5)]">
+                    <img
+                        src="../images/ionengine.jpg"
+                        alt="Ion Engine"
+                        class="h-full w-full object-cover transition duration-700 group-hover:scale-110">
+
+                    <div class="absolute inset-x-0 bottom-0 translate-y-0 bg-gradient-to-b md:translate-y-[70%] md:group-hover:translate-y-0 from-[rgba(11,31,58,.05)] to-[rgba(11,31,58,.97)] p-[35px] text-white transition duration-500">
+                        <span class="font-bold tracking-[2px] text-[#8FA8FF]">1998</span>
+
+                        <h3 class="my-[10px] mt-[-10px] text-[2rem] font-semibold">
+                            Ion Propulsion
+                        </h3>
+
+                        <p class="mb-[18px] leading-[1.7] opacity-100 transition delay-150 md:opacity-0 md:group-hover:opacity-100">
+                            Ion propulsion uses electrically charged particles to
+                            produce extremely efficient thrust, allowing spacecraft
+                            to travel farther while using significantly less fuel.
+                        </p>
+
+                        <ul class="list-disc pl-[18px] leading-[1.9] opacity-100 transition delay-200 md:opacity-0 md:group-hover:opacity-100">
+                            <li>10× more fuel efficient</li>
+                            <li>Ideal for deep-space travel</li>
+                            <li>Used by NASA's Deep Space 1 mission</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="group relative h-[520px] cursor-pointer sm:h-[450px] overflow-hidden rounded-[24px] shadow-[0_12px_35px_rgba(0,0,0,.35)] transition hover:-translate-y-3 hover:shadow-[0_25px_55px_rgba(0,0,0,.5)]">
+                    <img
+                        src="../images/ingenuity.jpg"
+                        alt="Ingenuity Helicopter"
+                        class="h-full w-full object-cover transition duration-700 group-hover:scale-110">
+
+                    <div class="absolute inset-x-0 bottom-0 translate-y-0 bg-gradient-to-b md:translate-y-[70%] md:group-hover:translate-y-0 from-[rgba(11,31,58,.05)] to-[rgba(11,31,58,.97)] p-[35px] text-white transition duration-500">
+                        <span class="font-bold tracking-[2px] text-[#8FA8FF]">2021</span>
+
+                        <h3 class="my-[10px] mt-[-10px] text-[2rem] font-semibold">
+                            Ingenuity Helicopter
+                        </h3>
+
+                        <p class="mb-[18px] leading-[1.7] opacity-100 transition delay-150 md:opacity-0 md:group-hover:opacity-100">
+                            Ingenuity became the first aircraft to achieve powered,
+                            controlled flight on another planet, opening a new era
+                            of aerial planetary exploration.
+                        </p>
+
+                        <ul class="list-disc pl-[18px] leading-[1.9] opacity-100 transition delay-200 md:opacity-0 md:group-hover:opacity-100">
+                            <li>72 successful Mars flights</li>
+                            <li>Travelled with Perseverance Rover</li>
+                            <li>Proved flight on Mars is possible</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="group relative h-[520px] cursor-pointer sm:h-[450px] overflow-hidden rounded-[24px] shadow-[0_12px_35px_rgba(0,0,0,.35)] transition hover:-translate-y-3 hover:shadow-[0_25px_55px_rgba(0,0,0,.5)]">
+                    <img
+                        src="../images/lasercom.jpg"
+                        alt="Laser Communications"
+                        class="h-full w-full object-cover transition duration-700 group-hover:scale-110">
+
+                    <div class="absolute inset-x-0 bottom-0 translate-y-0 bg-gradient-to-b md:translate-y-[70%] md:group-hover:translate-y-0 from-[rgba(11,31,58,.05)] to-[rgba(11,31,58,.97)] p-[35px] text-white transition duration-500">
+                        <span class="font-bold tracking-[2px] text-[#8FA8FF]">2023</span>
+
+                        <h3 class="my-[10px] mt-[-10px] text-[2rem] font-semibold">
+                            Laser Communications
+                        </h3>
+
+                        <p class="mb-[18px] leading-[1.7] opacity-100 transition delay-150 md:opacity-0 md:group-hover:opacity-100">
+                            Laser communication systems use infrared light instead of
+                            radio waves, allowing spacecraft to transmit enormous
+                            amounts of scientific data back to Earth.
+                        </p>
+
+                        <ul class="list-disc pl-[18px] leading-[1.9] opacity-100 transition delay-200 md:opacity-0 md:group-hover:opacity-100">
+                            <li>Up to 100× faster than radio</li>
+                            <li>Higher bandwidth transmission</li>
+                            <li>Future of deep-space communications</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    <!-- Technology Comparison -->
+        <section class="mx-auto mt-24 mb-28 w-full max-w-[1900px] px-5 sm:px-8 lg:mt-[160px] lg:mb-[180px] lg:px-10">
+            <div class="overflow-x-auto">
+            <table class="mx-auto min-w-[900px] w-full lg:w-[85%] overflow-hidden rounded-[18px] border-separate border-spacing-0 bg-[#0B1424] shadow-[0_15px_35px_rgba(0,0,0,.35)]">
+                <thead class="bg-[#0D1930] text-white">
+                    <tr>
+                        <th class="p-6 text-[1.05rem] font-bold">Technology Area</th>
+                        <th class="p-6 text-[1.05rem] font-bold">Earlier Technology</th>
+                        <th class="p-6 text-[1.05rem] font-bold">Modern Technology</th>
+                        <th class="p-6 text-[1.05rem] font-bold">Improvement</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="transition hover:bg-[#121F36]">
+                        <td class="border-b border-[#202D43] p-6 font-bold text-[#7C96FF]">Space Telescope</td>
+                        <td class="border-b border-[#202D43] p-6 leading-[1.7]">Hubble Space Telescope (1990)</td>
+                        <td class="border-b border-[#202D43] p-6 leading-[1.7]">James Webb Space Telescope (2021)</td>
+                        <td class="border-b border-[#202D43] p-6 leading-[1.7]">Infrared imaging, deeper observations, 100× greater sensitivity.</td>
+                    </tr>
+
+                    <tr class="transition hover:bg-[#121F36]">
+                        <td class="border-b border-[#202D43] p-6 font-bold text-[#7C96FF]">Navigation</td>
+                        <td class="border-b border-[#202D43] p-6 leading-[1.7]">Ground-controlled navigation</td>
+                        <td class="border-b border-[#202D43] p-6 leading-[1.7]">AI-assisted autonomous navigation</td>
+                        <td class="border-b border-[#202D43] p-6 leading-[1.7]">Higher precision with reduced dependence on Earth.</td>
+                    </tr>
+
+                    <tr class="transition hover:bg-[#121F36]">
+                        <td class="border-b border-[#202D43] p-6 font-bold text-[#7C96FF]">Communication</td>
+                        <td class="border-b border-[#202D43] p-6 leading-[1.7]">Traditional radio transmission</td>
+                        <td class="border-b border-[#202D43] p-6 leading-[1.7]">Laser (Optical) Communication</td>
+                        <td class="border-b border-[#202D43] p-6 leading-[1.7]">Up to 100× faster data transmission over long distances.</td>
+                    </tr>
+
+                    <tr class="transition hover:bg-[#121F36]">
+                        <td class="border-b border-[#202D43] p-6 font-bold text-[#7C96FF]">Propulsion</td>
+                        <td class="border-b border-[#202D43] p-6 leading-[1.7]">Chemical Rocket Engines</td>
+                        <td class="border-b border-[#202D43] p-6 leading-[1.7]">Ion & Electric Propulsion</td>
+                        <td class="border-b border-[#202D43] p-6 leading-[1.7]">Higher fuel efficiency and longer mission duration.</td>
+                    </tr>
+
+                    <tr class="transition hover:bg-[#121F36]">
+                        <td class="border-b border-[#202D43] p-6 font-bold text-[#7C96FF]">Power Source</td>
+                        <td class="border-b border-[#202D43] p-6 leading-[1.7]">Basic Solar Panels</td>
+                        <td class="border-b border-[#202D43] p-6 leading-[1.7]">High-Efficiency Multi-Junction Solar Arrays</td>
+                        <td class="border-b border-[#202D43] p-6 leading-[1.7]">Greater energy generation with less surface area.</td>
+                    </tr>
+
+                    <tr class="transition hover:bg-[#121F36]">
+                        <td class="border-b border-[#202D43] p-6 font-bold text-[#7C96FF]">Robotics</td>
+                        <td class="border-b border-[#202D43] p-6 leading-[1.7]">Remote-controlled probes</td>
+                        <td class="border-b border-[#202D43] p-6 leading-[1.7]">Autonomous Mars Rovers</td>
+                        <td class="border-b border-[#202D43] p-6 leading-[1.7]">Independent navigation, hazard avoidance and scientific analysis.</td>
+                    </tr>
+
+                    <tr class="transition hover:bg-[#121F36]">
+                        <td class="p-6 font-bold text-[#7C96FF]">Manufacturing</td>
+                        <td class="p-6 leading-[1.7]">Conventional machining</td>
+                        <td class="p-6 leading-[1.7]">3D Printed Space Components</td>
+                        <td class="p-6 leading-[1.7]">Lighter parts, reduced cost and faster production.</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="../javascript/spaceTechnology.js"></script>
+</body>
+
+</html>

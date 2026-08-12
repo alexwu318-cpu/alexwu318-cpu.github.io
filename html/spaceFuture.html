@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Astraea | Future of Space Exploration</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        space: ["Space Grotesk", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="../CSS/navbar.css">
+
+    <script src="../javascript/navbar.js" defer></script>
+    <script src="../javascript/spaceFuture.js" defer></script>
+</head>
+
+<body class="overflow-x-hidden bg-[#050816] font-space text-[#E8EEF8] [background-image:linear-gradient(rgba(124,150,255,.045)_1px,transparent_1px),linear-gradient(90deg,rgba(124,150,255,.045)_1px,transparent_1px)] [background-size:32px_32px]">
+
+    <!-- Nav -->
+    <header id="navbar" class="topnav">
+    <div class="logo-container">
+    <a href="../index.html" class="logo">Astraea</a>
+    <img src="../images/logo.png" class="logo-icon">
+    </div>
+
+    <div class="menu-toggle" id="mobile-menu"> <!--for phones-->
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
+    <ul class="nav-links">
+        
+    <li class="dropdown">
+        <a href="#" class="dropbtn">Planets & Systems ▾</a>
+        <div class="dropdown-content">
+        <div class="nested-dropdown">
+            <a href="#" class="nested-dropbtn">Solar System Planets ▸</a>
+            <div class="nested-dropdown-content">
+            <a href="../html/Planets_Mercury.html">Mercury</a>
+            <a href="../html/Planets_Venus.html">Venus</a>
+            <a href="../html/Planets_Earth.html">Earth</a>
+            <a href="../html/Planets_Mars.html">Mars</a>
+            <a href="../html/Planets_Jupiter.html">Jupiter</a>
+            <a href="../html/Planets_Saturn.html">Saturn</a>
+            <a href="../html/Planets_Uranus.html">Uranus</a>
+            <a href="../html/Planets_Neptune.html">Neptune</a>
+            </div>
+        </div>
+        <a href="../html/exoplanets.html">Exoplanets</a>
+        <a href="../html/Alien Systems.html">Foreign Systems</a>
+        </div>
+    </li>
+
+        <li class="dropdown">
+        <a href="#" class="dropbtn">Missions & Spacecraft ▾</a>
+        <div class="dropdown-content">
+            <a href="../html/Europa Clipper.html">Europa Clipper</a>
+            <a href="../html/mars-missions.html">Mars Missions</a>
+            <a href="../html/Apollo.html">Apollo Missions</a>
+        </div>
+        </li>
+
+        <li class="dropdown">
+        <a href="#" class="dropbtn">Science & Tech ▾</a>
+        <div class="dropdown-content">
+            <a href="../html/spaceTechnology.html">Space Technology</a>
+            <a href="../html/SpacePhenomena.html">Space Phenomena</a>
+        </div>
+        </li>
+
+        <li class="dropdown">
+        <a href="#" class="dropbtn">Mysteries & History ▾</a>
+        <div class="dropdown-content">
+            <a href="../html/SpaceMysteries.html">Space Mysteries</a>
+            <a href="../html/spaceHistory.html">Space History</a>
+            <a href="../html/spaceFuture.html">Future of Space</a>
+        </div>
+        </li>
+
+    </ul>
+    </header>
+
+    <main class="pt-[76px]">
+
+    <!-- Hero -->
+        <section class="future-hero relative min-h-[calc(100vh-76px)] overflow-hidden px-5 py-14 sm:px-[7%] sm:py-20">
+
+            <div class="mx-auto grid max-w-[1600px] items-center gap-12 lg:min-h-[720px] lg:grid-cols-[.82fr_1.18fr] lg:gap-16">
+
+                <div class="future-content relative z-10">
+
+                    <p class="mb-5 text-sm font-semibold uppercase tracking-[4px] text-[#7C96FF]">
+                        Beyond Tomorrow
+                    </p>
+
+                    <h1 class="mb-7 text-5xl font-semibold uppercase leading-[1.02] tracking-[2px] md:text-7xl">
+                        The Future of<br>
+                        Space Exploration
+                    </h1>
+
+                    <p class="mb-9 max-w-[570px] text-lg leading-8 text-[#A1AEC1]">
+                        The next era of exploration may extend human activity from
+                        Earth orbit to the Moon, Mars and worlds beyond our solar system.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4">
+
+                        <a href="#roadmap"
+                           class="inline-flex items-center gap-6 bg-[#0D1930] px-7 py-4 text-sm font-semibold uppercase tracking-[1px] text-white transition hover:bg-[#5F7CFF]">
+                            Explore the Future
+                            <span>→</span>
+                        </a>
+
+                        <a href="#future-explorer"
+                           class="inline-flex items-center gap-6 border border-[#40516D] bg-[#0B1424] px-7 py-4 text-sm font-semibold uppercase tracking-[1px] transition hover:border-[#7C96FF]">
+                            View Roadmap
+                        </a>
+
+                    </div>
+
+                    <a href="#roadmap"
+                       class="mt-12 inline-flex items-center gap-4 text-xs font-semibold uppercase tracking-[2px]">
+                        Scroll to Explore
+
+                        <span class="flex h-9 w-9 items-center justify-center rounded-full border border-[#40516D]">
+                            ↓
+                        </span>
+                    </a>
+
+                </div>
+
+                <div class="future-visual relative min-h-[430px] sm:min-h-[560px] lg:min-h-[620px]">
+
+    <div class="absolute right-1/2 top-1/2 h-[320px] w-[320px] translate-x-1/2 -translate-y-1/2 rounded-full border border-[#2D3C56] sm:h-[500px] sm:w-[500px] lg:right-0 lg:h-[580px] lg:w-[580px] lg:translate-x-0"></div>
+
+    <div class="absolute right-1/2 top-1/2 h-[260px] w-[260px] translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[#40516D] sm:h-[400px] sm:w-[400px] lg:right-[60px] lg:h-[460px] lg:w-[460px] lg:translate-x-0"></div>
+
+    <div class="absolute right-1/2 top-1/2 h-[180px] w-[180px] translate-x-1/2 -translate-y-1/2 rounded-full border border-[#2D3C56] sm:h-[280px] sm:w-[280px] lg:right-[140px] lg:h-[300px] lg:w-[300px] lg:translate-x-0"></div>
+
+    <div class="absolute right-1/2 top-1/2 h-[140px] w-[140px] translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full border-[6px] border-[#111D31] sm:h-[180px] sm:w-[180px] lg:right-[190px] lg:h-[200px] lg:w-[200px] lg:translate-x-0 lg:border-[10px] shadow-[0_20px_70px_rgba(0,0,0,.55)]">
+        <img
+            src="../images/futureSpaceex.jpg"
+            alt="Future lunar settlement"
+            class="h-full w-full object-cover">
+    </div>
+
+    <a
+        href="https://www.nasa.gov/humans-in-space/artemis/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="future-point group absolute hidden sm:block left-[15%] top-[18%] z-20">
+
+        <span class="block h-5 w-5 rounded-full bg-[#5F7CFF] shadow-[0_0_0_10px_rgba(65,105,225,.12)] transition duration-300 group-hover:scale-150 group-hover:opacity-0 group-focus:scale-150 group-focus:opacity-0"></span>
+
+        <div class="absolute left-0 top-0 w-[220px] lg:w-[250px] origin-top-left scale-0 border border-[#34445F] bg-[#0B1424] p-6 opacity-0 shadow-[0_18px_45px_rgba(0,0,0,.45)] transition duration-300 group-hover:scale-100 group-hover:opacity-100 group-focus:scale-100 group-focus:opacity-100">
+
+            <p class="mb-2 text-xs font-semibold uppercase tracking-[2px] text-[#7C96FF]">
+                Destination 01
+            </p>
+
+            <h3 class="mb-3 text-xl font-semibold uppercase">
+                Lunar Surface
+            </h3>
+
+            <p class="text-sm leading-6 text-[#9AA9BF]">
+                Lunar bases could support scientific research, resource testing and preparation for missions deeper into space.
+            </p>
+
+        </div>
+
+    </a>
+
+    <a
+        href="https://www.nasa.gov/MoonToMarsArchitecture/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="future-point group absolute hidden sm:block right-[7%] top-[25%] z-20">
+
+        <span class="block h-5 w-5 rounded-full bg-[#0D1930] transition duration-300 group-hover:scale-150 group-hover:opacity-0 group-focus:scale-150 group-focus:opacity-0"></span>
+
+        <div class="absolute right-0 top-0 w-[220px] lg:w-[250px] origin-top-right scale-0 bg-[#0D1930] p-6 text-white opacity-0 shadow-[0_18px_45px_rgba(0,0,0,.5)] transition duration-300 group-hover:scale-100 group-hover:opacity-100 group-focus:scale-100 group-focus:opacity-100">
+
+            <p class="mb-2 text-xs font-semibold uppercase tracking-[2px] text-[#8FA8FF]">
+                Destination 02
+            </p>
+
+            <h3 class="mb-3 text-xl font-semibold uppercase">
+                Mars
+            </h3>
+
+            <p class="text-sm leading-6 text-white/70">
+                Human missions to Mars will require reliable habitats, life support and greater independence from Earth.
+            </p>
+
+        </div>
+
+    </a>
+
+    <a
+        href="https://www.nasa.gov/international-space-station/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="future-point group absolute hidden sm:block bottom-[14%] left-[25%] z-20">
+
+        <span class="block h-4 w-4 rounded-full bg-[#5F7CFF] transition duration-300 group-hover:scale-150 group-hover:opacity-0 group-focus:scale-150 group-focus:opacity-0"></span>
+
+        <div class="absolute bottom-0 left-0 w-[220px] lg:w-[250px] origin-bottom-left scale-0 border border-[#34445F] bg-[#0B1424] p-6 opacity-0 shadow-[0_18px_45px_rgba(0,0,0,.45)] transition duration-300 group-hover:scale-100 group-hover:opacity-100 group-focus:scale-100 group-focus:opacity-100">
+
+            <p class="mb-2 text-xs font-semibold uppercase tracking-[2px] text-[#7C96FF]">
+                Destination 03
+            </p>
+
+            <h3 class="mb-3 text-xl font-semibold uppercase">
+                Orbital Habitats
+            </h3>
+
+            <p class="text-sm leading-6 text-[#9AA9BF]">
+                Larger orbital stations may become research centres, transport hubs and long-term living environments.
+            </p>
+
+        </div>
+
+    </a>
+
+    <a
+        href="https://science.nasa.gov/exoplanets/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="future-point group absolute hidden sm:block bottom-[12%] right-[15%] z-20">
+
+        <span class="block h-4 w-4 rounded-full bg-[#0D1930] transition duration-300 group-hover:scale-150 group-hover:opacity-0 group-focus:scale-150 group-focus:opacity-0"></span>
+
+        <div class="absolute bottom-0 right-0 w-[220px] lg:w-[250px] origin-bottom-right scale-0 bg-[#5F7CFF] p-6 text-white opacity-0 shadow-[0_18px_45px_rgba(0,0,0,.5)] transition duration-300 group-hover:scale-100 group-hover:opacity-100 group-focus:scale-100 group-focus:opacity-100">
+
+            <p class="mb-2 text-xs font-semibold uppercase tracking-[2px] text-white/70">
+                Destination 04
+            </p>
+
+            <h3 class="mb-3 text-xl font-semibold uppercase">
+                Beyond the Solar System
+            </h3>
+
+            <p class="text-sm leading-6 text-white/80">
+                Future robotic probes may explore distant planetary systems and search for environments capable of supporting life.
+            </p>
+
+        </div>
+
+    </a>
+
+</div>
+
+                <div class="grid gap-3 sm:hidden">
+                    <a href="https://www.nasa.gov/humans-in-space/artemis/" target="_blank" rel="noopener noreferrer" class="border border-[#34445F] bg-[#0B1424] p-5">
+                        <p class="text-xs font-semibold uppercase tracking-[2px] text-[#7C96FF]">Destination 01</p>
+                        <h3 class="mt-2 font-semibold uppercase">Lunar Surface</h3>
+                        <p class="mt-2 text-sm leading-6 text-[#9AA9BF]">Lunar bases could support research, resource testing and preparation for deeper missions.</p>
+                    </a>
+
+                    <a href="https://www.nasa.gov/MoonToMarsArchitecture/" target="_blank" rel="noopener noreferrer" class="border border-[#34445F] bg-[#0B1424] p-5">
+                        <p class="text-xs font-semibold uppercase tracking-[2px] text-[#7C96FF]">Destination 02</p>
+                        <h3 class="mt-2 font-semibold uppercase">Mars</h3>
+                        <p class="mt-2 text-sm leading-6 text-[#9AA9BF]">Human Mars missions will require reliable habitats, life support and greater independence from Earth.</p>
+                    </a>
+
+                    <a href="https://www.nasa.gov/international-space-station/" target="_blank" rel="noopener noreferrer" class="border border-[#34445F] bg-[#0B1424] p-5">
+                        <p class="text-xs font-semibold uppercase tracking-[2px] text-[#7C96FF]">Destination 03</p>
+                        <h3 class="mt-2 font-semibold uppercase">Orbital Habitats</h3>
+                        <p class="mt-2 text-sm leading-6 text-[#9AA9BF]">Larger stations may become research centres, transport hubs and long-term living environments.</p>
+                    </a>
+
+                    <a href="https://science.nasa.gov/exoplanets/" target="_blank" rel="noopener noreferrer" class="border border-[#34445F] bg-[#0B1424] p-5">
+                        <p class="text-xs font-semibold uppercase tracking-[2px] text-[#7C96FF]">Destination 04</p>
+                        <h3 class="mt-2 font-semibold uppercase">Beyond the Solar System</h3>
+                        <p class="mt-2 text-sm leading-6 text-[#9AA9BF]">Future robotic probes may explore distant planetary systems and search for environments capable of supporting life.</p>
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+    <!-- Roadmap -->
+        <section id="roadmap" class="roadmap-section border-y border-[#202D43] bg-[#07101D] px-[7%] py-24">
+
+            <div class="mx-auto max-w-[1450px]">
+
+                <div class="roadmap-header mb-16 grid gap-8 md:grid-cols-[.7fr_1.3fr]">
+
+                    <div>
+
+                        <p class="mb-3 text-xs font-semibold uppercase tracking-[3px] text-[#7C96FF]">
+                            Possible Pathways
+                        </p>
+
+                        <h2 class="text-4xl font-semibold uppercase tracking-[2px] md:text-5xl">
+                            The Road Ahead
+                        </h2>
+
+                    </div>
+
+                    <p class="max-w-[700px] text-lg leading-8 text-[#9AA9BF]">
+                        Future exploration will depend on scientific discovery,
+                        international cooperation, responsible technology and the
+                        ability to live beyond Earth for longer periods.
+                    </p>
+
+                </div>
+
+                <div class="roadmap-grid relative space-y-8">
+
+                    <div class="absolute bottom-0 left-[35px] top-0 hidden w-px bg-[#34445F] md:block"></div>
+
+                    <article class="roadmap-card relative grid gap-7 md:grid-cols-[70px_200px_1fr] md:items-center">
+
+                        <div class="relative z-10 flex h-[70px] w-[70px] items-center justify-center rounded-full border border-[#40577A] bg-[#0B1424] font-semibold transition hover:border-[#7C96FF] hover:bg-[#5F7CFF] hover:text-white">
+                            01
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold uppercase tracking-[2px] text-[#7C96FF]">
+                                2026–2035
+                            </p>
+
+                            <h3 class="mt-2 text-xl font-semibold uppercase">
+                                Build and Test
+                            </h3>
+                        </div>
+
+                        <p class="border-l border-[#293850] pl-7 leading-7 text-[#9AA9BF]">
+                            Develop reusable spacecraft, test lunar systems, improve
+                            surface power and prepare technologies for longer missions.
+                        </p>
+
+                    </article>
+
+                    <article class="roadmap-card relative grid gap-7 md:grid-cols-[70px_200px_1fr] md:items-center">
+
+                        <div class="relative z-10 flex h-[70px] w-[70px] items-center justify-center rounded-full border border-[#40577A] bg-[#0B1424] font-semibold transition hover:border-[#7C96FF] hover:bg-[#5F7CFF] hover:text-white">
+                            02
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold uppercase tracking-[2px] text-[#7C96FF]">
+                                2035–2045
+                            </p>
+
+                            <h3 class="mt-2 text-xl font-semibold uppercase">
+                                Establish and Expand
+                            </h3>
+                        </div>
+
+                        <p class="border-l border-[#293850] pl-7 leading-7 text-[#9AA9BF]">
+                            Build permanent lunar research stations, develop local
+                            resources and expand scientific activity around the Moon.
+                        </p>
+
+                    </article>
+
+                    <article class="roadmap-card relative grid gap-7 md:grid-cols-[70px_200px_1fr] md:items-center">
+
+                        <div class="relative z-10 flex h-[70px] w-[70px] items-center justify-center rounded-full border border-[#40577A] bg-[#0B1424] font-semibold transition hover:border-[#7C96FF] hover:bg-[#5F7CFF] hover:text-white">
+                            03
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold uppercase tracking-[2px] text-[#7C96FF]">
+                                2045–2060
+                            </p>
+
+                            <h3 class="mt-2 text-xl font-semibold uppercase">
+                                Prepare for Mars
+                            </h3>
+                        </div>
+
+                        <p class="border-l border-[#293850] pl-7 leading-7 text-[#9AA9BF]">
+                            Test closed-loop habitats, radiation protection, autonomous
+                            cargo systems and technologies for long-distance travel.
+                        </p>
+
+                    </article>
+
+                    <article class="roadmap-card relative grid gap-7 md:grid-cols-[70px_200px_1fr] md:items-center">
+
+                        <div class="relative z-10 flex h-[70px] w-[70px] items-center justify-center rounded-full border border-[#40577A] bg-[#0B1424] font-semibold transition hover:border-[#7C96FF] hover:bg-[#5F7CFF] hover:text-white">
+                            04
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold uppercase tracking-[2px] text-[#7C96FF]">
+                                2060–2080
+                            </p>
+
+                            <h3 class="mt-2 text-xl font-semibold uppercase">
+                                Connect New Worlds
+                            </h3>
+                        </div>
+
+                        <p class="border-l border-[#293850] pl-7 leading-7 text-[#9AA9BF]">
+                            Create an interplanetary transport network connecting Earth,
+                            orbital stations, the Moon and possible settlements on Mars.
+                        </p>
+
+                    </article>
+
+                    <article class="roadmap-card relative grid gap-7 md:grid-cols-[70px_200px_1fr] md:items-center">
+
+                        <div class="relative z-10 flex h-[70px] w-[70px] items-center justify-center rounded-full border border-[#40577A] bg-[#0B1424] font-semibold transition hover:border-[#7C96FF] hover:bg-[#5F7CFF] hover:text-white">
+                            05
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-bold uppercase tracking-[2px] text-[#7C96FF]">
+                                2080+
+                            </p>
+
+                            <h3 class="mt-2 text-xl font-semibold uppercase">
+                                Beyond the Solar System
+                            </h3>
+                        </div>
+
+                        <p class="border-l border-[#293850] pl-7 leading-7 text-[#9AA9BF]">
+                            Send advanced robotic probes farther into space and continue
+                            the search for habitable environments and signs of life.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    <!-- Vision -->
+        <section class="vision-section px-[6%] py-28">
+
+            <div class="mx-auto max-w-[1550px]">
+
+                <div class="vision-header mb-14 flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
+
+                    <div>
+
+                        <p class="mb-3 text-xs font-semibold uppercase tracking-[3px] text-[#7C96FF]">
+                            Five Priorities
+                        </p>
+
+                        <h2 class="text-4xl font-semibold uppercase tracking-[2px] md:text-5xl">
+                            Our Vision for the Future
+                        </h2>
+
+                    </div>
+
+                    <p class="max-w-[560px] leading-7 text-[#9AA9BF]">
+                        Future missions must balance discovery with safety,
+                        sustainability and responsible use of space environments.
+                    </p>
+
+                </div>
+
+                <div class="vision-grid grid gap-6 lg:grid-cols-12">
+
+                    <article class="vision-card group relative min-h-[520px] overflow-hidden bg-[#0D1930] text-white lg:col-span-7 lg:row-span-2">
+
+                        <img src="../images/lunarBase.jpg"
+                             alt="Future lunar base"
+                             class="absolute inset-0 h-full w-full object-cover opacity-65 transition duration-700 group-hover:scale-105">
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#07101F] via-[#07101F]/55 to-transparent"></div>
+
+                        <div class="relative flex min-h-[520px] flex-col justify-end p-9 md:p-12">
+
+                            <p class="mb-3 text-sm font-semibold uppercase tracking-[3px] text-[#A6B8FF]">
+                                Living Beyond Earth
+                            </p>
+
+                            <h3 class="mb-4 text-3xl font-semibold uppercase md:text-4xl">
+                                Sustainable Lunar Bases
+                            </h3>
+
+                            <p class="mb-7 max-w-[650px] leading-7 text-white/80">
+                                Lunar habitats could support scientific research,
+                                technology testing and preparation for missions deeper
+                                into the solar system.
+                            </p>
+
+                            <a href="https://www.nasa.gov/humans-in-space/artemis/"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="inline-flex w-fit items-center gap-5 border border-white/50 px-6 py-3 text-xs font-semibold uppercase tracking-[1px] transition hover:bg-[#E8EEF8] hover:text-[#07101D]">
+                                Explore Lunar Missions
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                    <article class="vision-card group relative min-h-[250px] overflow-hidden border border-[#293850] bg-[#0B1424] lg:col-span-5">
+
+                        <img src="../images/marsMission.jpg"
+                             alt="Future Mars mission"
+                             class="h-[190px] w-full object-cover transition duration-700 group-hover:scale-105 sm:absolute sm:right-0 sm:top-0 sm:h-full sm:w-[48%]">
+
+                        <div class="relative z-10 flex min-h-[250px] w-full flex-col justify-center p-8 sm:w-[58%]">
+
+                            <p class="mb-3 text-xs font-semibold uppercase tracking-[2px] text-[#7C96FF]">
+                                Human Exploration
+                            </p>
+
+                            <h3 class="mb-4 text-2xl font-semibold uppercase">
+                                Mars Missions
+                            </h3>
+
+                            <p class="mb-5 text-sm leading-6 text-[#9AA9BF]">
+                                Long-duration missions will require reliable habitats,
+                                life support and greater independence from Earth.
+                            </p>
+
+                            <a href="https://www.nasa.gov/MoonToMarsArchitecture/"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="text-xs font-bold uppercase">
+                                Learn More →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                    <article class="vision-card group min-h-[245px] border border-[#293850] bg-[#091321] p-8 transition hover:-translate-y-2 hover:border-[#7C96FF] lg:col-span-3">
+
+                        <span class="mb-10 flex h-12 w-12 items-center justify-center rounded-full border border-[#40516D] text-lg">
+                            ◇
+                        </span>
+
+                        <h3 class="mb-4 text-xl font-semibold uppercase">
+                            Orbital Habitats
+                        </h3>
+
+                        <p class="text-sm leading-6 text-[#9AA9BF]">
+                            Larger stations may become research centres, transport hubs
+                            and long-term living environments.
+                        </p>
+
+                    </article>
+
+                    <article class="vision-card group min-h-[245px] border border-[#293850] bg-[#091321] p-8 transition hover:-translate-y-2 hover:border-[#7C96FF] lg:col-span-2">
+
+                        <span class="mb-10 flex h-12 w-12 items-center justify-center rounded-full border border-[#40516D] text-lg">
+                            ♻
+                        </span>
+
+                        <h3 class="mb-4 text-xl font-semibold uppercase">
+                            Cleaner Spacecraft
+                        </h3>
+
+                        <p class="text-sm leading-6 text-[#9AA9BF]">
+                            Reusable systems and responsible disposal can reduce waste
+                            in orbit.
+                        </p>
+
+                    </article>
+
+                    <article class="vision-card group relative min-h-[300px] overflow-hidden border border-[#293850] bg-[#0B1424] lg:col-span-5">
+
+                        <img src="../images/emergingTechnology.jpg"
+                             alt="Emerging space technology"
+                             class="h-[170px] w-full object-cover transition duration-700 group-hover:scale-105">
+
+                        <div class="p-7">
+
+                            <p class="mb-2 text-xs font-semibold uppercase tracking-[2px] text-[#7C96FF]">
+                                Intelligent Exploration
+                            </p>
+
+                            <h3 class="mb-3 text-xl font-semibold uppercase">
+                                Emerging Technologies
+                            </h3>
+
+                            <p class="text-sm leading-6 text-[#9AA9BF]">
+                                Robotics, artificial intelligence and advanced
+                                communication will allow missions to operate farther
+                                from Earth.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="vision-card group relative min-h-[300px] overflow-hidden bg-[#5F7CFF] text-white lg:col-span-7">
+
+                        <div class="absolute right-[-80px] top-[-80px] h-[300px] w-[300px] rounded-full border border-white/30"></div>
+                        <div class="absolute right-[20px] top-[20px] h-[180px] w-[180px] rounded-full border border-white/30"></div>
+
+                        <div class="relative max-w-[680px] p-9">
+
+                            <p class="mb-3 text-xs font-semibold uppercase tracking-[3px] text-white/70">
+                                The Greater Goal
+                            </p>
+
+                            <h3 class="mb-4 text-3xl font-semibold uppercase">
+                                Search for Life Beyond Earth
+                            </h3>
+
+                            <p class="mb-7 leading-7 text-white/80">
+                                Future observatories and robotic missions may help
+                                determine whether environments suitable for life exist
+                                elsewhere in the universe.
+                            </p>
+
+                            <a href="https://science.nasa.gov/exoplanets/"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="inline-flex items-center gap-5 border border-white/50 px-6 py-3 text-xs font-semibold uppercase transition hover:bg-[#E8EEF8] hover:text-[#7C96FF]">
+                                Explore Exoplanets
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    <!-- Future Statistics -->
+        <section class="future-statistics bg-[#0D1930] px-[7%] py-16 text-white">
+
+            <div class="mx-auto grid max-w-[1450px] gap-10 sm:grid-cols-2 lg:grid-cols-4">
+
+                <div class="stat-box border-l border-white/25 pl-7">
+                    <p class="mb-2 text-5xl font-semibold">5</p>
+                    <p class="text-sm uppercase tracking-[2px] text-white/65">
+                        Exploration Eras
+                    </p>
+                </div>
+
+                <div class="stat-box border-l border-white/25 pl-7">
+                    <p class="mb-2 text-5xl font-semibold">4</p>
+                    <p class="text-sm uppercase tracking-[2px] text-white/65">
+                        Core Priorities
+                    </p>
+                </div>
+
+                <div class="stat-box border-l border-white/25 pl-7">
+                    <p class="mb-2 text-5xl font-semibold">3</p>
+                    <p class="text-sm uppercase tracking-[2px] text-white/65">
+                        Major Destinations
+                    </p>
+                </div>
+
+                <div class="stat-box border-l border-white/25 pl-7">
+                    <p class="mb-2 text-5xl font-semibold">1</p>
+                    <p class="text-sm uppercase tracking-[2px] text-white/65">
+                        Shared Future
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    <!-- Interactive Roadmap -->
+        <section id="future-explorer" class="future-explorer px-5 py-20 sm:px-[6%] sm:py-28">
+
+    <div class="mx-auto max-w-[1550px]">
+
+        <div class="mb-14">
+
+            <p class="mb-3 text-xs font-semibold uppercase tracking-[3px] text-[#7C96FF]">
+                Interactive Roadmap
+            </p>
+
+            <h2 class="text-4xl font-semibold uppercase tracking-[2px] md:text-5xl">
+                Explore the Future
+            </h2>
+
+        </div>
+
+        <div class="grid overflow-hidden border border-[#293850] bg-[#0B1424] lg:grid-cols-[360px_1fr]">
+
+            <div class="phase-panel border-b border-[#293850] lg:border-b-0 lg:border-r">
+
+                <button
+                    type="button"
+                    class="phase-btn w-full border-b border-[#202D43] px-7 py-7 text-left transition hover:bg-[#121F36] aria-selected:bg-[#0D1930] aria-selected:text-white"
+                    data-year="2026–2035"
+                    data-title="Build and Test"
+                    data-text="Early development focuses on reusable spacecraft, robotic exploration, surface power systems and technology testing near Earth and the Moon."
+                    data-image="../images/futurebuild1.jpg"
+                    data-alt="Reusable spacecraft and lunar technology testing"
+                    data-link="https://www.nasa.gov/humans-in-space/artemis/"
+                    aria-selected="true">
+
+                    <span class="block text-xs font-semibold uppercase tracking-[2px] text-[#7C96FF]">
+                        Phase 01
+                    </span>
+
+                    <span class="mt-2 block text-lg font-semibold uppercase">
+                        Build and Test
+                    </span>
+
+                </button>
+
+                <button
+                    type="button"
+                    class="phase-btn w-full border-b border-[#202D43] px-7 py-7 text-left transition hover:bg-[#121F36] aria-selected:bg-[#0D1930] aria-selected:text-white"
+                    data-year="2035–2045"
+                    data-title="Establish and Expand"
+                    data-text="Permanent lunar research facilities may support longer missions, stronger transport systems and greater use of local resources."
+                    data-image="../images/futurebuild2.jpg"
+                    data-alt="Permanent lunar research settlement"
+                    data-link="https://www.nasa.gov/MoonToMarsArchitecture/"
+                    aria-selected="false">
+
+                    <span class="block text-xs font-semibold uppercase tracking-[2px] text-[#7C96FF]">
+                        Phase 02
+                    </span>
+
+                    <span class="mt-2 block text-lg font-semibold uppercase">
+                        Establish and Expand
+                    </span>
+
+                </button>
+
+                <button
+                    type="button"
+                    class="phase-btn w-full border-b border-[#202D43] px-7 py-7 text-left transition hover:bg-[#121F36] aria-selected:bg-[#0D1930] aria-selected:text-white"
+                    data-year="2045–2060"
+                    data-title="Prepare for Mars"
+                    data-text="Closed-loop habitats, radiation protection and autonomous cargo systems will be tested before humans travel safely to Mars."
+                    data-image="../images/futurebuild3.jpg"
+                    data-alt="Human mission preparing to travel to Mars"
+                    data-link="https://www.nasa.gov/MoonToMarsArchitecture/"
+                    aria-selected="false">
+
+                    <span class="block text-xs font-semibold uppercase tracking-[2px] text-[#7C96FF]">
+                        Phase 03
+                    </span>
+
+                    <span class="mt-2 block text-lg font-semibold uppercase">
+                        Prepare for Mars
+                    </span>
+
+                </button>
+
+                <button
+                    type="button"
+                    class="phase-btn w-full border-b border-[#202D43] px-7 py-7 text-left transition hover:bg-[#121F36] aria-selected:bg-[#0D1930] aria-selected:text-white"
+                    data-year="2060–2080"
+                    data-title="Connect New Worlds"
+                    data-text="Transport routes, communication relays and orbital stations may form an interplanetary network connecting Earth, the Moon and Mars."
+                    data-image="../images/futurebuild4.jpeg"
+                    data-alt="Interplanetary transport network"
+                    data-link="https://www.nasa.gov/MoonToMarsArchitecture/"
+                    aria-selected="false">
+
+                    <span class="block text-xs font-semibold uppercase tracking-[2px] text-[#7C96FF]">
+                        Phase 04
+                    </span>
+
+                    <span class="mt-2 block text-lg font-semibold uppercase">
+                        Connect New Worlds
+                    </span>
+
+                </button>
+
+                <button
+                    type="button"
+                    class="phase-btn w-full px-7 py-7 text-left transition hover:bg-[#121F36] aria-selected:bg-[#0D1930] aria-selected:text-white"
+                    data-year="2080+"
+                    data-title="Beyond the Solar System"
+                    data-text="Advanced observatories and robotic probes may explore distant planetary systems and search for signs of life."
+                    data-image="../images/futurebuild5.jpg"
+                    data-alt="Spacecraft travelling beyond the solar system"
+                    data-link="https://science.nasa.gov/exoplanets/"
+                    aria-selected="false">
+
+                    <span class="block text-xs font-semibold uppercase tracking-[2px] text-[#7C96FF]">
+                        Phase 05
+                    </span>
+
+                    <span class="mt-2 block text-lg font-semibold uppercase">
+                        Beyond the Solar System
+                    </span>
+
+                </button>
+
+            </div>
+
+            <div class="phase-display grid min-h-[600px] lg:grid-cols-[1fr_360px]">
+
+                <div class="relative min-h-[430px] overflow-hidden bg-[#111C2E]">
+
+                    <img
+                        id="phase-image"
+                        src="../images/futurebuild1.jpg"
+                        alt="Reusable spacecraft and lunar technology testing"
+                        class="absolute inset-0 h-full w-full object-cover opacity-100 transition-opacity duration-300">
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#050B16]/85 via-transparent to-transparent"></div>
+
+                    <div class="absolute bottom-8 left-8 right-8 text-white">
+
+                        <p
+                            id="phase-year"
+                            class="mb-3 text-sm font-semibold uppercase tracking-[3px] text-[#A6B8FF]">
+                            2026–2035
+                        </p>
+
+                        <h3
+                            id="phase-title"
+                            class="text-3xl font-semibold uppercase md:text-4xl">
+                            Build and Test
+                        </h3>
+
+                    </div>
+
+                </div>
+
+                <div class="flex flex-col justify-between p-8 md:p-10">
+
+                    <div>
+
+                        <p class="mb-4 text-xs font-semibold uppercase tracking-[3px] text-[#7C96FF]">
+                            Phase Overview
+                        </p>
+
+                        <p id="phase-text" class="leading-8 text-[#9AA9BF]">
+                            Early development focuses on reusable spacecraft, robotic exploration, surface power systems and technology testing near Earth and the Moon.
+                        </p>
+
+                    </div>
+
+                    <a
+                        id="phase-link"
+                        href="https://www.nasa.gov/humans-in-space/artemis/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="mt-10 inline-flex w-fit items-center gap-6 border border-[#40516D] px-6 py-3 text-xs font-semibold uppercase tracking-[1px] transition hover:border-[#7C96FF] hover:bg-[#0D1930] hover:text-white">
+                        View Details
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- Future Questions -->
+        <section class="future-questions border-y border-[#202D43] bg-[#091321] px-[7%] py-24">
+
+            <div class="mx-auto max-w-[1450px]">
+
+                <div class="mb-14 grid gap-8 md:grid-cols-[.8fr_1.2fr]">
+
+                    <h2 class="text-4xl font-semibold uppercase tracking-[2px]">
+                        Questions That Will Shape the Future
+                    </h2>
+
+                    <p class="max-w-[650px] leading-7 text-[#9AA9BF]">
+                        The future of space exploration will not be decided by
+                        technology alone. It will also depend on ethical, environmental
+                        and social choices.
+                    </p>
+
+                </div>
+
+                <div class="grid gap-6 lg:grid-cols-3">
+
+                    <article class="question-card group flex min-h-[340px] flex-col justify-between border border-[#293850] bg-[#0B1424] p-8 transition hover:-translate-y-2 hover:border-[#7C96FF]">
+
+                        <span class="text-sm font-semibold tracking-[3px] text-[#7C96FF]">
+                            01
+                        </span>
+
+                        <div>
+
+                            <h3 class="mb-5 text-2xl font-semibold uppercase">
+                                Who Governs Space?
+                            </h3>
+
+                            <p class="leading-7 text-[#9AA9BF]">
+                                As activity increases beyond Earth, countries and
+                                organisations will need shared rules for cooperation,
+                                safety and access.
+                            </p>
+
+                        </div>
+
+                        <a href="https://www.unoosa.org/oosa/en/ourwork/spacelaw/treaties.html"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="mt-7 text-xs font-bold uppercase transition group-hover:text-[#7C96FF]">
+                            Explore Space Law →
+                        </a>
+
+                    </article>
+
+                    <article class="question-card group flex min-h-[340px] flex-col justify-between bg-[#0D1930] p-8 text-white transition hover:-translate-y-2">
+
+                        <span class="text-sm font-semibold tracking-[3px] text-[#A6B8FF]">
+                            02
+                        </span>
+
+                        <div>
+
+                            <h3 class="mb-5 text-2xl font-semibold uppercase">
+                                Can Settlements Sustain Themselves?
+                            </h3>
+
+                            <p class="leading-7 text-white/70">
+                                Future habitats must recycle water, produce food,
+                                generate energy and protect people with limited support
+                                from Earth.
+                            </p>
+
+                        </div>
+
+                        <a href="https://www.nasa.gov/MoonToMarsArchitecture/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="mt-7 text-xs font-bold uppercase text-[#A6B8FF]">
+                            Explore Moon to Mars →
+                        </a>
+
+                    </article>
+
+                    <article class="question-card group flex min-h-[340px] flex-col justify-between border border-[#293850] bg-[#0B1424] p-8 transition hover:-translate-y-2 hover:border-[#7C96FF]">
+
+                        <span class="text-sm font-semibold tracking-[3px] text-[#7C96FF]">
+                            03
+                        </span>
+
+                        <div>
+
+                            <h3 class="mb-5 text-2xl font-semibold uppercase">
+                                How Do We Protect Space?
+                            </h3>
+
+                            <p class="leading-7 text-[#9AA9BF]">
+                                Exploration must limit orbital debris, avoid harmful
+                                contamination and protect environments that may hold
+                                scientific value.
+                            </p>
+
+                        </div>
+
+                        <a href="https://www.esa.int/Space_Safety/Space_Debris"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="mt-7 text-xs font-bold uppercase transition group-hover:text-[#7C96FF]">
+                            Explore Space Safety →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    <!-- Continue Exploring -->
+        <section class="future-callout px-5 py-20 sm:px-[7%] sm:py-24">
+
+            <div class="mx-auto grid max-w-[1450px] overflow-hidden bg-[#5F7CFF] text-white lg:grid-cols-[1fr_420px]">
+
+                <div class="p-10 md:p-14">
+
+                    <p class="mb-4 text-xs font-semibold uppercase tracking-[3px] text-white/70">
+                        Continue Exploring
+                    </p>
+
+                    <h2 class="mb-5 text-3xl font-semibold uppercase md:text-5xl">
+                        The Future Has Not Been Written Yet
+                    </h2>
+
+                    <p class="max-w-[760px] leading-8 text-white/80">
+                        Every mission, discovery and new technology brings humanity
+                        closer to understanding its place in the universe.
+                    </p>
+
+                </div>
+
+                <div class="flex items-center justify-center border-t border-white/25 p-10 lg:border-l lg:border-t-0">
+
+                    <a href="../html/spaceHistory.html"
+                       class="inline-flex items-center gap-7 border border-white/60 px-8 py-4 text-sm font-semibold uppercase tracking-[1px] transition hover:bg-[#E8EEF8] hover:text-[#7C96FF]">
+                        Explore Space History
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#030711] px-[7%] py-10 text-white">
+
+        <div class="mx-auto flex max-w-[1450px] flex-col justify-between gap-8 md:flex-row md:items-center">
+
+            <div class="flex items-center gap-4">
+
+                <img src="../images/logo.png"
+                     alt="Astraea Logo"
+                     class="h-11 w-11 object-contain">
+
+                <div>
+                    <p class="text-xl font-semibold">Astraea</p>
+                    <p class="text-sm text-white/60">Explore beyond the known.</p>
+                </div>
+
+            </div>
+
+            <div class="flex flex-wrap gap-7 text-sm text-white/65">
+                <a href="spaceTechnology.html" class="hover:text-white">Space Technology</a>
+                <a href="spaceHistory.html" class="hover:text-white">Space History</a>
+                <a href="spaceFuture.html" class="hover:text-white">Future Exploration</a>
+            </div>
+
+            <p class="text-sm text-white/50">
+                © 2026 Astraea
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

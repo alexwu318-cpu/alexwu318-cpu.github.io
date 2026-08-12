@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alien Star Systems — Skies With More Than One Sun</title>
+<link rel="stylesheet" href="../CSS/navbar.css">
+<link rel="stylesheet" href="../CSS/Aliensystems.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="../javascript/navbar.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  ::root{
+    --nasa-blue:#4d8dff;
+    --nasa-red:#ff5733;
+
+    --paper:#0f1115;
+    --panel:#181c24;
+    --ink:#f5f7fa;
+    --line:#303846;
+    --dim:#a7b0bd;
+}
+  *{margin:0;padding:0;box-sizing:border-box;}
+ body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Space Grotesk', sans-serif;
+  line-height:1.6;
+}
+  a{ color:inherit; }
+  img{ display:block; max-width:100%; }
+
+  header.topbar{
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 1.1rem 6vw; border-bottom:3px solid var(--nasa-blue);
+    position:sticky; top:0; background:var(--paper); z-index:10;
+  }
+  .brand{ display:flex; align-items:center; gap:0.6rem; font-weight:800; letter-spacing:0.02em; }
+  .brand .dot{ width:14px; height:14px; border-radius:50%; background:var(--nasa-red); }
+  nav.toplinks{ display:flex; gap:1.6rem; font-size:0.85rem; font-weight:600; }
+  nav.toplinks a{ text-decoration:none; color:var(--dim); }
+  nav.toplinks a:hover{ color:var(--nasa-blue); }
+
+  .eyebrow{
+    font-size:0.75rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase;
+    color:var(--nasa-red); margin-bottom:0.8rem;
+  }
+  h1{ font-size:clamp(2rem,4.6vw,3.2rem); font-weight:800; line-height:1.15; max-width:20ch; }
+  h2{ font-size:clamp(1.4rem,2.8vw,2rem); font-weight:800; }
+  h3{ font-size:1.05rem; font-weight:700; }
+  .lede{ color:var(--dim); max-width:60ch; font-size:1.02rem; margin-top:1rem;}
+
+  section{ padding: 4.5vw 6vw; }
+  .section-head{ margin-bottom:2rem; }
+
+  .hero-intro{ padding: 4vw 6vw 2vw; }
+  .hero-grid{
+    display:grid; grid-template-columns: 2.2fr 1fr; gap:1.5rem;
+    padding: 0 6vw 1.5rem;
+  }
+  .hero-scroll{
+    display:flex; gap:0; overflow-x:auto; scroll-snap-type:x mandatory;
+    border:1px solid var(--line); border-radius:6px; background:#000;
+  }
+  .hero-scroll img{
+    scroll-snap-align:start; flex:0 0 100%; height:min(56vw,420px); object-fit:cover;
+  }
+  .hero-scroll-cap{ font-size:0.78rem; color:var(--dim); margin-top:0.6rem; }
+  .fact-panel{
+    border:1px solid var(--line); border-radius:6px; background:var(--panel);
+    display:flex; flex-direction:column; height:min(56vw,420px);
+  }
+  .fact-panel .fp-label{
+    font-size:0.7rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--nasa-blue); padding:0.9rem 1rem 0.4rem;
+  }
+  .fact-scroll{ overflow-y:auto; padding: 0 1rem 1rem; flex:1; }
+  .fact-item{ padding: 0.9rem 0; border-top:1px solid var(--line); font-size:0.88rem; }
+  .fact-item:first-child{ border-top:none; }
+  .fact-item b{ color:var(--nasa-red); display:block; font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:0.3rem;}
+  .hero-caption{ padding: 0 6vw 3vw; color:var(--dim); font-size:0.92rem; max-width:70ch; }
+  .hero-caption b{ color:var(--ink); }
+
+  .row{
+    display:grid; grid-template-columns: 1fr 1.4fr; gap: 2rem; align-items:center;
+    padding: 2.2rem 0; border-bottom:1px solid var(--line);
+  }
+  .row.reverse{ grid-template-columns: 1.4fr 1fr; }
+  .row.reverse .row-media{ order:2; }
+  .row.reverse .row-text{ order:1; }
+  .row-media img{ width:100%; border-radius:8px; border:1px solid var(--line); }
+  .row-media.pill img{ border-radius:999px; aspect-ratio:1/1; object-fit:cover; }
+  .row-media.square img{ aspect-ratio:1/1; object-fit:cover; }
+  .row-tag{ font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--nasa-blue); margin-bottom:0.5rem;}
+  .row-text p{ color:var(--dim); margin-top:0.5rem; }
+
+  .orbit-box{ border:1px solid var(--line); border-radius:8px; padding:1rem; background:var(--panel); display:flex; justify-content:center;}
+  svg#binary{ width:100%; max-width:320px; height:auto; }
+  .sun-a{ animation: orbitA 9s linear infinite; transform-origin: 160px 150px; }
+  .sun-b{ animation: orbitB 9s linear infinite; transform-origin: 160px 150px; }
+  @keyframes orbitA{ from{transform:rotate(0deg);} to{transform:rotate(360deg);} }
+  @keyframes orbitB{ from{transform:rotate(180deg);} to{transform:rotate(540deg);} }
+  .planet-orbit{ animation: orbitP 20s linear infinite; transform-origin: 160px 150px; }
+  @keyframes orbitP{ from{transform:rotate(0deg);} to{transform:rotate(360deg);} }
+
+  .spotlight{ border:1px solid var(--line); border-radius:10px; overflow:hidden; margin-bottom:2rem; }
+  .spotlight-top{ display:grid; grid-template-columns: 1fr 1.1fr; }
+  .spotlight-media img{ width:100%; height:100%; object-fit:cover; min-height:280px; }
+  .spotlight-info{ padding:1.8rem; display:flex; flex-direction:column; justify-content:center; }
+  .fact-callout{ margin-top:1rem; background:var(--panel); border-left:4px solid var(--nasa-red); padding:0.8rem 1rem; font-size:0.9rem; }
+  .fact-callout b{ color:var(--nasa-red); text-transform:uppercase; font-size:0.7rem; letter-spacing:0.08em; display:block; margin-bottom:0.25rem;}
+  .spotlight-body{ padding:1.5rem 1.8rem; border-top:1px solid var(--line); color:var(--dim); font-size:0.95rem;}
+
+  .grid-stats{ display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1.2rem; margin-top:1.5rem;}
+  .stat{ border:1px solid var(--line); border-radius:8px; padding:1.2rem; }
+  .stat .n{ font-size:1.8rem; font-weight:800; color:var(--nasa-blue); }
+  .stat .l{ font-size:0.8rem; color:var(--dim); margin-top:0.3rem; }
+
+  footer{ padding:2.5rem 6vw; border-top:1px solid var(--line); color:var(--dim); font-size:0.85rem; }
+  a.navlink{ color:var(--nasa-blue); font-weight:700; text-decoration:none; }
+
+  @media (max-width: 800px){
+    .hero-grid{ grid-template-columns:1fr; }
+    .fact-panel{ height:260px; }
+    .row, .row.reverse{ grid-template-columns:1fr; }
+    .row.reverse .row-media, .row.reverse .row-text{ order:initial; }
+    .spotlight-top{ grid-template-columns:1fr; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .sun-a, .sun-b, .planet-orbit{ animation:none !important; }
+  }
+</style>
+</head>
+<body>
+<header id="navbar" class="topnav">
+  <div class="logo-container">
+  <a href="../index.html" class="logo">Astraea</a>
+  <img src="../images/logo.png" class="logo-icon">
+  </div>
+
+  <div class="menu-toggle" id="mobile-menu"> <!--for phones-->
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+
+  <ul class="nav-links">
+    
+  <li class="dropdown">
+    <a href="#" class="dropbtn">Planets & Systems ▾</a>
+    <div class="dropdown-content">
+      <div class="nested-dropdown">
+        <a href="#" class="nested-dropbtn">Solar System Planets ▸</a>
+        <div class="nested-dropdown-content">
+          <a href="../html/Planets_Mercury.html">Mercury</a>
+          <a href="../html/Planets_Venus.html">Venus</a>
+          <a href="../html/Planets_Earth.html">Earth</a>
+          <a href="../html/Planets_Mars.html">Mars</a>
+          <a href="../html/Planets_Jupiter.html">Jupiter</a>
+          <a href="../html/Planets_Saturn.html">Saturn</a>
+          <a href="../html/Planets_Uranus.html">Uranus</a>
+          <a href="../html/Planets_Neptune.html">Neptune</a>
+        </div>
+      </div>
+      <a href="../html/exoplanets.html">Exoplanets</a>
+      <a href="../html/Alien Systems.html">Foreign Systems</a>
+    </div>
+  </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Missions & Spacecraft ▾</a>
+      <div class="dropdown-content">
+        <a href="../html/Europa Clipper.html">Europa Clipper</a>
+        <a href="../html/mars-missions.html">Mars Missions</a>
+        <a href="../html/Apollo.html">Apollo Missions</a>
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Science & Tech ▾</a>
+      <div class="dropdown-content">
+        <a href="../html/spaceTechnology.html">Space Technology</a>
+        <a href="../html/SpacePhenomena.html">Space Phenomena</a>
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Mysteries & History ▾</a>
+      <div class="dropdown-content">
+        <a href="../html/SpaceMysteries.html">Space Mysteries</a>
+        <a href="../html/spaceHistory.html">Space History</a>
+        <a href="../html/spaceFuture.html">Future of Space</a>
+      </div>
+    </li>
+
+  </ul>
+</header>
+
+<div class="hero-intro">
+  <div class="eyebrow">Beyond Single-Star Skies</div>
+  <h1>Some skies have two sunsets — or three, or more.</h1>
+  <p class="lede">Most stars in our galaxy aren't alone. Roughly half of all Sun-like stars belong to binary or multiple-star systems, orbiting a shared center of gravity. Any planets in these systems would see something no human ever has: more than one sun in the sky.</p>
+</div>
+
+<div class="hero-grid">
+  <div>
+    <div class="hero-scroll" id="heroScroll">
+      <img src="https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA10406.jpg" alt="Cassini photo of Alpha Centauri A and B above Saturn's horizon">
+      <img src="https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA14724.jpg" alt="Artist's concept of Kepler-16b, a planet with two suns">
+      <img src="https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA14727.jpg" alt="Diagram of the Kepler-16 binary star orbits">
+    </div>
+    <div class="hero-scroll-cap">Scroll → a real Cassini photo of Alpha Centauri above Saturn, plus NASA/JPL artist's concepts of Kepler-16b.</div>
+  </div>
+
+  <div class="fact-panel">
+    <div class="fp-label">Scroll ↓ Fun Facts</div>
+    <div class="fact-scroll">
+      <div class="fact-item"><b>Real Tatooine</b>Kepler-16b, confirmed in 2011, was the first planet found definitively orbiting two stars at once.</div>
+      <div class="fact-item"><b>Triple Neighbor</b>Alpha Centauri, our closest stellar neighbor, is actually three stars: A, B, and the red dwarf Proxima Centauri.</div>
+      <div class="fact-item"><b>Six Stars, One System</b>What looks like a single star, Castor, is actually three separate binary pairs bound together.</div>
+      <div class="fact-item"><b>Cold Despite Closeness</b>Kepler-16b orbits at a Venus-like distance from its stars but is still frigid, since both stars are dim.</div>
+      <div class="fact-item"><b>Two Sunsets</b>Standing on a circumbinary planet, you could watch both stars rise and set independently.</div>
+      <div class="fact-item"><b>Common, Not Rare</b>Multiple-star systems are so common that our single-star setup is the unusual one.</div>
+    </div>
+  </div>
+</div>
+
+<div class="hero-caption">
+  <b>What the sketch shows:</b> two stars orbiting a shared center of mass, with a small planet circling both from the outside — a real class of worlds called circumbinary planets.
+</div>
+
+<section style="padding-top:1rem;">
+  <div class="section-head">
+    <div class="eyebrow">Kinds of Multi-Star Systems</div>
+    <h2>Four ways a sky can hold more than one sun</h2>
+  </div>
+
+  <div class="row">
+    <div class="row-media orbit-box">
+      <svg id="binary" viewBox="0 0 320 300">
+        <ellipse cx="160" cy="150" rx="120" ry="55" fill="none" stroke="#dde2e8" stroke-width="1"/>
+        <ellipse cx="160" cy="150" rx="80" ry="36" fill="none" stroke="#dde2e8" stroke-width="1"/>
+        <g class="planet-orbit"><circle cx="260" cy="150" r="5" fill="#0b3d91"/></g>
+        <g class="sun-a"><circle cx="120" cy="150" r="20" fill="#fc3d21"/></g>
+        <g class="sun-b"><circle cx="120" cy="150" r="13" fill="#f2a24b"/></g>
+      </svg>
+    </div>
+    <div class="row-text">
+      <div class="row-tag">Binary Systems</div>
+      <h3>Two stars, one shared center of gravity</h3>
+      <p>Two stars locked in mutual orbit around a shared center of mass — the most common type of multiple-star system in the galaxy.</p>
+    </div>
+  </div>
+
+  <div class="row reverse">
+    <div class="row-media square">
+      <img src="https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA14724.jpg" alt="Artist's concept of Kepler-16b with two suns setting on the horizon">
+    </div>
+    <div class="row-text">
+      <div class="row-tag">Circumbinary Planets</div>
+      <h3>Orbiting both stars at once</h3>
+      <p>Planets that circle a binary pair from the outside, like real-world "Tatooine" worlds. Kepler-16b, confirmed in 2011, is the best-known example.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="row-media pill">
+      <img src="https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA14727.jpg" alt="Diagram of the Kepler-16 system orbits from overhead">
+    </div>
+    <div class="row-text">
+      <div class="row-tag">Circumstellar Planets</div>
+      <h3>Orbiting just one star of the pair</h3>
+      <p>Instead of circling both stars, some planets orbit only one, with the second star appearing as a bright, distant companion in the sky.</p>
+    </div>
+  </div>
+
+  <div class="row reverse">
+    <div class="row-media square">
+      <img src="https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA10406.jpg" alt="Alpha Centauri A and B seen above Saturn's horizon by Cassini">
+    </div>
+    <div class="row-text">
+      <div class="row-tag">Trinary &amp; Higher Systems</div>
+      <h3>Three or more stars, kept stable by hierarchy</h3>
+      <p>Systems like Alpha Centauri pair two stars closely while a third orbits much farther out — the arrangement that keeps such systems gravitationally stable.</p>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="section-head">
+    <div class="eyebrow">Featured Systems</div>
+    <h2>Two systems worth knowing</h2>
+  </div>
+
+  <div class="border border-[#afb2b7] rounded-xl overflow-hidden mb-8 bg-[#807a7a]">
+
+    <div class="spotlight-top">
+      <div class="spotlight-media">
+        <img src="https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA10406.jpg" alt="Cassini photo of Alpha Centauri above Saturn's horizon">
+      </div>
+      <div class="spotlight-info">
+        <div class="row-tag">Alpha Centauri</div>
+        <h3 style="font-size:1.4rem;">Our closest neighboring system</h3>
+        <div class="fact-callout"><b>Fun Fact</b>This photo isn't an illustration — Cassini really captured both Alpha Centauri A and B glowing above Saturn's horizon in 2008.</div>
+      </div>
+    </div>
+    <div class="spotlight-body">
+      Alpha Centauri is a triple system just 4.2 light-years away, made up of Alpha Centauri A and B — both Sun-like stars — and the faint red dwarf Proxima Centauri. From Saturn's orbit, this Cassini image shows how distinctly the two brighter stars still stand out, even though their light takes over four years to reach us.
+    </div>
+  </div>
+
+  <div class="spotlight" style="background:var(--paper);">
+    <div class="spotlight-top">
+      <div class="spotlight-media">
+        <img src="https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA14724.jpg" alt="Artist's concept of Kepler-16b orbiting two stars">
+      </div>
+      <div class="spotlight-info">
+        <div class="row-tag">Kepler-16b</div>
+        <h3 style="font-size:1.4rem;">The real "Tatooine"</h3>
+        <div class="fact-callout"><b>Fun Fact</b>Kepler-16b's two stars eclipse each other from our point of view, which is how scientists measured them so precisely.</div>
+      </div>
+    </div>
+    <div class="spotlight-body">
+      Kepler-16b is a cold, gaseous planet orbiting a close binary pair — a K dwarf about 69% the Sun's mass, and a red dwarf about 20%. It orbits its stars once every 229 days, at a distance comparable to Venus's orbit around our Sun, but stays frigid since both parent stars are far dimmer than ours.
+    </div>
+  </div>
+
+  <div class="grid-stats">
+    <div class="stat"><div class="n">~50%</div><div class="l">Sun-like stars in multiples</div></div>
+    <div class="stat"><div class="n">3</div><div class="l">Stars in Alpha Centauri</div></div>
+    <div class="stat"><div class="n">2011</div><div class="l">Year Kepler-16b was confirmed</div></div>
+    <div class="stat"><div class="n">6</div><div class="l">Stars bound together in Castor</div></div>
+  </div>
+</section>
+
+<footer>
+  Images: NASA/JPL/Space Science Institute, NASA/JPL-Caltech, NASA/Ames/JPL-Caltech. See also
+  <a class="navlink" href="../html/exoplanets.html">Exoplanets</a> and
+  <a class="navlink" href="../html/Europa Clipper.html">Europa Clipper</a>.
+</footer>
+
+</body>
+</html>

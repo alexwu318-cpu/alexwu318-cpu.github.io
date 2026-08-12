@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astraea | Mars Mission</title>
+
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="../CSS/navbar.css">
+
+  <script src="../javascript/navbar.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body class="mars-page-body">
+
+<header id="navbar" class="topnav">
+  <div class="logo-container">
+  <a href="../index.html" class="logo">Astraea</a>
+  <img src="../images/logo.png" class="logo-icon">
+  </div>
+
+  <div class="menu-toggle" id="mobile-menu"> <!--for phones-->
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+
+  <ul class="nav-links">
+    
+  <li class="dropdown">
+    <a href="#" class="dropbtn">Planets & Systems ▾</a>
+    <div class="dropdown-content">
+      <div class="nested-dropdown">
+        <a href="#" class="nested-dropbtn">Solar System Planets ▸</a>
+        <div class="nested-dropdown-content">
+          <a href="../html/Planets_Mercury.html">Mercury</a>
+          <a href="../html/Planets_Venus.html">Venus</a>
+          <a href="../html/Planets_Earth.html">Earth</a>
+          <a href="../html/Planets_Mars.html">Mars</a>
+          <a href="../html/Planets_Jupiter.html">Jupiter</a>
+          <a href="../html/Planets_Saturn.html">Saturn</a>
+          <a href="../html/Planets_Uranus.html">Uranus</a>
+          <a href="../html/Planets_Neptune.html">Neptune</a>
+        </div>
+      </div>
+      <a href="../html/exoplanets.html">Exoplanets</a>
+      <a href="../html/Alien Systems.html">Foreign Systems</a>
+    </div>
+  </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Missions & Spacecraft ▾</a>
+      <div class="dropdown-content">
+        <a href="../html/Europa Clipper.html">Europa Clipper</a>
+        <a href="../html/mars-missions.html">Mars Missions</a>
+        <a href="../html/Apollo.html">Apollo Missions</a>
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Science & Tech ▾</a>
+      <div class="dropdown-content">
+        <a href="../html/spaceTechnology.html">Space Technology</a>
+        <a href="../html/SpacePhenomena.html">Space Phenomena</a>
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Mysteries & History ▾</a>
+      <div class="dropdown-content">
+        <a href="../html/SpaceMysteries.html">Space Mysteries</a>
+        <a href="../html/spaceHistory.html">Space History</a>
+        <a href="../html/spaceFuture.html">Future of Space</a>
+      </div>
+    </li>
+
+  </ul>
+</header>
+
+  <section>
+    <div class="mars-orbital-wrapper">
+      
+      <div class="mars-giant-sphere"></div>
+
+      <section class="mars-hero-section">
+        <div class="mars-hero-content">
+          <h1 class="mars-hero-title">MISSIONS TO MARS</h1>
+          <p class="mars-hero-subtitle">
+            From robotic trailblazers to autonomous wheeled laboratories, 
+            explore the human drive to decode the Red Planet.
+          </p>
+        </div>
+
+        <div class="scroll-indicator">
+          <span class="scroll-text">Scroll Down</span>
+          <div class="scroll-line"></div>
+        </div>
+      </section>
+
+    </div>
+  </section>
+
+<section class="timeline-section">
+  
+  <div class="section-header-box">
+    <h2 class="section-main-title">The Rover Chronicles</h2>
+    <p class="section-desc">
+      Hover over any mission card to expand and uncover deep technical details of each historic journey.
+    </p>
+  </div>
+</section>
+  <section>
+
+    <div class="timeline">
+      
+      <div class="container left group">
+        <div class="content">
+          <span class="rover-year">1997</span>
+          <h3>Sojourner & Pathfinder</h3>
+          <p class="summary-text">The tiny pioneer that proved mobile robotics on another world.</p>
+          <div class="expanded-details">
+            <p>
+              Sojourner was the first wheeled vehicle to operate on Mars. Weighing just 23 pounds, 
+              it used a unique rocker-bogie suspension system and relied on base station communications to 
+              navigate the rocky Ares Vallis terrain.
+            </p>
+            <ul class="rover-specs">
+              <li><strong>Distance Traveled:</strong> 100 meters</li>
+              <li><strong>Mission Duration:</strong> 85 days</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container right group">
+        <div class="content">
+          <span class="rover-year">2004</span>
+          <h3>Spirit & Opportunity</h3>
+          <p class="summary-text">
+            The robotic geologists designed for a 90-day sprint that lasted years.
+          </p>
+          <div class="expanded-details">
+            <p>
+              Twin rovers landing on opposite sides of Mars tasked with searching for past water activity. 
+              Opportunity shattered all expectations, surviving dust storms and harsh winters to operate for nearly 15 years.
+            </p>
+            <ul class="rover-specs">
+              <li><strong>Distance Traveled:</strong> 45.16 km (Opportunity)</li>
+              <li><strong>Key Discovery:</strong> Direct evidence of ancient liquid water</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container left group">
+        <div class="content">
+          <span class="rover-year">2012</span>
+          <h3>Curiosity (MSL)</h3>
+          <p class="summary-text">
+            The nuclear-powered SUV probing Gale Crater for organic building blocks.
+          </p>
+          <div class="expanded-details">
+            <p>
+              Using a revolutionary sky-crane landing maneuver, 
+              Curiosity touched down inside Gale Crater. Armed with a laser-firing spectrometer (ChemCam), 
+              it drills into Martian rock layers to analyze planetary chemistry.
+            </p>
+            <ul class="rover-specs">
+              <li><strong>Power Source:</strong> Radioisotope Thermoelectric Generator</li>
+              <li><strong>Status:</strong> Active & Exploring Mount Sharp</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container right group">
+        <div class="content">
+          <span class="rover-year">2021</span>
+          <h3>Perseverance & Ingenuity</h3>
+          <p class="summary-text">
+            Searching for ancient microbial biosignatures and caching samples for Earth return.
+          </p>
+          <div class="expanded-details">
+            <p>
+              Landing in Jezero Crater—an ancient lakebed—Perseverance carries a suite of high-tech instruments and 
+              a sample-caching system. It also deployed Ingenuity, the first powered aircraft to fly on another planet.
+            </p>
+            <ul class="rover-specs">
+              <li><strong>Primary Goal:</strong> Astrobiology & Sample Caching</li>
+              <li><strong>Companion:</strong> Ingenuity Helicopter</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="mars-map-section">
+  <div class="map-container-wrapper">
+    <h2 class="section-main-title">Planetary Traverse Map</h2>
+    <p class="section-desc">
+      Hover over the landing pins to inspect each rover's landing zone and mission footprint.
+    </p>
+    
+    <div class="mars-map-hotspot-container">
+      <img src="../images/mars_surface_map.jpg" alt="Mars Surface Map" class="map-background-img">
+      
+      <button class="mars-hotspot-btn sojourner-btn" data-target="card-sojourner"></button>
+      <button class="mars-hotspot-btn opportunity-btn" data-target="card-opportunity"></button>
+      <button class="mars-hotspot-btn curiosity-btn" data-target="card-curiosity"></button>
+      <button class="mars-hotspot-btn perseverance-btn" data-target="card-perseverance"></button>
+
+      <div id="card-sojourner" class="info-card-mars sojourner-card">
+        <h4>Ares Vallis (Sojourner)</h4>
+        <p>
+          Landed on July 4, 1997. 
+          Chosen as the landing site because it presented a wide variety of rocks washed down by ancient floods, 
+          offering a diverse geological sampling area.
+        </p>
+        <ul>
+          <li><strong>Landing Year:</strong> 1997</li>
+          <li><strong>Terrain:</strong> Rocky Floodplain</li>
+        </ul>
+      </div>
+
+      <div id="card-opportunity" class="info-card-mars opportunity-card">
+        <h4>Meridiani Planum (Opportunity)</h4>
+        <p>
+          Landed in January 2004. Explored flat basaltic plains and impact craters, 
+          famously discovering hematite spheres ("blueberries") that formed in ancient liquid water.
+        </p>
+        <ul>
+          <li><strong>Landing Year:</strong> 2004</li>
+          <li><strong>Terrain:</strong> Flat Plains & Craters</li>
+        </ul>
+      </div>
+
+      <div id="card-curiosity" class="info-card-mars curiosity-card">
+        <h4>Gale Crater (Curiosity)</h4>
+        <p>
+          Landed in August 2012 via sky-crane. 
+          Currently exploring the base of Mount Sharp to investigate ancient climate shifts and habitable lake environments.
+        </p>
+        <ul>
+          <li><strong>Landing Year:</strong> 2012</li>
+          <li><strong>Terrain:</strong> Impact Crater & Mountain Base</li>
+        </ul>
+      </div>
+
+      <div id="card-perseverance" class="info-card-mars perseverance-card">
+        <h4>Jezero Crater (Perseverance)</h4>
+        <p>
+          Landed in February 2021. 
+          An ancient river delta environment rich in clay minerals, 
+          perfectly suited for hunting signs of ancient microbial biosignatures.
+        </p>
+        <ul>
+          <li><strong>Landing Year:</strong> 2021</li>
+          <li><strong>Terrain:</strong> Ancient River Delta</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

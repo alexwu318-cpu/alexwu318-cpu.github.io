@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Explore planet Mercury, its characteristics, statistics, surface, orbit, and place in the solar system."
+    >
+
+    <title>Astraea | Planet Mercury</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        space: [
+                            "Space Grotesk",
+                            "Arial",
+                            "sans-serif"
+                        ]
+                    },
+
+                    colors: {
+                        mercury: {
+                            300: "#d4d4d4",
+                            400: "#a8a29e",
+                            500: "#78716c"
+                        }
+                    },
+
+                    letterSpacing: {
+                        planet: "0.12em",
+                        label: "0.5rem"
+                    },
+
+                    boxShadow: {
+                        "mercury-glow":
+                            "0 20px 60px rgba(168, 162, 158, 0.18)"
+                    }
+                }
+            }
+        };
+    </script>
+
+    <!-- Existing navbar styles -->
+    <link rel="stylesheet" href="../CSS/navbar.css">
+
+    <!-- Advanced planet styles -->
+    <link rel="stylesheet" href="../CSS/planets_css.css">
+
+    <script src="../javascript/navbar.js" defer></script>
+</head>
+
+<body
+    data-planet="mercury"
+    class="m-0 min-h-screen overflow-x-hidden bg-[#020305] font-space text-white antialiased"
+>
+<header id="navbar" class="topnav">
+  <div class="logo-container">
+  <a href="../index.html" class="logo">Astraea</a>
+  <img src="../images/logo.png" class="logo-icon">
+  </div>
+
+  <div class="menu-toggle" id="mobile-menu"> <!--for phones-->
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+
+  <ul class="nav-links">
+    
+  <li class="dropdown">
+    <a href="#" class="dropbtn">Planets & Systems ▾</a>
+    <div class="dropdown-content">
+      <div class="nested-dropdown">
+        <a href="#" class="nested-dropbtn">Solar System Planets ▸</a>
+        <div class="nested-dropdown-content">
+          <a href="../html/Planets_Mercury.html">Mercury</a>
+          <a href="../html/Planets_Venus.html">Venus</a>
+          <a href="../html/Planets_Earth.html">Earth</a>
+          <a href="../html/Planets_Mars.html">Mars</a>
+          <a href="../html/Planets_Jupiter.html">Jupiter</a>
+          <a href="../html/Planets_Saturn.html">Saturn</a>
+          <a href="../html/Planets_Uranus.html">Uranus</a>
+          <a href="../html/Planets_Neptune.html">Neptune</a>
+        </div>
+      </div>
+      <a href="../html/exoplanets.html">Exoplanets</a>
+      <a href="../html/Alien Systems.html">Foreign Systems</a>
+    </div>
+  </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Missions & Spacecraft ▾</a>
+      <div class="dropdown-content">
+        <a href="../html/Europa Clipper.html">Europa Clipper</a>
+        <a href="../html/mars-missions.html">Mars Missions</a>
+        <a href="../html/Apollo.html">Apollo Missions</a>
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Science & Tech ▾</a>
+      <div class="dropdown-content">
+        <a href="../html/spaceTechnology.html">Space Technology</a>
+        <a href="../html/SpacePhenomena.html">Space Phenomena</a>
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Mysteries & History ▾</a>
+      <div class="dropdown-content">
+        <a href="../html/SpaceMysteries.html">Space Mysteries</a>
+        <a href="../html/spaceHistory.html">Space History</a>
+        <a href="../html/spaceFuture.html">Future of Space</a>
+      </div>
+    </li>
+
+  </ul>
+</header>
+
+    <main class="relative z-10">
+        <!-- Hero -->
+        <section
+            id="hero"
+            class="hero-section relative flex min-h-screen min-h-[100svh] items-center overflow-hidden"
+            aria-labelledby="planet-title"
+        >
+            <div
+                class="relative z-20 ml-auto w-full max-w-2xl px-6 pb-16 pt-32
+                       md:px-12
+                       lg:mr-16 lg:w-[34rem] lg:px-0 lg:py-0
+                       xl:mr-24"
+            >
+                <p
+                    class="mb-4 text-sm font-medium uppercase tracking-label text-mercury-400"
+                >
+                    Planet 01
+                </p>
+
+                <h1
+                    id="planet-title"
+                    class="mb-6 text-6xl font-bold uppercase leading-none tracking-planet
+                           sm:text-7xl
+                           lg:text-8xl"
+                >
+                    Mercury
+                </h1>
+
+                <p
+                    class="mb-8 max-w-xl text-base leading-7 text-zinc-300
+                           sm:text-lg sm:leading-8
+                           lg:text-xl"
+                >
+                    Mercury is the closest planet to the Sun and the
+                    smallest planet in our solar system. Its rocky,
+                    heavily cratered surface experiences extreme
+                    temperature changes because the planet has almost
+                    no atmosphere to retain heat.
+                </p>
+
+                <a
+                    href="#about"
+                    class="explore-link group inline-flex items-center gap-3
+                           text-sm font-medium uppercase tracking-[0.3rem]
+                           text-white transition-colors duration-300
+                           hover:text-mercury-300
+                           focus-visible:outline-none"
+                >
+                    <span>Explore More</span>
+
+                    <span
+                        class="text-2xl transition-transform duration-300
+                               group-hover:translate-y-2"
+                        aria-hidden="true"
+                    >
+                        ↓
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Facts -->
+        <section
+            id="about"
+            class="facts-section relative min-h-screen overflow-hidden
+                   px-6 py-24
+                   md:px-12
+                   lg:px-16 lg:py-28"
+            aria-labelledby="facts-title"
+        >
+            <div
+                class="facts-section-overlay absolute inset-0"
+                aria-hidden="true"
+            ></div>
+
+            <div class="relative z-10 mx-auto max-w-7xl">
+                <header class="mx-auto mb-16 max-w-3xl text-center lg:mb-20">
+                    <p
+                        class="text-sm font-medium uppercase tracking-label text-mercury-400"
+                    >
+                        Facts &amp; Statistics
+                    </p>
+
+                    <h2
+                        id="facts-title"
+                        class="mt-4 text-4xl font-bold leading-tight
+                               sm:text-5xl
+                               lg:text-6xl"
+                    >
+                        Discover Mercury
+                    </h2>
+
+                    <p
+                        class="mx-auto mt-6 max-w-2xl text-base leading-7
+                               text-zinc-400
+                               sm:text-lg sm:leading-8"
+                    >
+                        Mercury is a dense, rocky world with a large
+                        metallic core, a heavily cratered surface,
+                        extreme temperatures, and the fastest orbit
+                        around the Sun.
+                    </p>
+                </header>
+
+                <div
+                    class="grid grid-cols-1 gap-6
+                           md:grid-cols-2
+                           lg:grid-cols-3 lg:gap-8"
+                >
+                    <article class="fact-card p-8">
+                        <h3
+                            class="text-4xl font-bold leading-none text-mercury-400
+                                   lg:text-5xl"
+                        >
+                            4,879 km
+                        </h3>
+
+                        <p class="mt-5 text-xl font-semibold">
+                            Diameter
+                        </p>
+
+                        <p class="mt-3 leading-7 text-zinc-400">
+                            Mercury has a diameter of approximately
+                            4,879 kilometres, making it the smallest
+                            planet in the solar system.
+                        </p>
+                    </article>
+
+                    <article class="fact-card p-8">
+                        <h3
+                            class="text-4xl font-bold leading-none text-mercury-400
+                                   lg:text-5xl"
+                        >
+                            4.5 B
+                        </h3>
+
+                        <p class="mt-5 text-xl font-semibold">
+                            Years Old
+                        </p>
+
+                        <p class="mt-3 leading-7 text-zinc-400">
+                            Mercury formed approximately 4.5 billion
+                            years ago during the early formation of
+                            the solar system.
+                        </p>
+                    </article>
+
+                    <article class="fact-card p-8">
+                        <h3
+                            class="text-4xl font-bold leading-none text-mercury-400
+                                   lg:text-5xl"
+                        >
+                            3.7
+                        </h3>
+
+                        <p class="mt-5 text-xl font-semibold">
+                            Gravity
+                        </p>
+
+                        <p class="mt-3 leading-7 text-zinc-400">
+                            Mercury's surface gravity is approximately
+                            3.7 m/s², about 38% of Earth's gravity.
+                        </p>
+                    </article>
+
+                    <article class="fact-card p-8">
+                        <h3
+                            class="text-4xl font-bold leading-none text-mercury-400
+                                   lg:text-5xl"
+                        >
+                            88 Days
+                        </h3>
+
+                        <p class="mt-5 text-xl font-semibold">
+                            Orbital Period
+                        </p>
+
+                        <p class="mt-3 leading-7 text-zinc-400">
+                            Mercury completes one orbit around the Sun
+                            in only 88 Earth days.
+                        </p>
+                    </article>
+
+                    <article class="fact-card p-8">
+                        <h3
+                            class="text-4xl font-bold leading-none text-mercury-400
+                                   lg:text-5xl"
+                        >
+                            0
+                        </h3>
+
+                        <p class="mt-5 text-xl font-semibold">
+                            Moons
+                        </p>
+
+                        <p class="mt-3 leading-7 text-zinc-400">
+                            Mercury has no natural moons and no ring
+                            system.
+                        </p>
+                    </article>
+
+                    <article class="fact-card p-8">
+                        <h3
+                            class="text-4xl font-bold leading-none text-mercury-400
+                                   lg:text-5xl"
+                        >
+                            430°C
+                        </h3>
+
+                        <p class="mt-5 text-xl font-semibold">
+                            Daytime Heat
+                        </p>
+
+                        <p class="mt-3 leading-7 text-zinc-400">
+                            Daytime temperatures near Mercury's
+                            equator can reach approximately 430°C.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Shared planet animation -->
+    <script src="../javascript/planets_js.js"></script>
+</body>
+</html>

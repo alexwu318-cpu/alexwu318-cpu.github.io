@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astraea | Apollo</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+
+    <script src="../javascript/footer.js" defer></script>
+    <script src="../javascript/apollo.js" defer></script>
+    <script src="../javascript/navbar.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+<header id="navbar" class="topnav">
+  <div class="logo-container">
+  <a href="../index.html" class="logo">Astraea</a>
+  <img src="../images/logo.png" class="logo-icon">
+  </div>
+
+  <div class="menu-toggle" id="mobile-menu"> <!--for phones-->
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+
+  <ul class="nav-links">
+    
+  <li class="dropdown">
+    <a href="#" class="dropbtn">Planets & Systems ▾</a>
+    <div class="dropdown-content">
+      <div class="nested-dropdown">
+        <a href="#" class="nested-dropbtn">Solar System Planets ▸</a>
+        <div class="nested-dropdown-content">
+          <a href="../html/Planets_Mercury.html">Mercury</a>
+          <a href="../html/Planets_Venus.html">Venus</a>
+          <a href="../html/Planets_Earth.html">Earth</a>
+          <a href="../html/Planets_Mars.html">Mars</a>
+          <a href="../html/Planets_Jupiter.html">Jupiter</a>
+          <a href="../html/Planets_Saturn.html">Saturn</a>
+          <a href="../html/Planets_Uranus.html">Uranus</a>
+          <a href="../html/Planets_Neptune.html">Neptune</a>
+        </div>
+      </div>
+      <a href="../html/exoplanets.html">Exoplanets</a>
+      <a href="../html/Alien Systems.html">Foreign Systems</a>
+    </div>
+  </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Missions & Spacecraft ▾</a>
+      <div class="dropdown-content">
+        <a href="../html/Europa Clipper.html">Europa Clipper</a>
+        <a href="../html/mars-missions.html">Mars Missions</a>
+        <a href="../html/Apollo.html">Apollo Missions</a>
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Science & Tech ▾</a>
+      <div class="dropdown-content">
+        <a href="../html/spaceTechnology.html">Space Technology</a>
+        <a href="../html/SpacePhenomena.html">Space Phenomena</a>
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Mysteries & History ▾</a>
+      <div class="dropdown-content">
+        <a href="../html/SpaceMysteries.html">Space Mysteries</a>
+        <a href="../html/spaceHistory.html">Space History</a>
+        <a href="../html/spaceFuture.html">Future of Space</a>
+      </div>
+    </li>
+
+  </ul>
+</header>
+
+<section class="apollo-hero-section">
+  
+  <div class="apollo-layout-grid">
+    
+    <div class="apollo-left-col">
+      <div class="rocket-interactive-wrapper">
+        
+        <img src="../images/saturn-v-sfs.jpg" alt="Saturn V Rocket" class="rocket-img">
+        
+        <button class="hotspot-btn card-escape-btn" data-target="card-escape"></button>
+        <button class="hotspot-btn card-command-btn" data-target="card-command"></button>
+        <button class="hotspot-btn card-service-btn" data-target="card-service"></button>
+        <button class="hotspot-btn card-stage3-btn" data-target="card-stage3"></button>
+        <button class="hotspot-btn card-stage2-btn" data-target="card-stage2"></button>
+        <button class="hotspot-btn card-stage1-btn" data-target="card-stage1"></button>
+
+        <div id="card-escape" class="info-card-apollo card-escape">
+          <h4 class="font-bold text-[#ffd700] mb-2">Launch Escape System</h4>
+          <p class="text-sm">
+            The ultimate safety net. 
+            The LES was a solid-fuel rocket attached to the very top of the spacecraft, 
+            designed to quickly pull the crew capsule away from the main rocket 
+            in the event of a catastrophic failure on the launch pad or during early ascent.
+          </p>
+          <ul>
+            <li><strong>Height:</strong> 33 feet (10 m)</li>
+            <li><strong>Thrust:</strong> ~147,000 lbs</li>
+            <li><strong>Status:</strong> Jettison after reaching a safe altitude</li>
+          </ul>
+        </div>
+
+        <div id="card-command" class="info-card-apollo card-command">
+          <h4 class="font-bold text-[#ffd700] mb-2">Command Module</h4>
+          <p class="text-sm">
+            The control center and living quarters for the three Apollo astronauts. 
+            Packed with navigation panels and life support, 
+            this cone-shaped capsule was the only part of the massive Saturn V rocket 
+            designed to return to Earth and splash down in the ocean.
+          </p>
+          <ul>
+            <li><strong>Crew Capacity:</strong> 3 Astronauts</li>
+            <li><strong>Habitable Volume:</strong> 210 cubic feet</li>
+            <li><strong>Heat Shield:</strong> Ablative</li>
+          </ul>
+        </div>
+
+        <div id="card-service" class="info-card-apollo card-service">
+          <h4 class="font-bold text-[#ffd700] mb-2">Service Module</h4>
+          <p class="text-sm">
+            The unsung workhorse of the Apollo spacecraft. 
+            It remained attached to the Command Module right up until reentry, 
+            providing the crew with vital electricity, breathable oxygen, water, 
+            and the main engine thrust needed to get into and out of lunar orbit.
+          </p>
+          <ul>
+            <li><strong>Main Engine:</strong> Service Propulsion System (SPS)</li>
+            <li><strong>Thrust:</strong> 20,500 lbs</li>
+            <li><strong>Power Source:</strong> Hydrogen/Oxygen Fuel Cells</li>
+          </ul>
+        </div>
+
+        <div id="card-stage3" class="info-card-apollo card-stage3">
+          <h4 class="font-bold text-[#ffd700] mb-2">S-IVB third stage</h4>
+          <p class="text-sm">
+            The stage that actually sent them to the Moon. 
+            It fired twice: first for a short burst to put the spacecraft into a temporary parking orbit around Earth, 
+            and then a massive second burn to break Earth's gravity and shoot the astronauts toward the Moon.
+          </p>
+          <ul>
+            <li><strong>Engines:</strong> 1 x J-2 Engine</li>
+            <li><strong>Thrust:</strong> 230,000 lbs</li>
+            <li><strong>Fuel:</strong> Liquid Hydrogen (LH2) & Liquid Oxygen (LOX)</li>
+          </ul>
+        </div>
+
+        <div id="card-stage2" class="info-card-apollo card-stage2">
+          <h4 class="font-bold text-[#ffd700] mb-2">S-II Second Stage</h4>
+          <p class="text-sm">
+            After the first stage dropped away, 
+            Stage 2 ignited high in the thinning atmosphere. 
+            It burned for about six minutes, 
+            pushing the Apollo spacecraft almost all the way to orbital velocity before its fuel ran dry.
+          </p>
+          <ul>
+            <li><strong>Engines:</strong> 5 x J-2 Engines</li>
+            <li><strong>Thrust:</strong> 1.15 million lbs</li>
+            <li><strong>Burn Time:</strong> 6min</li>
+          </ul>
+        </div>
+
+        <div id="card-stage1" class="info-card-apollo card-stage1">
+          <h4 class="font-bold text-[#ffd700] mb-2">S-IC First Stage</h4>
+          <p class="text-sm">
+            The absolute powerhouse of the Saturn V. 
+            This massive first stage did the heavy lifting, 
+            generating enough raw power to push the 3,000-ton rocket 
+            off the launch pad and punch through the thickest part of Earth's atmosphere.
+          </p>
+          <ul>
+            <li><strong>Engines:</strong> 5 x F-1 Engines</li>
+            <li><strong>Thrust:</strong> 7.5 million lbs</li>
+            <li><strong>Fuel Consumption:</strong> 15 tons of fuel per second</li>
+          </ul>
+        </div>
+
+
+        </div>
+    </div>
+
+    <div class="apollo-right-col">
+      
+      <h2 class="apollo-main-title">The Mighty Saturn V</h2>
+      
+      <p class="apollo-intro-text">
+        The Saturn V remains the tallest, heaviest, and most powerful rocket ever brought to operational status. 
+        Developed by NASA, this engineering marvel was built with one singular goal: 
+        to break the bounds of Earth's gravity and safely transport human beings to the lunar surface.
+      </p>
+
+      <div class="apollo-features-container">
+        
+        <div class="feature-block">
+          <h4 class="feature-title">
+            <span class="gold-line"></span> Raw Power
+          </h4>
+          <p class="feature-text-apollo">
+            At liftoff, its five F-1 engines consumed roughly 15 tons of rocket fuel 
+            <strong>every single second</strong>. 
+            This generated a staggering 7.5 million pounds of thrust—enough sheer power to create 
+            localized earthquakes near the launch pad and send the 3,000-ton behemoth hurtling toward the stars.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h4 class="feature-title">
+            <span class="cyan-line"></span> The Legacy
+          </h4>
+          <p class="feature-text-apollo">
+            Between 1967 and 1973, the Saturn V flew 13 times. 
+            It successfully launched the Apollo lunar missions and placed the Skylab space station into orbit. 
+            Despite the complexity of millions of moving parts, the Saturn V retains a flawless record: zero loss of crew or payload.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h4 class="feature-title">
+            <span class="purple-line"></span> Precision Guidance
+          </h4>
+          <p class="feature-text-apollo">
+            Guiding this behemoth was the Instrument Unit, 
+            a three-foot-tall black ring sitting atop the third stage. It acted as the rocket's brain, 
+            constantly calculating trajectories and swiveling the massive engines to 
+            keep the Saturn V perfectly on course through the intense vibrations of launch.
+          </p>
+        </div>
+
+        <div class="feature-block">
+          <h4 class="feature-title">
+            <span class="orange-line"></span> Shedding Weight
+          </h4>
+          <p class="feature-text-apollo">
+            To reach the Moon, the rocket had to shed dead weight as quickly as possible. 
+            By the time the astronauts entered Earth's orbit, the massive first and second stages had 
+            burned through thousands of tons of fuel and been jettisoned into the ocean, leaving a much smaller, 
+            sleeker ship to push onward.
+          </p>
+        </div>
+        
+      </div>
+        
+      </div>
+  </div>
+
+  <div class="apollo-stats-dashboard centered-dashboard">
+    <h5 class="stats-header">Saturn V Specifications</h5>
+    
+    <ul class="stats-grid">
+      <li class="stat-item">
+        <span class="stat-label">Height</span>
+        <span class="stat-value">363 ft <span class="stat-metric">(110.6 m)</span></span>
+      </li>
+      
+      <li class="stat-item">
+        <span class="stat-label">Gross Mass</span>
+        <span class="stat-value">6.2M lbs <span class="stat-metric">(2.8M kg)</span></span>
+      </li>
+
+      <li class="stat-item">
+        <span class="stat-label">Max Thrust</span>
+        <span class="stat-value">7.5M lbf <span class="stat-metric">(34.5M N)</span></span>
+      </li>
+      
+      <li class="stat-item">
+        <span class="stat-label">Payload (LEO)</span>
+        <span class="stat-value">261k lbs <span class="stat-metric">(118k kg)</span></span>
+      </li>
+      
+      <li class="stat-item">
+        <span class="stat-label">Payload (Moon)</span>
+        <span class="stat-value">107k lbs <span class="stat-metric">(48k kg)</span></span>
+      </li>
+
+      <li class="stat-item">
+        <span class="stat-label">Total Stages</span>
+        <span class="stat-value">3 <span class="stat-metric">(S-IC, S-II, S-IVB)</span></span>
+      </li>
+    </ul>
+  </div>
+  
+</section>
+
+<section class="max-w-5xl py-20 px-4 text-center text-white mt-12 border-t border-gray-800 margin-auto">
+  
+  <h2 class="text-4xl font-bold text-[#ffd700]" style="margin-top: 60px; margin-bottom: 20px;">The Lunar Module</h2>
+  <h3>Humanity's Greatest Machine</h3>
+  <p class="text-lg text-gray-300 max-w-3xl margin-auto" style="margin-bottom: 48px; margin-top: 10px;">
+    Hidden away during launch, 
+    the Lunar Module was the first true spacecraft—designed to fly entirely in the vacuum of space. 
+    It consisted of a Descent Stage to land safely on the Moon, and an Ascent Stage to blast the astronauts back into orbit.
+  </p>
+
+  <div class="img-lunar-container margin-auto">
+    
+    <img src="../images/lunar modual.jpg" alt="Apollo Lunar Module" class="img-lunar">
+
+    <button class="hotspot-btn card-rcs-btn" data-target="card-rcs"></button>
+    <button class="hotspot-btn card-eva-btn" data-target="card-eva"></button>
+    <button class="hotspot-btn card-buzz-btn" data-target="card-buzz"></button>
+    <button class="hotspot-btn card-leg-btn" data-target="card-leg"></button>
+    <button class="hotspot-btn card-light-btn" data-target="card-light"></button>
+
+      <div id="card-rcs" class="info-card-apollo card-rcs">
+        <h4 class="font-bold text-[#ffd700] mb-2">Thrust Chamber Assembly Cluster</h4>
+        <p class="text-sm">
+          Essential for precise steering and docking in orbit, 
+          these small thrusters gave astronauts total control over the Lunar Module.
+        </p>
+        <ul>
+          <li><strong>Total Thrusters:</strong> 16 (4 clusters of 4)</li>
+          <li><strong>Thrust:</strong> ~100 lbs per engine</li>
+          <li><strong>Fuel Type:</strong> Hypergolic</li>
+        </ul>
+      </div>
+      <div id="card-eva" class="info-card-apollo card-eva">
+        <h4 class="font-bold text-[#ffd700] mb-2">EVA Antenna</h4>
+        <p class="text-sm">
+          The vital communication lifeline during moonwalks. 
+          This antenna received voice audio and real-time biometric data—like heart rate and 
+          oxygen levels—from the astronauts' spacesuits.
+        </p>
+        <ul>
+          <li><strong>Target:</strong> Astronaut spacesuits (PLSS)</li>
+          <li><strong>Signal:</strong> Very High Frequency (VHF)</li>
+          <li><strong>Data:</strong> Voice, telemetry, and biometrics</li>
+        </ul>
+      </div>
+      <div id="card-buzz" class="info-card-apollo card-buzz">
+        <h4 class="font-bold text-[#ffd700] mb-2">Buzz Aldrin & The A7L Spacesuit</h4>
+        <p class="text-sm">
+          Stepping onto the Moon shortly after Neil Armstrong, Aldrin wore the iconic A7L spacesuit. 
+          This wearable mini-spacecraft provided vital oxygen, temperature control, and protection.
+        </p>
+        <ul>
+          <li><strong>Role:</strong> Lunar Module Pilot (Apollo 11)</li>
+          <li><strong>Suit Model:</strong> Custom-tailored A7L</li>
+          <li><strong>Weight:</strong> 180 lbs on Earth (30 lbs on the Moon)</li>
+        </ul>
+      </div>
+      <div id="card-leg" class="info-card-apollo card-leg">
+        <h4 class="font-bold text-[#ffd700] mb-2">Lunar Landing Gear</h4>
+        <p class="text-sm">
+          Designed to absorb the impact of touching down on an alien world, 
+          these four deployable legs featured crushable shock absorbers and specialized sensors to detect the lunar surface.
+        </p>
+        <ul>
+          <li><strong>Total Legs:</strong> 4 (Folded during launch)</li>
+          <li><strong>Shock Absorbers:</strong> Crushable aluminum honeycomb</li>
+          <li><strong>Sensors:</strong> 3 surface contact probes (None under the ladder)</li>
+        </ul>
+      </div>
+      <div id="card-light" class="info-card-apollo card-light">
+        <h4 class="font-bold text-[#ffd700] mb-2">Docking Lights</h4>
+        <p class="text-sm">
+          A small, cylindrical strobe beacon protruding from the Ascent Stage. 
+          It flashed a brilliant white light to help the Command Module visually track and dock with the returning Lunar Module in the dark.
+        </p>
+        <ul>
+          <li><strong>Function:</strong> Visual tracking for orbital rendezvous</li>
+          <li><strong>Visibility:</strong> Up to 400 nautical miles (740 km)</li>
+          <li><strong>Flash Rate:</strong> Approximately 50 flashes per minute</li>
+        </ul>
+      </div>
+
+  </div>
+
+</section>
+
+<section class="apollo-conclusion-section">
+  <div class="conclusion-container">
+    
+    <h2 class="conclusion-title">A Legacy Written in the Stars</h2>
+    <p class="conclusion-subtitle">
+      The Saturn V didn't just push the boundaries of engineering—it expanded the horizons of humanity.
+    </p>
+    
+    <div class="achievements-grid">
+      
+      <div class="achievement-card">
+        <h3 class="achievement-header">Apollo 11</h3>
+        <p class="achievement-text">
+          Successfully launched the historic mission that placed the first humans, 
+          Neil Armstrong and Buzz Aldrin, on the lunar surface in July 1969.
+        </p>
+      </div>
+
+      <div class="achievement-card">
+        <h3 class="achievement-header">Skylab Space Station</h3>
+        <p class="achievement-text">
+          In 1973, a modified two-stage Saturn V launched Skylab, America's first space station, 
+          into orbit in a single, massive payload launch.
+        </p>
+      </div>
+
+      <div class="achievement-card">
+        <h3 class="achievement-header">Flawless Record</h3>
+        <p class="achievement-text">
+          Over 13 launches between 1967 and 1973, 
+          the Saturn V maintained a 100% success rate with zero loss of crew or payload.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="final-summary-box">
+      <p class="final-summary-text">
+        Today, the Saturn V remains the undisputed king of rockets. 
+        It stands as a testament to what humanity can achieve when millions of minds unite under a single, 
+        impossible goal. Though its engines have long since gone quiet, 
+        the echoes of its roar still inspire every modern mission to the cosmos.
+      </p>
+    </div>
+
+  </div>
+</section>
+    
+</body>
+</html>

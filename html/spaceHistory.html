@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Astraea | Space History</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../javascript/spaceHistory.js defer"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        space: ["Space Grotesk", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <script src="../javascript/navbar.js" defer></script>
+</head>
+
+<body class="overflow-x-hidden font-space bg-[#050816] text-[#E8EEF8] leading-[1.6] bg-[linear-gradient(rgba(124,150,255,.04)_2px,transparent_2px),linear-gradient(90deg,rgba(124,150,255,.04)_2px,transparent_2px),linear-gradient(rgba(124,150,255,.025)_2px,transparent_2px),linear-gradient(90deg,rgba(124,150,255,.025)_2px,transparent_2px)] bg-[size:120px_120px,120px_120px,24px_24px,24px_24px]"></body>
+    <!-- Nav -->
+    <header id="navbar" class="topnav">
+    <div class="logo-container">
+    <a href="../index.html" class="logo">Astraea</a>
+    <img src="../images/logo.png" class="logo-icon">
+    </div>
+
+    <div class="menu-toggle" id="mobile-menu"> <!--for phones-->
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
+    <ul class="nav-links">
+        
+    <li class="dropdown">
+        <a href="#" class="dropbtn">Planets & Systems ▾</a>
+        <div class="dropdown-content">
+        <div class="nested-dropdown">
+            <a href="#" class="nested-dropbtn">Solar System Planets ▸</a>
+            <div class="nested-dropdown-content">
+            <a href="../html/Planets_Mercury.html">Mercury</a>
+            <a href="../html/Planets_Venus.html">Venus</a>
+            <a href="../html/Planets_Earth.html">Earth</a>
+            <a href="../html/Planets_Mars.html">Mars</a>
+            <a href="../html/Planets_Jupiter.html">Jupiter</a>
+            <a href="../html/Planets_Saturn.html">Saturn</a>
+            <a href="../html/Planets_Uranus.html">Uranus</a>
+            <a href="../html/Planets_Neptune.html">Neptune</a>
+            </div>
+        </div>
+        <a href="../html/exoplanets.html">Exoplanets</a>
+        <a href="../html/Alien Systems.html">Foreign Systems</a>
+        </div>
+    </li>
+
+        <li class="dropdown">
+        <a href="#" class="dropbtn">Missions & Spacecraft ▾</a>
+        <div class="dropdown-content">
+            <a href="../html/Europa Clipper.html">Europa Clipper</a>
+            <a href="../html/mars-missions.html">Mars Missions</a>
+            <a href="../html/Apollo.html">Apollo Missions</a>
+        </div>
+        </li>
+
+        <li class="dropdown">
+        <a href="#" class="dropbtn">Science & Tech ▾</a>
+        <div class="dropdown-content">
+            <a href="../html/spaceTechnology.html">Space Technology</a>
+            <a href="../html/SpacePhenomena.html">Space Phenomena</a>
+        </div>
+        </li>
+
+        <li class="dropdown">
+        <a href="#" class="dropbtn">Mysteries & History ▾</a>
+        <div class="dropdown-content">
+            <a href="../html/SpaceMysteries.html">Space Mysteries</a>
+            <a href="../html/spaceHistory.html">Space History</a>
+            <a href="../html/spaceFuture.html">Future of Space</a>
+        </div>
+        </li>
+
+    </ul>
+    </header>
+
+    <main class="pt-[76px]">
+
+    <!-- Hero -->
+        <section class="history-hero border-b border-[#202D43] px-[7%] py-16">
+            <div class="mx-auto grid max-w-[1500px] items-center gap-16 lg:grid-cols-[.9fr_1.1fr]">
+                <div class="history-content">
+                    <p class="mb-4 text-sm font-semibold uppercase tracking-[3px] text-[#7C96FF]">
+                        Astraea Archives
+                    </p>
+
+                    <h1 class="mb-6 text-5xl font-semibold uppercase leading-[1.05] tracking-[2px] md:text-7xl">
+                        The History of<br>
+                        Space Exploration
+                    </h1>
+
+                    <p class="mb-8 max-w-[560px] text-lg leading-8 text-[#A1AEC1]">
+                        From early rocket theories to the first satellite, Moon landings,
+                        space stations and Mars rovers, explore the discoveries that changed
+                        humanity's view of the universe.
+                    </p>
+
+                    <div class="hero-buttons flex flex-wrap gap-4">
+                        <a href="#timeline"
+                           class="inline-flex items-center gap-4 bg-[#0D1930] px-7 py-4 text-sm font-semibold uppercase tracking-[1px] text-white transition hover:bg-[#5F7CFF]">
+                            Explore Timeline
+                            <span>→</span>
+                        </a>
+
+                        <a href="#milestones"
+                           class="inline-flex items-center gap-4 border border-[#40516D] bg-[#0B1424] px-7 py-4 text-sm font-semibold uppercase tracking-[1px] transition hover:border-[#7C96FF]">
+                            Discover Milestones
+                        </a>
+                    </div>
+                </div>
+
+                <div class="history-images overflow-hidden border border-[#40516D] bg-[#0B1424]">
+                    <img src="../images/earthrise.png"
+                         alt="Earth rising above the Moon during Apollo 8"
+                         class="h-[320px] w-full object-cover sm:h-[420px] lg:h-[500px]">
+                </div>
+            </div>
+        </section>
+
+    <!-- Journey Through Time -->
+        <section id="timeline" class="timeline-section border-b border-[#202D43] px-[5%] py-16">
+            <div class="mx-auto max-w-[1600px]">
+                <div class="timeline-header mb-14 flex items-center justify-center gap-5">
+                    <div class="h-px w-16 bg-[#34445F]"></div>
+                    <h2 class="text-center text-xl font-semibold uppercase tracking-[3px]">
+                        A Journey Through Time
+                    </h2>
+                    <div class="h-px w-16 bg-[#34445F]"></div>
+                </div>
+
+                <div class="timeline-grid relative grid gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+                    <div class="absolute left-[8%] right-[8%] top-10 hidden h-px bg-[#34445F] xl:block"></div>
+
+                    <a href="https://en.wikipedia.org/wiki/History_of_spaceflight"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="timeline-item group relative z-10 text-center">
+                        <div class="timeline-circle mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full border border-[#40516D] bg-[#0B1424] text-lg font-semibold transition duration-300 group-hover:border-[#7C96FF] group-hover:bg-[#5F7CFF] group-hover:text-white">
+                            01
+                        </div>
+                        <p class="mb-2 text-xs font-bold uppercase tracking-[1px]">Before 1957</p>
+                        <h3 class="mb-3 font-semibold uppercase transition group-hover:text-[#7C96FF]">
+                            Foundations of Rocketry
+                        </h3>
+                        <p class="text-sm leading-6 text-[#9AA9BF]">
+                            Visionaries such as Tsiolkovsky, Goddard and Oberth developed the ideas that made spaceflight possible.
+                        </p>
+                    </a>
+
+                    <a href="https://en.wikipedia.org/wiki/Space_Race"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="timeline-item group relative z-10 text-center">
+                        <div class="timeline-circle mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full border border-[#40516D] bg-[#0B1424] text-lg font-semibold transition duration-300 group-hover:border-[#7C96FF] group-hover:bg-[#5F7CFF] group-hover:text-white">
+                            02
+                        </div>
+                        <p class="mb-2 text-xs font-bold uppercase tracking-[1px]">1957–1969</p>
+                        <h3 class="mb-3 font-semibold uppercase transition group-hover:text-[#7C96FF]">
+                            The Space Race
+                        </h3>
+                        <p class="text-sm leading-6 text-[#9AA9BF]">
+                            Sputnik 1, Yuri Gagarin and Apollo 11 transformed spaceflight into a global technological race.
+                        </p>
+                    </a>
+
+                    <a href="https://en.wikipedia.org/wiki/Space_exploration"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="timeline-item group relative z-10 text-center">
+                        <div class="timeline-circle mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full border border-[#40516D] bg-[#0B1424] text-lg font-semibold transition duration-300 group-hover:border-[#7C96FF] group-hover:bg-[#5F7CFF] group-hover:text-white">
+                            03
+                        </div>
+                        <p class="mb-2 text-xs font-bold uppercase tracking-[1px]">1970–1990</p>
+                        <h3 class="mb-3 font-semibold uppercase transition group-hover:text-[#7C96FF]">
+                            Expanding Horizons
+                        </h3>
+                        <p class="text-sm leading-6 text-[#9AA9BF]">
+                            Space stations, Voyager probes, the Space Shuttle and Hubble expanded exploration beyond the Moon.
+                        </p>
+                    </a>
+
+                    <a href="https://en.wikipedia.org/wiki/International_Space_Station"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="timeline-item group relative z-10 text-center">
+                        <div class="timeline-circle mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full border border-[#40516D] bg-[#0B1424] text-lg font-semibold transition duration-300 group-hover:border-[#7C96FF] group-hover:bg-[#5F7CFF] group-hover:text-white">
+                            04
+                        </div>
+                        <p class="mb-2 text-xs font-bold uppercase tracking-[1px]">1991–2010</p>
+                        <h3 class="mb-3 font-semibold uppercase transition group-hover:text-[#7C96FF]">
+                            International Cooperation
+                        </h3>
+                        <p class="text-sm leading-6 text-[#9AA9BF]">
+                            The ISS, Mars Pathfinder, Cassini and twin Mars rovers marked a new era of global collaboration.
+                        </p>
+                    </a>
+
+                    <a href="https://en.wikipedia.org/wiki/Commercial_spaceflight"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="timeline-item group relative z-10 text-center">
+                        <div class="timeline-circle mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full border border-[#40516D] bg-[#0B1424] text-lg font-semibold transition duration-300 group-hover:border-[#7C96FF] group-hover:bg-[#5F7CFF] group-hover:text-white">
+                            05
+                        </div>
+                        <p class="mb-2 text-xs font-bold uppercase tracking-[1px]">2011–Present</p>
+                        <h3 class="mb-3 font-semibold uppercase transition group-hover:text-[#7C96FF]">
+                            A New Space Era
+                        </h3>
+                        <p class="text-sm leading-6 text-[#9AA9BF]">
+                            Reusable rockets, commercial crews, Curiosity, New Horizons, Webb and Artemis reshaped exploration.
+                        </p>
+                    </a>
+
+                    <a href="https://en.wikipedia.org/wiki/Future_of_space_exploration"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="timeline-item group relative z-10 text-center">
+                        <div class="timeline-circle mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full border border-[#40516D] bg-[#0B1424] text-lg font-semibold transition duration-300 group-hover:border-[#7C96FF] group-hover:bg-[#5F7CFF] group-hover:text-white">
+                            06
+                        </div>
+                        <p class="mb-2 text-xs font-bold uppercase tracking-[1px]">The Future</p>
+                        <h3 class="mb-3 font-semibold uppercase transition group-hover:text-[#7C96FF]">
+                            Beyond Tomorrow
+                        </h3>
+                        <p class="text-sm leading-6 text-[#9AA9BF]">
+                            Lunar bases, Mars missions, autonomous spacecraft and new observatories may define the next chapter.
+                        </p>
+                    </a>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="https://en.wikipedia.org/wiki/Timeline_of_spaceflight"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center gap-8 border border-[#40516D] bg-[#0B1424] px-8 py-3 text-xs font-semibold uppercase tracking-[1px] transition hover:border-[#7C96FF]">
+                        View Full Timeline
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    <!-- Key Milestones -->
+        <section id="milestones" class="milestones-section border-b border-[#202D43] px-[4%] py-14">
+            <div class="mx-auto grid max-w-[1650px] gap-8 xl:grid-cols-[240px_1fr]">
+                <div class="milestones-intro">
+                    <h2 class="mb-4 text-xl font-semibold uppercase tracking-[1px]">
+                        Key Milestones
+                    </h2>
+                    <p class="mb-8 text-sm leading-6 text-[#9AA9BF]">
+                        Five defining achievements that changed how humanity understood and explored space.
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Timeline_of_space_exploration"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center gap-8 border border-[#40516D] bg-[#0B1424] px-6 py-3 text-xs font-semibold uppercase tracking-[1px] transition hover:border-[#7C96FF]">
+                        View All Milestones
+                        <span>→</span>
+                    </a>
+                </div>
+
+                <div class="milestone-grid grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+                    <article class="milestone-card overflow-hidden border border-[#293850] bg-[#0B1424] transition hover:-translate-y-2 hover:shadow-lg">
+                        <img src="../images/sputnik1.png" alt="Sputnik 1 satellite" class="h-40 w-full object-cover">
+                        <div class="p-5">
+                            <p class="mb-2 text-sm font-bold text-[#7C96FF]">1957</p>
+                            <h3 class="mb-3 font-semibold uppercase">Sputnik 1 Launch</h3>
+                            <p class="mb-5 text-sm leading-6 text-[#9AA9BF]">
+                                The Soviet Union launched the first artificial Earth satellite and began the Space Age.
+                            </p>
+                            <a href="https://en.wikipedia.org/wiki/Sputnik_1"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="text-xs font-bold uppercase">
+                                Read More →
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="milestone-card overflow-hidden border border-[#293850] bg-[#0B1424] transition hover:-translate-y-2 hover:shadow-lg">
+                        <img src="../images/yuriGagarin.png" alt="Portrait of Yuri Gagarin" class="h-40 w-full object-cover object-top">
+                        <div class="p-5">
+                            <p class="mb-2 text-sm font-bold text-[#7C96FF]">1961</p>
+                            <h3 class="mb-3 font-semibold uppercase">Yuri Gagarin</h3>
+                            <p class="mb-5 text-sm leading-6 text-[#9AA9BF]">
+                                Gagarin became the first person in space and completed one orbit of Earth aboard Vostok 1.
+                            </p>
+                            <a href="https://en.wikipedia.org/wiki/Yuri_Gagarin"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="text-xs font-bold uppercase">
+                                Read More →
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="milestone-card overflow-hidden border border-[#293850] bg-[#0B1424] transition hover:-translate-y-2 hover:shadow-lg">
+                        <img src="../images/apollo11.png" alt="Buzz Aldrin standing on the Moon" class="h-40 w-full object-cover object-top">
+                        <div class="p-5">
+                            <p class="mb-2 text-sm font-bold text-[#7C96FF]">1969</p>
+                            <h3 class="mb-3 font-semibold uppercase">Apollo 11</h3>
+                            <p class="mb-5 text-sm leading-6 text-[#9AA9BF]">
+                                Neil Armstrong and Buzz Aldrin became the first humans to walk on the Moon.
+                            </p>
+                            <a href="https://en.wikipedia.org/wiki/Apollo_11"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="text-xs font-bold uppercase">
+                                Read More →
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="milestone-card overflow-hidden border border-[#293850] bg-[#0B1424] transition hover:-translate-y-2 hover:shadow-lg">
+                        <img src="../images/hubble.jpg" alt="Hubble Space Telescope in orbit" class="h-40 w-full object-cover">
+                        <div class="p-5">
+                            <p class="mb-2 text-sm font-bold text-[#7C96FF]">1990</p>
+                            <h3 class="mb-3 font-semibold uppercase">Hubble Telescope</h3>
+                            <p class="mb-5 text-sm leading-6 text-[#9AA9BF]">
+                                Hubble began observing above Earth's atmosphere and transformed modern astronomy.
+                            </p>
+                            <a href="https://en.wikipedia.org/wiki/Hubble_Space_Telescope"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="text-xs font-bold uppercase">
+                                Read More →
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="milestone-card overflow-hidden border border-[#293850] bg-[#0B1424] transition hover:-translate-y-2 hover:shadow-lg">
+                        <img src="../images/curiosity.jpg" alt="Curiosity rover on Mars" class="h-40 w-full object-cover">
+                        <div class="p-5">
+                            <p class="mb-2 text-sm font-bold text-[#7C96FF]">2012</p>
+                            <h3 class="mb-3 font-semibold uppercase">Curiosity Rover</h3>
+                            <p class="mb-5 text-sm leading-6 text-[#9AA9BF]">
+                                Curiosity landed in Gale crater to investigate Mars's climate, geology and past habitability.
+                            </p>
+                            <a href="https://en.wikipedia.org/wiki/Curiosity_(rover)"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="text-xs font-bold uppercase">
+                                Read More →
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    <!-- Apollo 11 Story -->
+        <section class="story-section border-b border-[#202D43] px-[5%] py-14">
+            <div class="mx-auto grid max-w-[1600px] gap-12 xl:grid-cols-[300px_1fr_270px]">
+                <div class="story-content">
+                    <p class="mb-3 text-xs font-semibold uppercase tracking-[2px] text-[#9AA9BF]">
+                        In-Depth Story
+                    </p>
+                    <h2 class="mb-2 text-2xl font-semibold uppercase tracking-[1px]">
+                        The Apollo 11 Mission
+                    </h2>
+                    <p class="mb-6 text-xs font-semibold uppercase text-[#9AA9BF]">
+                        July 16–24, 1969
+                    </p>
+                    <p class="mb-6 text-sm leading-6 text-[#A1AEC1]">
+                        Apollo 11 fulfilled the goal of landing humans on the Moon and returning them safely to Earth.
+                        The mission became one of the most important achievements in exploration history.
+                    </p>
+                    <div class="mb-7 space-y-2 text-sm">
+                        <p>○ First crewed landing on the Moon</p>
+                        <p>○ First human footsteps on another world</p>
+                        <p>○ 21.5 kilograms of lunar samples returned</p>
+                        <p>○ Global television audience followed the mission</p>
+                    </div>
+                    <a href="https://en.wikipedia.org/wiki/Apollo_11"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center gap-8 border border-[#40516D] bg-[#0B1424] px-6 py-3 text-xs font-semibold uppercase tracking-[1px] transition hover:border-[#7C96FF]">
+                        Explore the Mission
+                        <span>→</span>
+                    </a>
+                </div>
+
+                <div class="story-video overflow-hidden border border-[#40516D] bg-[#0B1424]">
+                    <iframe
+                        class="aspect-video w-full"
+                        src="https://www.youtube.com/embed/FlpstXNjImY"
+                        title="Historic Apollo 11 Moon Landing Footage"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="story-details space-y-6">
+                    <div>
+                        <p class="text-xs font-semibold uppercase text-[#9AA9BF]">Crew</p>
+                        <p class="text-sm">Neil Armstrong, Buzz Aldrin, Michael Collins</p>
+                    </div>
+                    <div>
+                        <p class="text-xs font-semibold uppercase text-[#9AA9BF]">Spacecraft</p>
+                        <p class="text-sm">Columbia and Eagle</p>
+                    </div>
+                    <div>
+                        <p class="text-xs font-semibold uppercase text-[#9AA9BF]">Launch Vehicle</p>
+                        <p class="text-sm">Saturn V</p>
+                    </div>
+                    <div>
+                        <p class="text-xs font-semibold uppercase text-[#9AA9BF]">Destination</p>
+                        <p class="text-sm">Mare Tranquillitatis, the Moon</p>
+                    </div>
+                    <div>
+                        <p class="text-xs font-semibold uppercase text-[#9AA9BF]">Mission Duration</p>
+                        <p class="text-sm">8 days, 3 hours, 18 minutes, 35 seconds</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- History Highlights -->
+        <section class="history-highlights border-b border-[#202D43] px-[5%] py-12">
+            <div class="mx-auto grid max-w-[1600px] divide-y divide-[#d8dee8] lg:grid-cols-3 lg:divide-x lg:divide-y-0">
+                <article class="quote-section py-4 lg:pr-10">
+                    <h2 class="mb-5 text-lg font-semibold uppercase tracking-[1px]">
+                        Voices of the Past
+                    </h2>
+                    <blockquote class="mb-5 text-lg leading-8">
+                        “That's one small step for a man, one giant leap for mankind.”
+                    </blockquote>
+                    <p class="mb-7 text-sm text-[#9AA9BF]">
+                        Neil Armstrong<br>
+                        July 20, 1969
+                    </p>
+                    <a href="https://en.wikipedia.org/wiki/Neil_Armstrong"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center gap-8 border border-[#40516D] bg-[#0B1424] px-6 py-3 text-xs font-semibold uppercase">
+                        Explore His Story
+                        <span>→</span>
+                    </a>
+                </article>
+
+                <article class="pioneers-section py-8 lg:px-10 lg:py-4">
+                    <h2 class="mb-2 text-lg font-semibold uppercase tracking-[1px]">
+                        Pioneers of Space
+                    </h2>
+                    <p class="mb-7 text-sm text-[#9AA9BF]">
+                        Scientists, engineers and astronauts whose work changed exploration.
+                    </p>
+
+                    <div class="grid grid-cols-3 gap-5 text-center">
+                        <a href="https://en.wikipedia.org/wiki/Konstantin_Tsiolkovsky"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="group">
+                            <img src="../images/tsiolkovsky.jpg"
+                                 alt="Konstantin Tsiolkovsky"
+                                 class="mx-auto mb-3 h-20 w-20 rounded-full border border-[#40516D] object-cover transition group-hover:border-[#7C96FF] group-hover:ring-2 group-hover:ring-[#7C96FF]/30">
+                            <p class="text-xs font-semibold uppercase group-hover:text-[#7C96FF]">Tsiolkovsky</p>
+                        </a>
+
+                        <a href="https://en.wikipedia.org/wiki/Wernher_von_Braun"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="group">
+                            <img src="../images/wernherVonBraun.jpg"
+                                 alt="Wernher von Braun"
+                                 class="mx-auto mb-3 h-20 w-20 rounded-full border border-[#40516D] object-cover transition group-hover:border-[#7C96FF] group-hover:ring-2 group-hover:ring-[#7C96FF]/30">
+                            <p class="text-xs font-semibold uppercase group-hover:text-[#7C96FF]">Von Braun</p>
+                        </a>
+
+                        <a href="https://en.wikipedia.org/wiki/Sally_Ride"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="group">
+                            <img src="../images/sallyRide.jpg"
+                                 alt="Sally Ride"
+                                 class="mx-auto mb-3 h-20 w-20 rounded-full border border-[#40516D] object-cover transition group-hover:border-[#7C96FF] group-hover:ring-2 group-hover:ring-[#7C96FF]/30">
+                            <p class="text-xs font-semibold uppercase group-hover:text-[#7C96FF]">Sally Ride</p>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="numbers-section py-8 lg:pl-10 lg:py-4">
+                    <h2 class="mb-8 text-lg font-semibold uppercase tracking-[1px]">
+                        History by the Numbers
+                    </h2>
+                    <div class="grid grid-cols-2 gap-8 sm:grid-cols-4">
+                        <div class="text-center">
+                            <p class="mb-2 text-3xl font-semibold">12</p>
+                            <p class="text-xs uppercase text-[#9AA9BF]">Moonwalkers</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="mb-2 text-3xl font-semibold">6</p>
+                            <p class="text-xs uppercase text-[#9AA9BF]">Crewed Moon Landings</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="mb-2 text-3xl font-semibold">5</p>
+                            <p class="text-xs uppercase text-[#9AA9BF]">Hubble Servicing Missions</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="mb-2 text-3xl font-semibold">1</p>
+                            <p class="text-xs uppercase text-[#9AA9BF]">Continuously Crewed ISS</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+<!-- Hidden Chapters -->
+<section class="hidden-history border-b border-[#202D43] px-[5%] py-14">
+
+    <div class="mx-auto max-w-[1600px]">
+
+        <div class="history-header mb-8 flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
+
+            <div>
+                <p class="mb-2 text-xs font-semibold uppercase tracking-[3px] text-[#7C96FF]">
+                    Beyond the Headlines
+                </p>
+
+                <h2 class="text-3xl font-semibold uppercase tracking-[1px]">
+                    Hidden Chapters of Space History
+                </h2>
+            </div>
+
+            <p class="max-w-[520px] text-sm leading-6 text-[#9AA9BF]">
+                Discover the people, decisions and unexpected moments that shaped
+                space exploration beyond its most famous missions.
+            </p>
+
+        </div>
+
+        <div class="history-grid grid gap-6 lg:grid-cols-[1.2fr_.8fr]">
+
+            <article class="history-feature group relative min-h-[520px] overflow-hidden bg-[#0D1930] text-white">
+
+                <img
+                    src="../images/apollo13.jpg"
+                    alt="Apollo 13 mission control"
+                    class="absolute inset-0 h-full w-full object-cover opacity-55 transition duration-500 group-hover:scale-105">
+
+                <div class="absolute inset-0 bg-gradient-to-t from-[#050816] via-[#07101D]/75 to-transparent"></div>
+
+                <div class="relative flex min-h-[520px] flex-col justify-end p-8 md:p-12">
+
+                    <p class="mb-3 text-sm font-semibold uppercase tracking-[2px] text-[#A6B8FF]">
+                        April 1970
+                    </p>
+
+                    <h3 class="mb-4 text-3xl font-semibold uppercase md:text-4xl">
+                        Apollo 13: Engineering Under Pressure
+                    </h3>
+
+                    <p class="mb-7 max-w-[720px] leading-7 text-white/80">
+                        After an oxygen tank exploded during the journey to the Moon,
+                        astronauts and mission controllers worked together to conserve
+                        power, control carbon dioxide and safely guide the spacecraft
+                        back to Earth.
+                    </p>
+
+                    <a
+                        href="https://en.wikipedia.org/wiki/Apollo_13"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex w-fit items-center gap-5 border border-white/50 px-6 py-3 text-xs font-semibold uppercase tracking-[1px] transition hover:bg-[#E8EEF8] hover:text-[#07101D]">
+                        Explore the Story
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+            <div class="history-stories grid gap-6">
+
+                <article class="history-story-card group grid overflow-hidden border border-[#293850] bg-[#0B1424] sm:grid-cols-[180px_1fr]">
+
+                    <img
+                        src="../images/katherineJohnson.jpg"
+                        alt="Katherine Johnson"
+                        class="h-52 w-full object-cover sm:h-full">
+
+                    <div class="p-6">
+
+                        <p class="mb-2 text-xs font-semibold uppercase tracking-[2px] text-[#7C96FF]">
+                            People Behind the Missions
+                        </p>
+
+                        <h3 class="mb-3 text-xl font-semibold uppercase">
+                            Katherine Johnson's Orbital Calculations
+                        </h3>
+
+                        <p class="mb-5 text-sm leading-6 text-[#9AA9BF]">
+                            Katherine Johnson calculated and verified flight paths for
+                            early American space missions, including John Glenn's
+                            Friendship 7 orbital flight.
+                        </p>
+
+                        <a
+                            href="https://en.wikipedia.org/wiki/Katherine_Johnson"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-xs font-bold uppercase transition group-hover:text-[#7C96FF]">
+                            Read Her Story →
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <article class="history-story-card group grid overflow-hidden border border-[#293850] bg-[#0B1424] sm:grid-cols-[180px_1fr]">
+
+                    <img
+                        src="../images/goldenRecord.jpg"
+                        alt="Voyager Golden Record"
+                        class="h-52 w-full object-cover sm:h-full">
+
+                    <div class="p-6">
+
+                        <p class="mb-2 text-xs font-semibold uppercase tracking-[2px] text-[#7C96FF]">
+                            Messages Beyond Earth
+                        </p>
+
+                        <h3 class="mb-3 text-xl font-semibold uppercase">
+                            The Voyager Golden Record
+                        </h3>
+
+                        <p class="mb-5 text-sm leading-6 text-[#9AA9BF]">
+                            The Voyager spacecraft carried a gold-plated record filled
+                            with sounds, images and greetings designed to represent life
+                            and culture on Earth.
+                        </p>
+
+                        <a
+                            href="https://en.wikipedia.org/wiki/Voyager_Golden_Record"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-xs font-bold uppercase transition group-hover:text-[#7C96FF]">
+                            Discover the Record →
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <article class="history-story-card group grid overflow-hidden border border-[#293850] bg-[#0B1424] sm:grid-cols-[180px_1fr]">
+
+                    <img
+                        src="../images/earth1946.jpg"
+                        alt="First photograph of Earth from space"
+                        class="h-52 w-full object-cover sm:h-full">
+
+                    <div class="p-6">
+
+                        <p class="mb-2 text-xs font-semibold uppercase tracking-[2px] text-[#7C96FF]">
+                            October 1946
+                        </p>
+
+                        <h3 class="mb-3 text-xl font-semibold uppercase">
+                            The First Photograph of Earth from Space
+                        </h3>
+
+                        <p class="mb-5 text-sm leading-6 text-[#9AA9BF]">
+                            A camera carried by a modified V-2 rocket captured one of
+                            the earliest views of Earth from beyond the atmosphere,
+                            years before the first satellite was launched.
+                        </p>
+
+                        <a
+                            href="https://en.wikipedia.org/wiki/First_images_of_Earth_from_space"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-xs font-bold uppercase transition group-hover:text-[#7C96FF]">
+                            View the History →
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- Continue Exploring -->
+        <section class="history-cta bg-[#07101D] px-[7%] py-10">
+            <div class="mx-auto flex max-w-[1450px] flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
+                <div>
+                    <h2 class="text-xl font-semibold uppercase tracking-[2px]">
+                        Continue Exploring Space History
+                    </h2>
+                    <p class="mt-2 text-sm text-[#9AA9BF]">
+                        Browse a complete timeline of missions, discoveries and human achievements.
+                    </p>
+                </div>
+
+                <a href="https://en.wikipedia.org/wiki/Timeline_of_spaceflight"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center gap-5 bg-[#0D1930] px-8 py-4 text-sm font-semibold uppercase text-white transition hover:bg-[#5F7CFF]">
+                    Open Full Timeline
+                    <span>→</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta
+        name="description"
+        content="Explore black holes, nebulae, supernovae, auroras, comets, and asteroids."
+    >
+    <title>Space Phenomena | Astraea</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet"
+    >
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/SpacePhenomena.css">
+    <script src="../javascript/navbar.js" defer></script>
+</head>
+
+<body class="min-h-screen overflow-x-hidden bg-black text-white">
+
+    <!-- Navigation -->
+
+<header id="navbar" class="topnav">
+  <div class="logo-container">
+  <a href="../index.html" class="logo">Astraea</a>
+  <img src="../images/logo.png" class="logo-icon">
+  </div>
+
+  <div class="menu-toggle" id="mobile-menu"> <!--for phones-->
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+
+  <ul class="nav-links">
+    
+  <li class="dropdown">
+    <a href="#" class="dropbtn">Planets & Systems ▾</a>
+    <div class="dropdown-content">
+      <div class="nested-dropdown">
+        <a href="#" class="nested-dropbtn">Solar System Planets ▸</a>
+        <div class="nested-dropdown-content">
+          <a href="../html/Planets_Mercury.html">Mercury</a>
+          <a href="../html/Planets_Venus.html">Venus</a>
+          <a href="../html/Planets_Earth.html">Earth</a>
+          <a href="../html/Planets_Mars.html">Mars</a>
+          <a href="../html/Planets_Jupiter.html">Jupiter</a>
+          <a href="../html/Planets_Saturn.html">Saturn</a>
+          <a href="../html/Planets_Uranus.html">Uranus</a>
+          <a href="../html/Planets_Neptune.html">Neptune</a>
+        </div>
+      </div>
+      <a href="../html/exoplanets.html">Exoplanets</a>
+      <a href="../html/Alien Systems.html">Foreign Systems</a>
+    </div>
+  </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Missions & Spacecraft ▾</a>
+      <div class="dropdown-content">
+        <a href="../html/Europa Clipper.html">Europa Clipper</a>
+        <a href="../html/mars-missions.html">Mars Missions</a>
+        <a href="../html/Apollo.html">Apollo Missions</a>
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Science & Tech ▾</a>
+      <div class="dropdown-content">
+        <a href="../html/spaceTechnology.html">Space Technology</a>
+        <a href="../html/SpacePhenomena.html">Space Phenomena</a>
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Mysteries & History ▾</a>
+      <div class="dropdown-content">
+        <a href="../html/SpaceMysteries.html">Space Mysteries</a>
+        <a href="../html/spaceHistory.html">Space History</a>
+        <a href="../html/spaceFuture.html">Future of Space</a>
+      </div>
+    </li>
+
+  </ul>
+</header>
+
+    <main class="relative z-10">
+
+        <!-- Hero -->
+
+        <section
+            class="flex min-h-screen items-center justify-center px-8 pb-24 pt-40 text-center"
+            aria-labelledby="page-title"
+        >
+            <div class="flex w-full max-w-5xl flex-col items-center gap-10">
+                <p
+                    class="m-0 text-sm font-bold uppercase tracking-[0.45em] text-cyan-300"
+                >
+                    Cosmic Events and Objects
+                </p>
+
+                <h1
+                    id="page-title"
+                    class="m-0 flex flex-col text-7xl font-black uppercase leading-[0.82] tracking-[-0.055em] text-white md:text-8xl lg:text-9xl"
+                >
+                    <span>Space</span>
+                    <span>Phenomena</span>
+                </h1>
+
+                <p class="m-0 max-w-3xl text-xl leading-9 text-slate-300">
+                    Explore the forces, events, and objects that shape the
+                    universe, from collapsing stars to glowing atmospheres.
+                </p>
+
+                <a
+                    href="#phenomena-grid"
+                    class="inline-flex min-h-14 items-center justify-center gap-4 rounded-full border border-cyan-300/50 bg-cyan-300/10 px-8 text-xs font-bold uppercase tracking-[0.25em] text-white transition duration-200 hover:-translate-y-1 hover:bg-cyan-300 hover:text-slate-950 focus:outline-none focus:ring-4 focus:ring-cyan-300/30"
+                >
+                    Explore Phenomena
+                    <span aria-hidden="true">↓</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Phenomena Collection -->
+
+        <section
+            id="phenomena-grid"
+            class="mx-auto max-w-7xl px-8 py-32"
+            aria-labelledby="phenomena-title"
+        >
+            <header class="mb-16 max-w-3xl">
+                <p
+                    class="m-0 text-sm font-bold uppercase tracking-[0.4em] text-slate-500"
+                >
+                    Phenomena Collection
+                </p>
+
+                <h2
+                    id="phenomena-title"
+                    class="mt-4 text-5xl font-black text-white"
+                >
+                    Choose a phenomenon
+                </h2>
+
+                <p class="mt-5 text-lg leading-8 text-slate-400">
+                    Select a card to open detailed information about each
+                    cosmic event or object.
+                </p>
+            </header>
+
+            <div class="grid grid-cols-12 gap-6">
+
+                <!-- Black Hole -->
+                <article
+                    class="phenomenon-card col-span-12 min-h-[460px] lg:col-span-7"
+                    data-accent="purple"
+                >
+                    <img
+                        src="../images/blackhole.jpg"
+                        alt="Black hole surrounded by glowing material"
+                        class="phenomenon-card-image"
+                    >
+
+                    <div
+                        class="phenomenon-card-overlay flex flex-col items-start justify-end p-9"
+                    >
+                        <p
+                            class="m-0 text-xs font-bold uppercase tracking-[0.28em]"
+                        >
+                            Extreme Gravity
+                        </p>
+
+                        <h3
+                            class="mb-6 mt-2 text-5xl font-black uppercase leading-none"
+                        >
+                            Black Hole
+                        </h3>
+
+                        <button
+                            class="phenomenon-trigger inline-flex min-h-12 items-center justify-center rounded-full border border-white/50 bg-white/5 px-6 text-xs font-bold uppercase tracking-[0.18em] text-white backdrop-blur-md transition duration-200 hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-cyan-300/30"
+                            type="button"
+                            data-phenomenon="black-hole"
+                        >
+                            Explore
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Nebula -->
+                <article
+                    class="phenomenon-card col-span-12 min-h-[460px] lg:col-span-5"
+                    data-accent="pink"
+                >
+                    <img
+                        src="../images/nebula.png"
+                        alt="Colorful nebula in space"
+                        class="phenomenon-card-image"
+                    >
+
+                    <div
+                        class="phenomenon-card-overlay flex flex-col items-start justify-end p-9"
+                    >
+                        <p
+                            class="m-0 text-xs font-bold uppercase tracking-[0.28em]"
+                        >
+                            Stellar Nursery
+                        </p>
+
+                        <h3
+                            class="mb-6 mt-2 text-5xl font-black uppercase leading-none"
+                        >
+                            Nebula
+                        </h3>
+
+                        <button
+                            class="phenomenon-trigger inline-flex min-h-12 items-center justify-center rounded-full border border-white/50 bg-white/5 px-6 text-xs font-bold uppercase tracking-[0.18em] text-white backdrop-blur-md transition duration-200 hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-cyan-300/30"
+                            type="button"
+                            data-phenomenon="nebula"
+                        >
+                            Explore
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Supernova -->
+                <article
+                    class="phenomenon-card col-span-12 min-h-[380px] lg:col-span-4"
+                    data-accent="orange"
+                >
+                    <img
+                        src="../images/supernova.jpg"
+                        alt="Bright supernova explosion"
+                        class="phenomenon-card-image"
+                    >
+
+                    <div
+                        class="phenomenon-card-overlay flex flex-col items-start justify-end p-8"
+                    >
+                        <p
+                            class="m-0 text-xs font-bold uppercase tracking-[0.24em]"
+                        >
+                            Stellar Explosion
+                        </p>
+
+                        <h3
+                            class="mb-6 mt-2 text-4xl font-black uppercase leading-none"
+                        >
+                            Supernova
+                        </h3>
+
+                        <button
+                            class="phenomenon-trigger inline-flex min-h-12 items-center justify-center rounded-full border border-white/50 bg-white/5 px-6 text-xs font-bold uppercase tracking-[0.18em] text-white backdrop-blur-md transition duration-200 hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-cyan-300/30"
+                            type="button"
+                            data-phenomenon="supernova"
+                        >
+                            Explore
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Aurora -->
+                <article
+                    class="phenomenon-card col-span-12 min-h-[380px] lg:col-span-4"
+                    data-accent="green"
+                >
+                    <img
+                        src="../images/aurora.png"
+                        alt="Green aurora across the night sky"
+                        class="phenomenon-card-image"
+                    >
+
+                    <div
+                        class="phenomenon-card-overlay flex flex-col items-start justify-end p-8"
+                    >
+                        <p
+                            class="m-0 text-xs font-bold uppercase tracking-[0.24em]"
+                        >
+                            Atmospheric Light
+                        </p>
+
+                        <h3
+                            class="mb-6 mt-2 text-4xl font-black uppercase leading-none"
+                        >
+                            Aurora
+                        </h3>
+
+                        <button
+                            class="phenomenon-trigger inline-flex min-h-12 items-center justify-center rounded-full border border-white/50 bg-white/5 px-6 text-xs font-bold uppercase tracking-[0.18em] text-white backdrop-blur-md transition duration-200 hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-cyan-300/30"
+                            type="button"
+                            data-phenomenon="aurora"
+                        >
+                            Explore
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Comet -->
+                <article
+                    class="phenomenon-card col-span-12 min-h-[380px] lg:col-span-4"
+                    data-accent="cyan"
+                >
+                    <img
+                        src="../images/comet.png"
+                        alt="Comet moving through space"
+                        class="phenomenon-card-image"
+                    >
+
+                    <div
+                        class="phenomenon-card-overlay flex flex-col items-start justify-end p-8"
+                    >
+                        <p
+                            class="m-0 text-xs font-bold uppercase tracking-[0.24em]"
+                        >
+                            Icy Wanderer
+                        </p>
+
+                        <h3
+                            class="mb-6 mt-2 text-4xl font-black uppercase leading-none"
+                        >
+                            Comet
+                        </h3>
+
+                        <button
+                            class="phenomenon-trigger inline-flex min-h-12 items-center justify-center rounded-full border border-white/50 bg-white/5 px-6 text-xs font-bold uppercase tracking-[0.18em] text-white backdrop-blur-md transition duration-200 hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-cyan-300/30"
+                            type="button"
+                            data-phenomenon="comet"
+                        >
+                            Explore
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Asteroid -->
+
+                <article
+                    class="phenomenon-card col-span-12 min-h-[420px]"
+                    data-accent="gray"
+                >
+                    <img
+                        src="../images/asteroid.png"
+                        alt="Rocky asteroid moving through space"
+                        class="phenomenon-card-image"
+                    >
+
+                    <div
+                        class="phenomenon-card-overlay flex flex-col items-start justify-end p-9"
+                    >
+                        <p
+                            class="m-0 text-xs font-bold uppercase tracking-[0.28em]"
+                        >
+                            Ancient Remnant
+                        </p>
+
+                        <h3
+                            class="mb-6 mt-2 text-5xl font-black uppercase leading-none"
+                        >
+                            Asteroid
+                        </h3>
+
+                        <button
+                            class="phenomenon-trigger inline-flex min-h-12 items-center justify-center rounded-full border border-white/50 bg-white/5 px-6 text-xs font-bold uppercase tracking-[0.18em] text-white backdrop-blur-md transition duration-200 hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-cyan-300/30"
+                            type="button"
+                            data-phenomenon="asteroid"
+                        >
+                            Explore
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Ending -->
+
+        <section
+            class="flex min-h-[70vh] items-center justify-center px-8 py-32 text-center"
+            aria-labelledby="ending-title"
+        >
+            <div class="max-w-4xl">
+                <p
+                    class="m-0 text-sm font-bold uppercase tracking-[0.45em] text-cyan-300"
+                >
+                    Cosmic Motion
+                </p>
+
+                <h2
+                    id="ending-title"
+                    class="mt-6 text-6xl font-black leading-tight text-white"
+                >
+                    Nothing in space is truly still
+                </h2>
+
+                <p class="mt-8 text-xl leading-9 text-slate-400">
+                    Stars form, explode, collapse, and reshape the universe.
+                    Every phenomenon is part of a much larger cosmic cycle.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Phenomenon Modal -->
+
+    <div
+        id="phenomenon-modal"
+        class="phenomenon-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-hidden="true"
+        aria-labelledby="phenomenon-modal-title"
+    >
+        <article class="phenomenon-panel">
+
+            <!-- Image header -->
+
+            <header class="phenomenon-panel-header">
+                <img
+                    id="phenomenon-modal-image"
+                    class="phenomenon-panel-image"
+                    src=""
+                    alt=""
+                >
+
+                <div class="phenomenon-panel-shade"></div>
+
+                <button
+                    id="close-phenomenon-modal"
+                    class="modal-close"
+                    type="button"
+                    aria-label="Close phenomenon information"
+                >
+                    <span aria-hidden="true">×</span>
+                </button>
+
+                <div
+                    class="absolute inset-x-0 bottom-0 z-10 px-10 pb-10"
+                >
+                    <p
+                        id="phenomenon-modal-label"
+                        class="m-0 text-xs font-bold uppercase tracking-[0.35em] text-cyan-300"
+                    ></p>
+
+                    <h2
+                        id="phenomenon-modal-title"
+                        class="mt-3 text-6xl font-black uppercase leading-none text-white"
+                    ></h2>
+                </div>
+            </header>
+
+            <!-- Main content -->
+
+            <div class="px-10 py-10">
+
+                <!-- Metadata pills -->
+
+                <dl class="flex flex-wrap gap-3">
+                    <div
+                        class="rounded-full border border-white/10 bg-white/5 px-5 py-3"
+                    >
+                        <dt
+                            class="inline text-xs font-bold uppercase tracking-[0.15em] text-slate-500"
+                        >
+                            Category:
+                        </dt>
+
+                        <dd
+                            id="phenomenon-modal-category"
+                            class="ml-2 inline text-sm font-semibold text-white"
+                        ></dd>
+                    </div>
+
+                    <div
+                        class="rounded-full border border-white/10 bg-white/5 px-5 py-3"
+                    >
+                        <dt
+                            class="inline text-xs font-bold uppercase tracking-[0.15em] text-slate-500"
+                        >
+                            Scale:
+                        </dt>
+
+                        <dd
+                            id="phenomenon-modal-scale"
+                            class="ml-2 inline text-sm font-semibold text-white"
+                        ></dd>
+                    </div>
+
+                    <div
+                        class="rounded-full border border-white/10 bg-white/5 px-5 py-3"
+                    >
+                        <dt
+                            class="inline text-xs font-bold uppercase tracking-[0.15em] text-slate-500"
+                        >
+                            Origin:
+                        </dt>
+
+                        <dd
+                            id="phenomenon-modal-origin"
+                            class="ml-2 inline text-sm font-semibold text-white"
+                        ></dd>
+                    </div>
+                </dl>
+
+                <!-- Overview and facts -->
+
+                <div class="mt-10 grid grid-cols-[0.9fr_1.1fr] gap-12">
+                    <section>
+                        <p
+                            class="text-xs font-bold uppercase tracking-[0.25em] text-cyan-300"
+                        >
+                            Overview
+                        </p>
+
+                        <p
+                            id="phenomenon-modal-description"
+                            class="mt-4 text-lg leading-8 text-slate-300"
+                        ></p>
+                    </section>
+
+                    <section>
+                        <p
+                            class="text-xs font-bold uppercase tracking-[0.25em] text-cyan-300"
+                        >
+                            Key Facts
+                        </p>
+
+                        <ul
+                            id="phenomenon-modal-facts"
+                            class="phenomenon-facts mt-4 grid grid-cols-2 gap-4"
+                        ></ul>
+                    </section>
+                </div>
+
+                <!-- Significance -->
+
+                <section class="phenomenon-significance mt-10">
+                    <div>
+                        <p
+                            class="m-0 text-xs font-bold uppercase tracking-[0.25em] text-cyan-300"
+                        >
+                            Why It Matters
+                        </p>
+
+                        <blockquote
+                            id="phenomenon-modal-significance"
+                            class="mt-3 text-xl font-semibold leading-8 text-white"
+                        ></blockquote>
+                    </div>
+
+                    <span
+                        class="text-5xl text-cyan-300/40"
+                        aria-hidden="true"
+                    >
+                        ✦
+                    </span>
+                </section>
+            </div>
+        </article>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../javascript/SpacePhenomena.js"></script>
+
+</body>
+
+</html>

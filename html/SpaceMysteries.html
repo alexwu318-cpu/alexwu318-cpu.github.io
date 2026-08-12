@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Explore six of astronomy's greatest unsolved space mysteries."
+    >
+
+    <title>Space Mysteries | Astraea</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet"
+    >
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/SpaceMysteries.css">
+
+    <script src="../javascript/navbar.js" defer></script>
+    <script src="../javascript/SpaceMysteries.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ======================================
+         NAVIGATION
+    ======================================= -->
+
+<header id="navbar" class="topnav">
+  <div class="logo-container">
+  <a href="../index.html" class="logo">Astraea</a>
+  <img src="../images/logo.png" class="logo-icon">
+  </div>
+
+  <div class="menu-toggle" id="mobile-menu"> <!--for phones-->
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+
+  <ul class="nav-links">
+    
+  <li class="dropdown">
+    <a href="#" class="dropbtn">Planets & Systems ▾</a>
+    <div class="dropdown-content">
+      <div class="nested-dropdown">
+        <a href="#" class="nested-dropbtn">Solar System Planets ▸</a>
+        <div class="nested-dropdown-content">
+          <a href="../html/Planets_Mercury.html">Mercury</a>
+          <a href="../html/Planets_Venus.html">Venus</a>
+          <a href="../html/Planets_Earth.html">Earth</a>
+          <a href="../html/Planets_Mars.html">Mars</a>
+          <a href="../html/Planets_Jupiter.html">Jupiter</a>
+          <a href="../html/Planets_Saturn.html">Saturn</a>
+          <a href="../html/Planets_Uranus.html">Uranus</a>
+          <a href="../html/Planets_Neptune.html">Neptune</a>
+        </div>
+      </div>
+      <a href="../html/exoplanets.html">Exoplanets</a>
+      <a href="../html/Alien Systems.html">Foreign Systems</a>
+    </div>
+  </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Missions & Spacecraft ▾</a>
+      <div class="dropdown-content">
+        <a href="../html/Europa Clipper.html">Europa Clipper</a>
+        <a href="../html/mars-missions.html">Mars Missions</a>
+        <a href="../html/Apollo.html">Apollo Missions</a>
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Science & Tech ▾</a>
+      <div class="dropdown-content">
+        <a href="../html/spaceTechnology.html">Space Technology</a>
+        <a href="../html/SpacePhenomena.html">Space Phenomena</a>
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Mysteries & History ▾</a>
+      <div class="dropdown-content">
+        <a href="../html/SpaceMysteries.html">Space Mysteries</a>
+        <a href="../html/spaceHistory.html">Space History</a>
+        <a href="../html/spaceFuture.html">Future of Space</a>
+      </div>
+    </li>
+
+  </ul>
+</header>
+
+    <main>
+
+        <!-- ======================================
+             HERO
+        ======================================= -->
+
+        <section
+            class="relative flex min-h-screen items-center overflow-hidden px-12 py-36"
+            aria-labelledby="page-title"
+        >
+            <div
+                class="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-2 items-center gap-20"
+            >
+                <div>
+                    <p
+                        class="mb-6 text-sm font-bold uppercase tracking-[0.45em] text-cyan-300"
+                    >
+                        Astraea Classified Files
+                    </p>
+
+                    <h1
+                        id="page-title"
+                        class="text-7xl font-black uppercase leading-[0.9] tracking-tight text-white"
+                    >
+                        Space
+
+                        <span class="block text-cyan-300">
+                            Mysteries
+                        </span>
+                    </h1>
+
+                    <p class="mt-8 max-w-xl text-xl leading-9 text-gray-300">
+                        Some discoveries changed astronomy. Others left
+                        scientists with more questions than answers. Explore
+                        six of the universe's greatest unsolved mysteries.
+                    </p>
+
+                    <a
+                        href="#timeline"
+                        class="mt-10 inline-flex items-center gap-4 rounded-full border border-cyan-300/40 bg-cyan-300/10 px-7 py-4 text-xs font-bold uppercase tracking-[0.3em] text-white transition hover:border-cyan-300 hover:bg-cyan-300 hover:text-black"
+                    >
+                        Begin Investigation
+
+                        <span class="text-lg" aria-hidden="true">
+                            ↓
+                        </span>
+                    </a>
+
+                    <div
+                        class="mt-10 flex max-w-lg items-center gap-6 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-lg"
+                        aria-label="Six unsolved cases"
+                    >
+                        <span class="text-5xl font-black text-cyan-300">
+                            06
+                        </span>
+
+                        <div>
+                            <p
+                                class="font-bold uppercase tracking-[0.2em] text-white"
+                            >
+                                Unsolved Cases
+                            </p>
+
+                            <p class="mt-1 text-sm text-gray-400">
+                                Six mysteries. No confirmed answers.
+                            </p>
+                        </div>
+
+                        <span
+                            class="ml-auto h-3 w-3 rounded-full bg-cyan-300 shadow-[0_0_14px_#22d3ee]"
+                            title="Investigation active"
+                            aria-label="Investigation active"
+                        ></span>
+                    </div>
+                </div>
+
+                <!-- Featured cases -->
+
+                <div
+                    class="relative h-[620px]"
+                    aria-label="Featured space mystery evidence"
+                >
+                    <div
+                        class="absolute left-4 top-8 w-[65%] -rotate-6 rounded-2xl border border-white/10 bg-white/10 p-4 shadow-2xl backdrop-blur-lg"
+                    >
+                        <img
+                            src="../images/darkenergy.jpg"
+                            alt="Visual representation of dark energy"
+                            class="h-72 w-full rounded-xl object-cover"
+                        >
+
+                        <div class="px-2 pb-2 pt-5">
+                            <p
+                                class="text-xs font-bold uppercase tracking-[0.3em] text-purple-300"
+                            >
+                                Case File 01
+                            </p>
+
+                            <h2 class="mt-2 text-2xl font-black text-white">
+                                Dark Energy
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div
+                        class="absolute bottom-8 right-4 w-[65%] rotate-6 rounded-2xl border border-white/10 bg-white/10 p-4 shadow-2xl backdrop-blur-lg"
+                    >
+                        <img
+                            src="../images/wowsignal.jpg"
+                            alt="Radio telescope associated with the Wow signal"
+                            class="h-72 w-full rounded-xl object-cover"
+                        >
+
+                        <div class="px-2 pb-2 pt-5">
+                            <p
+                                class="text-xs font-bold uppercase tracking-[0.3em] text-orange-300"
+                            >
+                                Case File 03
+                            </p>
+
+                            <h2 class="mt-2 text-2xl font-black text-white">
+                                Wow! Signal
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div
+                        class="absolute left-1/2 top-1/2 -z-10 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-500/20 blur-3xl"
+                        aria-hidden="true"
+                    ></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================
+             TIMELINE
+        ======================================= -->
+
+        <section
+            id="timeline"
+            class="relative mx-auto max-w-7xl scroll-mt-20 px-6 py-32 sm:px-8 lg:py-40"
+            aria-label="Space mystery case files"
+        >
+            <div class="timeline-line" aria-hidden="true"></div>
+
+            <!-- Dark Energy -->
+
+            <article class="timeline-item left reveal">
+                <div
+                    class="timeline-dot purple"
+                    aria-hidden="true"
+                ></div>
+
+                <div
+                    class="timeline-connector"
+                    aria-hidden="true"
+                ></div>
+
+                <div
+                    class="timeline-card rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl shadow-black/40 backdrop-blur-xl sm:p-8"
+                >
+                    <p
+                        class="mb-4 text-sm font-bold uppercase tracking-[0.35em] text-gray-500 sm:text-base"
+                    >
+                        Year: 1998
+                    </p>
+
+                    <img
+                        src="../images/darkenergy.jpg"
+                        alt="Visual representation of dark energy"
+                        class="h-64 w-full rounded-2xl object-cover"
+                        loading="lazy"
+                    >
+
+                    <p
+                        class="mt-6 text-sm uppercase tracking-[0.35em] text-purple-300"
+                    >
+                        Case File 01
+                    </p>
+
+                    <h2 class="mt-4 text-3xl font-black sm:text-4xl">
+                        Dark Energy
+                    </h2>
+
+                    <p class="mt-6 leading-8 text-gray-400">
+                        Astronomers discovered that the universe is expanding
+                        faster over time, but no one knows what force is causing
+                        this acceleration. The mysterious phenomenon has been
+                        named
+                        <strong class="text-gray-200">
+                            dark energy
+                        </strong>,
+                        and it may make up nearly 70% of the entire universe.
+                    </p>
+
+                    <button
+                        class="open-file-button"
+                        type="button"
+                        data-case="dark-energy"
+                    >
+                        Open File
+                    </button>
+                </div>
+            </article>
+
+            <!-- Dark Matter -->
+
+            <article class="timeline-item right reveal">
+                <div
+                    class="timeline-dot pink"
+                    aria-hidden="true"
+                ></div>
+
+                <div
+                    class="timeline-connector"
+                    aria-hidden="true"
+                ></div>
+
+                <div
+                    class="timeline-card rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl shadow-black/40 backdrop-blur-xl sm:p-8"
+                >
+                    <p
+                        class="mb-4 text-sm font-bold uppercase tracking-[0.35em] text-gray-500 sm:text-base"
+                    >
+                        Year: 1933
+                    </p>
+
+                    <img
+                        src="../images/darkmatter.jpg"
+                        alt="Visual representation of dark matter surrounding a galaxy"
+                        class="h-64 w-full rounded-2xl object-cover"
+                        loading="lazy"
+                    >
+
+                    <p
+                        class="mt-6 text-sm uppercase tracking-[0.35em] text-pink-300"
+                    >
+                        Case File 02
+                    </p>
+
+                    <h2 class="mt-4 text-3xl font-black sm:text-4xl">
+                        Dark Matter
+                    </h2>
+
+                    <p class="mt-6 leading-8 text-gray-400">
+                        While observing galaxies, astronomers found that visible
+                        matter alone could not explain how fast they rotate. An
+                        invisible substance known as
+                        <strong class="text-gray-200">
+                            dark matter
+                        </strong>
+                        appears to provide the missing gravity, yet it has never
+                        been directly detected despite decades of research.
+                    </p>
+
+                    <button
+                        class="open-file-button"
+                        type="button"
+                        data-case="dark-matter"
+                    >
+                        Open File
+                    </button>
+                </div>
+            </article>
+
+            <!-- Wow Signal -->
+
+            <article class="timeline-item left reveal">
+                <div
+                    class="timeline-dot orange"
+                    aria-hidden="true"
+                ></div>
+
+                <div
+                    class="timeline-connector"
+                    aria-hidden="true"
+                ></div>
+
+                <div
+                    class="timeline-card rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl shadow-black/40 backdrop-blur-xl sm:p-8"
+                >
+                    <p
+                        class="mb-4 text-sm font-bold uppercase tracking-[0.35em] text-gray-500 sm:text-base"
+                    >
+                        Year: 1977
+                    </p>
+
+                    <img
+                        src="../images/wowsignal.jpg"
+                        alt="Radio telescope associated with the Wow signal"
+                        class="h-64 w-full rounded-2xl object-cover"
+                        loading="lazy"
+                    >
+
+                    <p
+                        class="mt-6 text-sm uppercase tracking-[0.35em] text-orange-300"
+                    >
+                        Case File 03
+                    </p>
+
+                    <h2 class="mt-4 text-3xl font-black sm:text-4xl">
+                        Wow! Signal
+                    </h2>
+
+                    <p class="mt-6 leading-8 text-gray-400">
+                        On 15 August 1977, astronomers detected a powerful radio
+                        signal from deep space that lasted just 72 seconds. The
+                        signal matched many characteristics expected from an
+                        extraterrestrial transmission, yet it has never been
+                        detected again. Its true origin remains unresolved.
+                    </p>
+
+                    <button
+                        class="open-file-button"
+                        type="button"
+                        data-case="wow-signal"
+                    >
+                        Open File
+                    </button>
+                </div>
+            </article>
+
+            <!-- Great Attractor -->
+
+            <article class="timeline-item right reveal">
+                <div
+                    class="timeline-dot green"
+                    aria-hidden="true"
+                ></div>
+
+                <div
+                    class="timeline-connector"
+                    aria-hidden="true"
+                ></div>
+
+                <div
+                    class="timeline-card rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl shadow-black/40 backdrop-blur-xl sm:p-8"
+                >
+                    <p
+                        class="mb-4 text-sm font-bold uppercase tracking-[0.35em] text-gray-500 sm:text-base"
+                    >
+                        Year: 1986
+                    </p>
+
+                    <img
+                        src="../images/greatattractor.jpg"
+                        alt="Galaxies moving toward the Great Attractor"
+                        class="h-64 w-full rounded-2xl object-cover"
+                        loading="lazy"
+                    >
+
+                    <p
+                        class="mt-6 text-sm uppercase tracking-[0.35em] text-green-300"
+                    >
+                        Case File 04
+                    </p>
+
+                    <h2 class="mt-4 text-3xl font-black sm:text-4xl">
+                        Great Attractor
+                    </h2>
+
+                    <p class="mt-6 leading-8 text-gray-400">
+                        Millions of galaxies, including the Milky Way, are
+                        moving toward a region known as the
+                        <strong class="text-gray-200">
+                            Great Attractor
+                        </strong>.
+                        Dense stars and dust obscure the region, making its
+                        complete structure difficult to observe.
+                    </p>
+
+                    <button
+                        class="open-file-button"
+                        type="button"
+                        data-case="great-attractor"
+                    >
+                        Open File
+                    </button>
+                </div>
+            </article>
+
+            <!-- Oumuamua -->
+
+            <article class="timeline-item left reveal">
+                <div
+                    class="timeline-dot cyan"
+                    aria-hidden="true"
+                ></div>
+
+                <div
+                    class="timeline-connector"
+                    aria-hidden="true"
+                ></div>
+
+                <div
+                    class="timeline-card rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl shadow-black/40 backdrop-blur-xl sm:p-8"
+                >
+                    <p
+                        class="mb-4 text-sm font-bold uppercase tracking-[0.35em] text-gray-500 sm:text-base"
+                    >
+                        Year: 2017
+                    </p>
+
+                    <img
+                        src="../images/oumuamua.jpg"
+                        alt="Artist's interpretation of Oumuamua"
+                        class="h-64 w-full rounded-2xl object-cover"
+                        loading="lazy"
+                    >
+
+                    <p
+                        class="mt-6 text-sm uppercase tracking-[0.35em] text-cyan-300"
+                    >
+                        Case File 05
+                    </p>
+
+                    <h2 class="mt-4 text-3xl font-black sm:text-4xl">
+                        Oumuamua
+                    </h2>
+
+                    <p class="mt-6 leading-8 text-gray-400">
+                        In 2017, astronomers discovered
+                        <strong class="text-gray-200">
+                            Oumuamua
+                        </strong>,
+                        the first known object to enter the Solar System from
+                        interstellar space. Its unusual shape, acceleration, and
+                        lack of a visible comet tail continue to attract debate.
+                    </p>
+
+                    <button
+                        class="open-file-button"
+                        type="button"
+                        data-case="oumuamua"
+                    >
+                        Open File
+                    </button>
+                </div>
+            </article>
+
+            <!-- Fermi Paradox -->
+
+            <article class="timeline-item right reveal">
+                <div
+                    class="timeline-dot gray"
+                    aria-hidden="true"
+                ></div>
+
+                <div
+                    class="timeline-connector"
+                    aria-hidden="true"
+                ></div>
+
+                <div
+                    class="timeline-card rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl shadow-black/40 backdrop-blur-xl sm:p-8"
+                >
+                    <p
+                        class="mb-4 text-sm font-bold uppercase tracking-[0.35em] text-gray-500 sm:text-base"
+                    >
+                        Year: 1950
+                    </p>
+
+                    <img
+                        src="../images/fermiparadox.jpg"
+                        alt="Illustration representing the Fermi paradox"
+                        class="h-64 w-full rounded-2xl object-cover"
+                        loading="lazy"
+                    >
+
+                    <p
+                        class="mt-6 text-sm uppercase tracking-[0.35em] text-gray-300"
+                    >
+                        Case File 06
+                    </p>
+
+                    <h2 class="mt-4 text-3xl font-black sm:text-4xl">
+                        Fermi Paradox
+                    </h2>
+
+                    <p class="mt-6 leading-8 text-gray-400">
+                        In 1950, physicist
+                        <strong class="text-gray-200">
+                            Enrico Fermi
+                        </strong>
+                        posed the question:
+                        <em>“Where is everybody?”</em>
+                        Billions of potentially habitable worlds may exist, yet
+                        humanity has found no convincing evidence of another
+                        intelligent civilization.
+                    </p>
+
+                    <button
+                        class="open-file-button"
+                        type="button"
+                        data-case="fermi-paradox"
+                    >
+                        Open File
+                    </button>
+                </div>
+            </article>
+        </section>
+
+        <!-- ======================================
+             ENDING
+        ======================================= -->
+
+        <section
+            class="relative flex min-h-screen items-center justify-center overflow-hidden px-6 py-32"
+            aria-labelledby="ending-title"
+        >
+            <div class="relative z-10 mx-auto max-w-4xl text-center">
+                <p
+                    class="mb-6 text-sm uppercase tracking-[0.5em] text-gray-500 sm:text-base"
+                >
+                    End of File
+                </p>
+
+                <h2
+                    id="ending-title"
+                    class="mb-10 text-4xl font-black sm:text-5xl md:text-7xl"
+                >
+                    The Next Discovery
+                </h2>
+
+                <p
+                    class="text-lg leading-relaxed text-gray-400 sm:text-xl md:text-2xl"
+                >
+                    Every answer reveals another mystery. Somewhere beyond the
+                    reach of today's telescopes, the universe still holds
+                    secrets waiting to be uncovered.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ======================================
+         REUSABLE CASE MODAL
+    ======================================= -->
+
+    <div
+        id="case-modal"
+        class="case-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-hidden="true"
+        aria-labelledby="case-modal-title"
+    >
+        <article class="case-file">
+            <button
+                id="close-modal"
+                class="modal-close"
+                type="button"
+                aria-label="Close case file"
+            >
+                <span aria-hidden="true">×</span>
+            </button>
+
+            <img
+                id="case-modal-image"
+                class="case-file-image"
+                src=""
+                alt=""
+            >
+
+            <div class="case-file-content">
+                <header>
+                    <p
+                        id="case-modal-number"
+                        class="case-file-number"
+                    ></p>
+
+                    <h2 id="case-modal-title"></h2>
+
+                    <dl class="case-meta">
+                        <div>
+                            <dt>Year</dt>
+                            <dd id="case-modal-year"></dd>
+                        </div>
+
+                        <div>
+                            <dt>Category</dt>
+                            <dd id="case-modal-category"></dd>
+                        </div>
+
+                        <div>
+                            <dt>Status</dt>
+                            <dd id="case-modal-status"></dd>
+                        </div>
+                    </dl>
+                </header>
+
+                <section aria-labelledby="case-overview-title">
+                    <h3 id="case-overview-title">
+                        Case Overview
+                    </h3>
+
+                    <p
+                        id="case-modal-overview"
+                        class="case-file-overview"
+                    ></p>
+                </section>
+
+                <section aria-labelledby="case-evidence-title">
+                    <h3 id="case-evidence-title">
+                        Known Evidence
+                    </h3>
+
+                    <ul id="case-modal-evidence"></ul>
+                </section>
+
+                <section aria-labelledby="case-question-title">
+                    <h3 id="case-question-title">
+                        Unanswered Question
+                    </h3>
+
+                    <blockquote id="case-modal-question"></blockquote>
+                </section>
+            </div>
+        </article>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,479 @@
+/* ======================================
+   PAGE BACKGROUND
+====================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    isolation: isolate;
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #fff;
+    font-family: "Space Grotesk", sans-serif;
+    background:
+        radial-gradient(
+            ellipse at 15% 15%,
+            rgba(126, 74, 255, 0.25) 0%,
+            rgba(126, 74, 255, 0.08) 28%,
+            transparent 55%
+        ),
+        radial-gradient(
+            ellipse at 85% 35%,
+            rgba(0, 200, 255, 0.18) 0%,
+            rgba(0, 200, 255, 0.05) 30%,
+            transparent 55%
+        ),
+        radial-gradient(
+            ellipse at 45% 80%,
+            rgba(37, 99, 235, 0.18) 0%,
+            transparent 50%
+        ),
+        linear-gradient(
+            180deg,
+            #020208 0%,
+            #050511 35%,
+            #080b1d 65%,
+            #020207 100%
+        );
+    background-attachment: fixed;
+}
+
+/* Fixed grid overlay */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.03) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.03) 1px,
+            transparent 1px
+        );
+    background-size: 90px 90px;
+}
+
+/* Fixed vignette overlay */
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(
+        circle,
+        transparent 45%,
+        rgba(0, 0, 0, 0.45) 80%,
+        rgba(0, 0, 0, 0.85) 100%
+    );
+}
+
+/* ======================================
+   TIMELINE
+====================================== */
+
+.timeline-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    border-radius: 999px;
+    transform: translateX(-50%);
+    background: linear-gradient(
+        to bottom,
+        #38bdf8,
+        #8b5cf6,
+        #2563eb
+    );
+}
+
+.timeline-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 520px;
+    margin-bottom: 140px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item.left {
+    justify-content: flex-start;
+}
+
+.timeline-item.right {
+    justify-content: flex-end;
+}
+
+/* ======================================
+   TIMELINE DOTS
+====================================== */
+
+.timeline-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    width: 26px;
+    height: 26px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 24px currentColor;
+}
+
+.timeline-dot.purple {
+    color: #a855f7;
+    background-color: #a855f7;
+}
+
+.timeline-dot.pink {
+    color: #ec4899;
+    background-color: #ec4899;
+}
+
+.timeline-dot.orange {
+    color: #f97316;
+    background-color: #f97316;
+}
+
+.timeline-dot.green {
+    color: #22c55e;
+    background-color: #22c55e;
+}
+
+.timeline-dot.cyan {
+    color: #06b6d4;
+    background-color: #06b6d4;
+}
+
+.timeline-dot.gray {
+    color: #9ca3af;
+    background-color: #9ca3af;
+}
+
+/* ======================================
+   TIMELINE CONNECTORS
+====================================== */
+
+.timeline-connector {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 140px;
+    height: 3px;
+    transform: translateY(-50%);
+}
+
+.timeline-item.left .timeline-connector {
+    transform: translate(-140px, -50%);
+    background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 0.25)
+    );
+}
+
+.timeline-item.right .timeline-connector {
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 0.25)
+    );
+}
+
+/* ======================================
+   TIMELINE CARDS
+====================================== */
+
+.timeline-card {
+    width: 44%;
+    max-width: 560px;
+    transition:
+        transform 350ms ease,
+        border-color 350ms ease,
+        background-color 350ms ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: rgba(255, 255, 255, 0.24);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ======================================
+   REVEAL ANIMATION
+====================================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(80px);
+    transition:
+        opacity 800ms ease,
+        transform 800ms ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ======================================
+   OPEN FILE BUTTON
+====================================== */
+
+.open-file-button {
+    margin-top: 32px;
+    padding: 12px 28px;
+    border: 1px solid #fff;
+    border-radius: 999px;
+    color: #fff;
+    font: inherit;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: transparent;
+    transition:
+        color 200ms ease,
+        background-color 200ms ease,
+        border-color 200ms ease,
+        transform 200ms ease;
+}
+
+.open-file-button:hover {
+    color: #020617;
+    border-color: #67e8f9;
+    background: #67e8f9;
+    transform: translateY(-2px);
+}
+
+.open-file-button:active {
+    transform: translateY(0);
+}
+
+.open-file-button:focus-visible {
+    outline: 3px solid rgba(103, 232, 249, 0.45);
+    outline-offset: 4px;
+}
+
+/* ======================================
+   CASE MODAL
+====================================== */
+
+.case-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    place-items: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+}
+
+.case-modal.open {
+    display: grid;
+}
+
+.case-file {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.05fr 1.35fr;
+    width: min(1400px, 94vw);
+    max-height: 92vh;
+    overflow-y: auto;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 28px;
+    background:
+        linear-gradient(
+            145deg,
+            #0a1020,
+            #050813
+        );
+    box-shadow:
+        0 35px 110px rgba(0, 0, 0, 0.75),
+        0 0 60px rgba(103, 232, 249, 0.1);
+}
+
+/* ======================================
+   MODAL IMAGE
+====================================== */
+
+.case-file-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 720px;
+    object-fit: cover;
+}
+
+/* ======================================
+   MODAL CONTENT
+====================================== */
+
+.case-file-content {
+    padding: 64px;
+}
+
+.case-file-number {
+    margin: 0;
+    color: #67e8f9;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+.case-file h2 {
+    margin: 16px 0 28px;
+    color: #fff;
+    font-size: 4rem;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.case-file h3 {
+    margin: 32px 0 0;
+    color: #67e8f9;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+}
+
+.case-file-overview {
+    margin: 18px 0 0;
+    color: #cbd5e1;
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+.case-file ul {
+    margin: 18px 0 0;
+    padding-left: 22px;
+}
+
+.case-file li {
+    margin-top: 14px;
+    color: #cbd5e1;
+    font-size: 1rem;
+    line-height: 1.85;
+}
+
+.case-file li::marker {
+    color: #67e8f9;
+}
+
+.case-file section + section {
+    margin-top: 30px;
+}
+
+/* ======================================
+   CASE METADATA
+====================================== */
+
+.case-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 28px 0 36px;
+}
+
+.case-meta div {
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.case-meta dt {
+    color: #6b7280;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.case-meta dd {
+    margin: 8px 0 0;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* ======================================
+   UNANSWERED QUESTION
+====================================== */
+
+.case-file blockquote {
+    margin: 18px 0 0;
+    padding: 22px 24px;
+    border-left: 4px solid #67e8f9;
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.75;
+    background: rgba(103, 232, 249, 0.06);
+}
+
+/* ======================================
+   MODAL CLOSE BUTTON
+====================================== */
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: #fff;
+    font: inherit;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.65);
+    transition:
+        color 200ms ease,
+        background-color 200ms ease,
+        border-color 200ms ease,
+        transform 200ms ease;
+}
+
+.modal-close:hover {
+    color: #020617;
+    border-color: #67e8f9;
+    background: #67e8f9;
+    transform: rotate(90deg);
+}
+
+.modal-close:focus-visible {
+    outline: 3px solid rgba(103, 232, 249, 0.45);
+    outline-offset: 4px;
+}
+
+body.modal-open {
+    overflow: hidden;
+}

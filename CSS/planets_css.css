@@ -1,0 +1,90 @@
+/* =================================
+Global advanced behavior
+================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    isolation: isolate;
+}
+
+/* =================================
+Three.js canvas
+================================= */
+
+canvas {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    /* Keeps Earth colorful */
+    filter:
+        saturate(1.12)
+        contrast(1.06);
+}
+
+/* =================================
+Hero layered shading
+================================= */
+
+.hero-section {
+    background:
+        radial-gradient(
+            circle at 22% 48%,
+            transparent 0%,
+            transparent 24%,
+            rgba(0, 0, 0, 0.06) 45%,
+            rgba(0, 0, 0, 0.42) 100%
+        );
+}
+
+/* =================================
+Facts animated-star background
+================================= */
+
+.facts-section {
+    background: transparent;
+}
+
+.facts-section-overlay {
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 50% 10%,
+            rgba(30, 80, 150, 0.17),
+            transparent 34%
+        ),
+        radial-gradient(
+            circle at 10% 75%,
+            rgba(0, 92, 160, 0.1),
+            transparent 32%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(2, 3, 5, 0.62) 0%,
+            rgba(2, 3, 5, 0.76) 40%,
+            rgba(2, 3, 5, 0.9) 100%
+        );
+}
+
+/* =================================
+Fact cards
+================================= */
+
+.fact-card {
+    min-height: 15rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+
+    box-shadow:
+        0 1rem 3rem rgba(0, 0, 0, 0.15);
+}

@@ -1,0 +1,262 @@
+/* ======================================
+   GLOBAL
+====================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    isolation: isolate;
+    margin: 0;
+    font-family: "Space Grotesk", sans-serif;
+    background: linear-gradient(
+        180deg,
+        #010205 0%,
+        #03050a 50%,
+        #010204 100%
+    );
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+/* ======================================
+   THREE.JS BACKGROUND
+====================================== */
+
+canvas {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* ======================================
+   PHENOMENON CARDS
+====================================== */
+
+.phenomenon-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 28px;
+    background: #070a11;
+    box-shadow:
+        0 28px 70px rgba(0, 0, 0, 0.48),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.phenomenon-card-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:
+        transform 500ms ease,
+        filter 500ms ease;
+}
+
+.phenomenon-card:hover .phenomenon-card-image {
+    transform: scale(1.06);
+    filter: saturate(1.12);
+}
+
+.phenomenon-card-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        to top,
+        rgba(1, 4, 12, 0.97) 0%,
+        rgba(1, 4, 12, 0.58) 42%,
+        transparent 75%
+    );
+}
+
+.phenomenon-card-overlay p {
+    color: var(--accent);
+}
+
+.phenomenon-card[data-accent="purple"] {
+    --accent: #c084fc;
+}
+
+.phenomenon-card[data-accent="pink"] {
+    --accent: #f472b6;
+}
+
+.phenomenon-card[data-accent="orange"] {
+    --accent: #fb923c;
+}
+
+.phenomenon-card[data-accent="green"] {
+    --accent: #4ade80;
+}
+
+.phenomenon-card[data-accent="cyan"] {
+    --accent: #67e8f9;
+}
+
+.phenomenon-card[data-accent="gray"] {
+    --accent: #d1d5db;
+}
+
+.phenomenon-trigger:hover {
+    color: #020617;
+    border-color: var(--accent);
+    background: var(--accent);
+}
+
+/* ======================================
+   MODAL OVERLAY
+====================================== */
+
+.phenomenon-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    place-items: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(12px);
+}
+
+.phenomenon-modal.open {
+    display: grid;
+}
+
+/* ======================================
+   NEW MODAL PANEL
+====================================== */
+
+.phenomenon-panel {
+    width: min(1180px, 94vw);
+    max-height: 92vh;
+    overflow-y: auto;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 28px;
+    background: #080b12;
+    box-shadow:
+        0 35px 110px rgba(0, 0, 0, 0.82),
+        0 0 50px rgba(34, 211, 238, 0.06);
+}
+
+.phenomenon-panel-header {
+    position: relative;
+    min-height: 390px;
+    overflow: hidden;
+    border-radius: 28px 28px 0 0;
+}
+
+.phenomenon-panel-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.phenomenon-panel-shade {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to top,
+            rgba(8, 11, 18, 1) 0%,
+            rgba(8, 11, 18, 0.45) 48%,
+            rgba(8, 11, 18, 0.08) 100%
+        );
+}
+
+/* ======================================
+   FACT CARDS
+====================================== */
+
+.phenomenon-facts {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.phenomenon-facts li {
+    position: relative;
+    min-height: 120px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 18px;
+    color: #cbd5e1;
+    line-height: 1.7;
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.phenomenon-facts li::before {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 3px;
+    margin-bottom: 14px;
+    border-radius: 999px;
+    background: #67e8f9;
+}
+
+/* ======================================
+   SIGNIFICANCE PANEL
+====================================== */
+
+.phenomenon-significance {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 28px 30px;
+    border: 1px solid rgba(103, 232, 249, 0.18);
+    border-radius: 20px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(103, 232, 249, 0.08),
+            rgba(14, 165, 233, 0.025)
+        );
+}
+
+/* ======================================
+   MODAL CLOSE BUTTON
+====================================== */
+
+.modal-close {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    z-index: 20;
+    display: grid;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 50%;
+    color: #fff;
+    font: inherit;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.68);
+    backdrop-filter: blur(10px);
+    transition:
+        color 200ms ease,
+        background-color 200ms ease,
+        transform 200ms ease;
+}
+
+.modal-close:hover {
+    color: #020617;
+    background: #67e8f9;
+    transform: rotate(90deg);
+}
